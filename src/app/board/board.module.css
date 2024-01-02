@@ -1,0 +1,48 @@
+.phase {
+  @apply p-7 gap-7 flex flex-col border-[3px] border-secondary-gray w-[inherit] h-full;
+}
+
+.phase-number {
+  @apply bg-secondary-gray font-semibold text-[21px];
+}
+.available .phase-number {
+  @apply bg-primary-red;
+}
+.completed .phase-number {
+  @apply bg-primary-black text-white;
+}
+.phase-header span {
+  @apply text-primary-black;
+}
+
+.available .phase-header span {
+  @apply text-primary-red;
+}
+.completed .phase-header span {
+  @apply text-primary-black;
+}
+.phase-number {
+  @apply text-tertiary-gray;
+}
+.available .phase-number {
+  @apply text-white;
+}
+
+.available.phase {
+  @apply border-primary-red;
+}
+.completed.phase {
+  @apply border-primary-black;
+}
+
+.phase-action {
+  @apply text-tertiary-gray mt-auto;
+}
+
+.available .phase-action {
+  @apply bg-primary-red text-white;
+}
+
+.completed .phase-action {
+  @apply bg-primary-black text-white;
+}
