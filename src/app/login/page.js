@@ -30,11 +30,11 @@ export default function Login() {
     );
   };
   return (
-    <div className=" min-h-screen bg-primary-black flex items-center">
+    <div className="login min-h-screen bg-primary-black flex items-center">
       <form
         onSubmit={handleLogin}
         ref={form}
-        className=" w-full max-w-2xl mx-auto"
+        className="bg-primary-black w-full max-w-2xl mx-auto p-16"
       >
         <div className="mb-5">
           <label

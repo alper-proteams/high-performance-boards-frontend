@@ -34,18 +34,28 @@ body {
   font-weight: 500;
   line-height: 25px;
 }
+.body-default-16 {
+  font-weight: 400;
+  @apply text-base;
+}
 .body-default-18 {
   font-size: 18px;
   font-weight: 400;
   line-height: 34px;
   letter-spacing: 0em;
-  @apply mb-12;
+  /* @apply mb-12; */
 }
 .body-default-20 {
   font-size: 20px;
   font-weight: 400;
   line-height: 37px;
   letter-spacing: 0em;
+}
+.body-bold-20 {
+  /* font-size: 20px; */
+  /* line-height: 30px; */
+  font-weight: 600;
+  @apply text-xl;
 }
 .body-default-24 {
   font-size: 24px;
@@ -110,9 +120,6 @@ body {
 .full-container {
   @apply w-full;
 }
-.content-header {
-  @apply h4-bold;
-}
 
 .card-content p {
   @apply body-default-18;
@@ -152,12 +159,14 @@ body {
 .skill-icon {
   @apply w-12;
 }
+
 .content-header {
-  @apply col-span-4;
+  @apply col-span-4 h4-bold;
 }
 .content-detail {
   @apply col-span-8 col-start-5 w-full z-10;
 }
+
 .content-detail.full-bleed {
   @apply relative text-white bg-red-400;
 }
@@ -175,7 +184,8 @@ body {
   @apply mb-12;
 }
 
-.hero {
+.hero,
+.login {
   background-image: url("/images/homepage/hero.jpg");
 }
 
@@ -198,3 +208,64 @@ body {
   @apply hover:text-red-400
   text-4xl md:text-base;
 }
+
+/* cv start */
+.cv-sidebar {
+  @apply col-span-3 p-6;
+}
+.cv-detail {
+  @apply col-span-9 col-start-4 gap-6 flex flex-col;
+}
+.cv-box {
+  @apply flex flex-col p-8 bg-white gap-8;
+}
+.cv-box-header {
+  @apply h5-bold text-primary-red;
+}
+.cv-subbox {
+  @apply flex gap-6 items-start;
+}
+
+.cv-subbox + .cv-subbox {
+}
+.cv-box-subheader {
+  @apply body-bold-20 mb-2;
+}
+.cv-box-title {
+  @apply body-default-18 mb-2;
+}
+.cv-box-silent {
+  @apply body-default-16 text-[#7A808C] mb-4;
+}
+.cv-box-subdesc {
+  @apply body-default-14;
+}
+.cv-icon {
+  @apply bg-primary-red rounded-full text-white min-w-16 h-16 flex items-center justify-center h5-bold;
+}
+.cv-tags {
+  @apply flex flex-wrap gap-[10px];
+}
+.cv-tags li {
+  @apply bg-[#FFD9D7] text-primary-red p-5;
+}
+
+.cv-sidebar .cv-box {
+  @apply p-0;
+}
+.cv-sidebar .cv-box-header {
+  @apply text-xl;
+}
+
+.cv-sidebar .cv-box-subheader {
+  @apply text-base;
+}
+.cv-sidebar .cv-box-silent {
+  @apply text-sm;
+}
+
+.cv-sidebar .cv-box-subdesc {
+  /* font-weight: 400; */
+  @apply text-base font-normal;
+}
+/* cv end */

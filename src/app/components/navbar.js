@@ -25,7 +25,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="absolute mt-10 top-0 left-0 right-0 mx-auto w-full bg-white h-16">
+    <header className="absolute mt-10 top-0 left-0 right-0 mx-auto w-full bg-white h-16 z-20">
       <nav className="flex flex-row justify-between container items-center h-full">
         <Link href="/">
           <Image
