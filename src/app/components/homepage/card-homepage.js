@@ -10,7 +10,7 @@ export default function CardHomepage({
   ...props
 }) {
   return (
-    <div className={`${className} ${"card-homepage flex"}`} {...props}>
+    <div className={`${className} ${"card-homepage md:flex"}`} {...props}>
       <Image
         className="w-2/5"
         src={cardImage}

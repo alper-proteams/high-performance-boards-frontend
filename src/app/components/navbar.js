@@ -11,6 +11,7 @@ export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
   const [user, setUser] = useState(null);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
     setUser(AuthService.getCurrentUser());
@@ -36,11 +37,15 @@ export default function Navbar() {
           />
         </Link>
 
-        <ul className="flex flex-row gap-12 font-medium">
+        <ul
+          className={`nav transition-opacity ${
+            isNavOpen ? " opacity-100" : "opacity-0 md:opacity-100"
+          }`}
+        >
           {/* <li>
             <Link
-              className={`hover:text-red-400 ${
-                pathname === "/" ? " text-red-400" : "text-gray-700"
+              className={`nav-item ${
+                pathname === "/" ? " text-red-400" : "text-white md:text-gray-700"
               }`}
               href="/"
             >
@@ -49,8 +54,10 @@ export default function Navbar() {
           </li> */}
           <li>
             <Link
-              className={`hover:text-red-400 ${
-                pathname === "/about" ? " text-red-400" : "text-gray-700"
+              className={`nav-item ${
+                pathname === "/about"
+                  ? " text-red-400"
+                  : "text-white md:text-gray-700"
               }`}
               href="/about"
             >
@@ -59,8 +66,10 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              className={`hover:text-red-400 ${
-                pathname === "/resources" ? " text-red-400" : "text-gray-700"
+              className={`nav-item ${
+                pathname === "/resources"
+                  ? " text-red-400"
+                  : "text-white md:text-gray-700"
               }`}
               href="/resources"
             >
@@ -69,8 +78,10 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              className={`hover:text-red-400 ${
-                pathname === "/testimonials" ? " text-red-400" : "text-gray-700"
+              className={`nav-item ${
+                pathname === "/testimonials"
+                  ? " text-red-400"
+                  : "text-white md:text-gray-700"
               }`}
               href="/testimonials"
             >
@@ -79,8 +90,10 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              className={`hover:text-red-400 ${
-                pathname === "/contact" ? " text-red-400" : "text-gray-700"
+              className={`nav-item ${
+                pathname === "/contact"
+                  ? " text-red-400"
+                  : "text-white md:text-gray-700"
               }`}
               href="/contact"
             >
@@ -89,15 +102,25 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {user ? (
-          <Button className="w-48" onClick={handleLogout}>
-            Logout
-          </Button>
-        ) : (
-          <Link href="/login">
-            <Button className="w-48">Login</Button>
-          </Link>
-        )}
+        <div className="ml-auto md:ml-0 mr-4 md:mr-0">
+          {user ? (
+            <Button className=" w-20 md:w-48" onClick={handleLogout}>
+              Logout
+            </Button>
+          ) : (
+            <Link href="/login">
+              <Button className=" w-20 md:w-48">Login</Button>
+            </Link>
+          )}
+        </div>
+        <div
+          className="space-y-2 md:hidden"
+          onClick={() => setIsNavOpen((prev) => !prev)}
+        >
+          <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+          <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+          <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+        </div>
       </nav>
     </header>
   );

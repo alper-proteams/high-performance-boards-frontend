@@ -60,7 +60,7 @@ export default function Module2() {
         <h2 className="container h2-bold text-white ">HPBM AG</h2>
       </section>
       <section className="bg-white">
-        <div className="container grid grid-cols-12 py-24 gap-7">
+        <div className="container md:grid grid-cols-12 py-24 gap-7">
           <div className="content-header">Employee Representatives</div>
 
           <div className="content-detail">

@@ -7,7 +7,7 @@ export default function About() {
       <div className="full-container bg-white">
         <div className="card flex items-start py-20 px-36">
           <Image
-            src="https://placehold.co/540x720"
+            src="/images/common/about.jpg"
             width={500}
             height={300}
             priority

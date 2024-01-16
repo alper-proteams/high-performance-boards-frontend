@@ -14,7 +14,7 @@ export default function Welcome() {
           </span>
         </div>
 
-        <div className="skills grid grid-cols-3">
+        <div className="skills md:grid grid-cols-3">
           <div>
             <Skill
               content="Develop a sharper instinct for navigating complex scenarios in
