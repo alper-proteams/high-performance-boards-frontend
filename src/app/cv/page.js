@@ -4,36 +4,52 @@ export default function About() {
   return (
     <section className="mt-32 mb-16 px-12">
       <div className="container md:grid grid-cols-12 py-24 gap-7">
-        <div className="cv-sidebar bg-white">
-          <Image
-            className="mb-6"
-            src="/images/members/01.jpg"
-            alt="skill-icon"
-            layout="responsive"
-            width={100}
-            height={100}
-          />
-          <div className="cv-box-subheader">Marie Bellois</div>
-          <p className="cv-box-subdesc">Chief Financial Officer</p>
-          <hr className="opacity-50 my-6" />
+        <div className="cv-sidebar sticky top-36 h-min">
+          <div className="flex items-center gap-4 mb-7 -mt-14">
+            <Image
+              className=" w-10 h-10"
+              src="/images/common/back.svg"
+              alt="skill-icon"
+              width={40}
+              height={40}
+            />{" "}
+            Back
+          </div>
 
-          <div className="cv-box">
-            <div className="cv-box-header">Professional Experience</div>
-            <div className="cv-subbox">
-              {/* <div className="cv-icon">H</div> */}
-              <div>
-                <div className="cv-box-subheader">Professional Experience</div>
-                <div className="cv-box-title">Chief Financial Officer</div>
-                <div className="cv-box-silent">2017 - Present</div>
-                <p className="cv-box-subdesc">
-                  Married, Mother of two adult children, Avid competitive sports
-                  enthusiast, fostering discipline and determination (former
-                  member of Spanish Olympic sailing team)
-                </p>
+          <div className="cv-sidebar-content bg-white">
+            <Image
+              className="mb-6"
+              src="/images/members/01.jpg"
+              alt="skill-icon"
+              layout="responsive"
+              width={100}
+              height={100}
+            />
+            <div className="cv-box-subheader">Marie Bellois</div>
+            <p className="cv-box-subdesc">Chief Financial Officer</p>
+            <hr className="opacity-50 my-6" />
+
+            <div className="cv-box">
+              <div className="cv-box-header">Professional Experience</div>
+              <div className="cv-subbox">
+                {/* <div className="cv-icon">H</div> */}
+                <div>
+                  <div className="cv-box-subheader">
+                    Professional Experience
+                  </div>
+                  <div className="cv-box-title">Chief Financial Officer</div>
+                  <div className="cv-box-silent">2017 - Present</div>
+                  <p className="cv-box-subdesc">
+                    Married, Mother of two adult children, Avid competitive
+                    sports enthusiast, fostering discipline and determination
+                    (former member of Spanish Olympic sailing team)
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
         <div className="cv-detail">
           <div className="cv-box">
             <div className="cv-box-header">Professional Summary</div>

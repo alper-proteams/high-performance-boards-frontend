@@ -62,7 +62,7 @@ body {
   font-weight: 400;
   line-height: 39px;
   letter-spacing: 0em;
-  @apply mb-20;
+  @apply mb-8;
 }
 
 .h1-headline {
@@ -161,7 +161,7 @@ body {
 }
 
 .content-header {
-  @apply col-span-4 h4-bold;
+  @apply col-span-4 h4-bold h-fit;
 }
 .content-detail {
   @apply col-span-8 col-start-5 w-full z-10;
@@ -211,7 +211,10 @@ body {
 
 /* cv start */
 .cv-sidebar {
-  @apply col-span-3 p-6;
+  @apply col-span-3;
+}
+.cv-sidebar-content {
+  @apply p-6;
 }
 .cv-detail {
   @apply col-span-9 col-start-4 gap-6 flex flex-col;
@@ -269,3 +272,7 @@ body {
   @apply text-base font-normal;
 }
 /* cv end */
+
+.scroll-transition {
+  transition: height 0.3s ease;
+}

@@ -58,7 +58,7 @@ export default function Module1() {
       </section>
       <section className="bg-white">
         <div className="container md:grid grid-cols-12 py-24 gap-7">
-          <div className="content-header">About</div>
+          <div className="content-header sticky top-36 bg-white">About</div>
           <div className="content-detail">
             <p>
               High-Performance Bavarian Manufacturing AG (HPB), headquartered in
@@ -172,7 +172,9 @@ export default function Module1() {
               outside of China.
             </p>
           </div>
-          <div className="content-header">Top Management</div>
+          <div className="content-header sticky top-36 bg-white">
+            Top Management
+          </div>
           <div className="content-detail">
             <p>
               The company's core leadership team consists of the following
