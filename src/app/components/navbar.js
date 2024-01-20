@@ -39,7 +39,7 @@ export default function Navbar() {
       <div className="hidden h-10"> </div>
       <header
         className={` ${
-          stickyNav ? "h-14 top-0 fixed" : "h-24 top-10 absolute"
+          stickyNav ? "h-14 top-0 fixed" : " h-[72px] xl:h-24 top-10 absolute"
         } scroll-transition left-0 right-0 mx-auto w-full bg-white min-h-14 z-20`}
       >
         <nav className="flex flex-row justify-between container items-center h-full">

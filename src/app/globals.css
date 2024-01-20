@@ -152,6 +152,15 @@ body {
   @apply body-default-14 text-[#121B2C];
 }
 
+.skill-container {
+  background-image: url("/images/homepage/hero.jpg");
+  @apply bg-fixed relative;
+}
+.skill-container:before {
+  content: "";
+
+  @apply bg-primary-black bg-opacity-75 absolute left-0 top-0 m-auto h-full w-full;
+}
 .skills {
   @apply gap-7;
 }
@@ -212,7 +221,7 @@ body {
 }
 .hero-content--master:after {
   content: "";
-  @apply absolute -left-4 xl:left-0 w-36 xl:w-[315px] h-60 xl:h-[406px] bottom-0 bg-secondary-red -z-10;
+  @apply absolute -left-3 xl:left-0 w-36 xl:w-[315px] h-60 xl:h-[406px] bottom-0 bg-primary-red -z-10;
 }
 
 .welcome {
