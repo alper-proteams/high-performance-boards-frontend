@@ -1,4 +1,8 @@
 import Image from "next/image";
+export const metadata = {
+  title: "HPB - About",
+  description: "High Performance Board",
+};
 
 export default function About() {
   return (

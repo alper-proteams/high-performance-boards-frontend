@@ -1,5 +1,12 @@
 import Image from "next/image";
 
+import ContactForm from "../components/form/contactForm";
+
+export const metadata = {
+  title: "HPB - Contact",
+  description: "High Performance Board",
+};
+
 export default function Contact() {
   return (
     <section className="mt-32 mb-16 px-12">
@@ -23,7 +30,7 @@ export default function Contact() {
                 information you may need. Please fill out the form below, and
                 we'll get back to you promptly.
               </p>
-              /%Contact Form%/
+              <ContactForm />
             </div>
           </div>
         </div>
