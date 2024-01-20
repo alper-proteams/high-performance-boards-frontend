@@ -82,7 +82,7 @@ export default function Navbar() {
                 About
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 className={`nav-item ${
                   pathname === "/resources"
@@ -93,8 +93,8 @@ export default function Navbar() {
               >
                 Resources
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link
                 className={`nav-item ${
                   pathname === "/testimonials"
@@ -105,7 +105,7 @@ export default function Navbar() {
               >
                 Testimonials
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 className={`nav-item ${

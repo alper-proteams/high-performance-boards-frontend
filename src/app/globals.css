@@ -226,6 +226,7 @@ body {
 
 .welcome {
   background-image: url("/images/homepage/welcome.jpg");
+  @apply bg-cover bg-right;
 }
 
 .nav {
