@@ -63,13 +63,13 @@ export default function Module2() {
         <div className="container md:grid grid-cols-12 py-24 gap-7">
           <div className="content-header">Employee Representatives</div>
 
-          <div className="content-detail">
+          <div className="content-detail col-span-8 col-start-5">
             <p>
               The company's core leadership team consists of the following
               individuals, accompanied by their CVs.
             </p>
           </div>
-          <div className="content-detail">
+          <div className="content-detail col-span-8 col-start-5">
             {CardPersonItems.map((card, index) => (
               <CardPerson
                 key={index}
@@ -88,7 +88,7 @@ export default function Module2() {
           <div className="content-header mb-16">
             HPBM Board Member Pitch Assessment
           </div>
-          <div className="content-detail">
+          <div className="content-detail col-span-8 col-start-5">
             <MemberForm />
           </div>
         </div>

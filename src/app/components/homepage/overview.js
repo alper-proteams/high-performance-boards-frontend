@@ -109,11 +109,11 @@ export const CardHomepageItems = [
 export default function Overview() {
   return (
     <section className="bg-white">
-      <div class="container md:grid grid-cols-12 py-24 gap-7">
-        <div className="content-header sticky top-36 bg-white">
+      <div className="container md:grid grid-cols-12 py-24 gap-7">
+        <div className="content-header xl:sticky top-36 bg-white">
           Simulation Overview
         </div>
-        <div className="content-detail">
+        <div className="content-detail col-span-9 col-start-4">
           {CardHomepageItems.map((card, index) => (
             <CardHomepage
               key={index}

@@ -59,7 +59,7 @@ export default function Module1() {
       <section className="bg-white">
         <div className="container md:grid grid-cols-12 py-24 gap-7">
           <div className="content-header sticky top-36 bg-white">About</div>
-          <div className="content-detail">
+          <div className="content-detail col-span-8 col-start-5">
             <p>
               High-Performance Bavarian Manufacturing AG (HPB), headquartered in
               Augsburg, is a Tier 1 supplier to the automotive industry. It was
@@ -175,13 +175,13 @@ export default function Module1() {
           <div className="content-header sticky top-36 bg-white">
             Top Management
           </div>
-          <div className="content-detail">
+          <div className="content-detail col-span-8 col-start-5">
             <p>
               The company's core leadership team consists of the following
               individuals, accompanied by their CVs.
             </p>
           </div>
-          <div className="content-detail">
+          <div className="content-detail col-span-8 col-start-5">
             {CardPersonItems.map((card, index) => (
               <CardPerson
                 key={index}
@@ -197,7 +197,7 @@ export default function Module1() {
       <section className="bg-primary-black py-20">
         <div className="container text-center text-white">
           <div className="content-header mb-16">Corporate Video</div>
-          <div className="content-detail">
+          <div className="content-detail col-span-8 col-start-5">
             <iframe
               className="mx-auto"
               width="100%"
@@ -214,7 +214,7 @@ export default function Module1() {
           <div className="content-header mb-16">
             HPBM Board Member Pitch Assessment
           </div>
-          <div className="content-detail">
+          <div className="content-detail col-span-8 col-start-5">
             <MemberForm />
           </div>
         </div>

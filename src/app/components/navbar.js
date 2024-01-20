@@ -48,7 +48,7 @@ export default function Navbar() {
               src="/logo.svg"
               alt="HPB Logo"
               className={`scroll-transition w-auto ${
-                stickyNav ? "h-8" : "h-16 "
+                stickyNav ? "h-8 xl:h-8" : "h-8 xl:h-16 "
               }`}
               width={205}
               height={52}
@@ -123,8 +123,8 @@ export default function Navbar() {
           <div className="ml-auto md:ml-0 mr-4 md:mr-0">
             {user ? (
               <Button
-                className={`scroll-transition items-center py-0 ${
-                  stickyNav ? "h-8" : "h-12"
+                className={`scroll-transition items-center px-6 xl:px-20 ${
+                  stickyNav ? "h-9" : "h-12"
                 }`}
                 onClick={handleLogout}
               >
@@ -133,8 +133,8 @@ export default function Navbar() {
             ) : (
               <Link href="/login">
                 <Button
-                  className={`scroll-transition items-center py-0 ${
-                    stickyNav ? "h-8" : "h-12"
+                  className={`scroll-transition items-center px-6 xl:px-20 ${
+                    stickyNav ? "h-9" : "h-12"
                   }`}
                 >
                   Login
