@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="mt-32 mb-16 px-12">
+    <section className="mt-32 mb-16 xl:px-12">
       <div className="container md:grid grid-cols-12 py-24 gap-7">
-        <div className="cv-sidebar sticky top-36 h-min">
+        <div className="cv-sidebar xl:sticky top-36 h-min">
           <div className="flex items-center gap-4 mb-7 -mt-14">
             <Image
               className=" w-10 h-10"

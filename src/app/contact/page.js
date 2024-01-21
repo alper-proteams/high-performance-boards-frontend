@@ -9,10 +9,10 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <section className="mt-32 mb-16 px-12">
+    <section className="mt-32 mb-16 xl:px-12">
       <div className="page-header text-center">Contact</div>
       <div className="full-container bg-white">
-        <div className="card flex items-start py-20 px-36">
+        <div className="card card flex flex-col xl:flex-row items-start p-4 xl:py-20 xl:px-36 gap-4 xl:gap-0">
           <Image
             src="/images/common/contact.jpg"
             width={500}

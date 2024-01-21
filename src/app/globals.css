@@ -66,10 +66,11 @@ body {
 }
 
 .h1-headline {
-  font-size: 64px;
+  /* font-size: 64px; */
   font-weight: 600;
-  line-height: 75px;
+  /* line-height: 75px; */
   letter-spacing: -0.02em;
+  @apply text-[40px] leading-[40px] xl:text-[64px] xl:leading-[75px];
 }
 .h2-medium {
   font-size: 56px;
@@ -112,7 +113,7 @@ body {
 }
 
 .page-header {
-  @apply h1-headline text-primary-red py-14;
+  @apply h1-headline text-primary-red px-4 py-8 xl:py-14;
 }
 .container {
   @apply mx-auto px-4;

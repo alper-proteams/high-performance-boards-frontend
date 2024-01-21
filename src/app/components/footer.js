@@ -25,10 +25,10 @@ export default function Navbar() {
 
   return (
     <footer className="bg-primary-black text-white py-7">
-      <div className="container flex justify-between items-center">
+      <div className="container flex flex-col xl:flex-row justify-between items-center gap-10">
         <div>
           © 2023 High Performance Boards
-          <ul className="flex gap-6 mt-4">
+          <ul className="flex gap-6 mt-4 justify-center xl:justify-start">
             <li>Privacy</li>
             <li>Imprint</li>
           </ul>
