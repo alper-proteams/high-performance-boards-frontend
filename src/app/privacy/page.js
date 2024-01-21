@@ -130,30 +130,15 @@ export default function Privacy() {
               offer and make it more interesting for you as a user.
             </p>
             <p>
-              Third Party Information: Google Dublin, Google Ireland Ltd, Gordon
-              House, Barrow Street, Dublin 4, Ireland, Fax: +353 (1) 436 1001,
-              Terms of Use:&nbsp;
-              <a
-                href="http://www.google.com/analytics/terms/de.html"
-                data-saferedirecturl="https://www.google.com/url?q=http://www.google.com/analytics/terms/de.html&amp;source=gmail&amp;ust=1705929708114000&amp;usg=AOvVaw0k-gfM_9yqYDRAR0mIfam1"
-              >
-                www.google.com/analytics/terms/de.html
-              </a>
-              , Privacy Policy:&nbsp;
-              <a
-                href="http://www.google.com/intl/de/analytics/learn/privacy.html"
-                data-saferedirecturl="https://www.google.com/url?q=http://www.google.com/intl/de/analytics/learn/privacy.html&amp;source=gmail&amp;ust=1705929708114000&amp;usg=AOvVaw1ys3vEAEytNmKmBqiuW45_"
-              >
-                www.google.com/intl/de/analytics/learn/privacy.html
-              </a>
-              , and the Privacy Policy:&nbsp;
-              <a
-                href="http://www.google.de/intl/de/policies/privacy"
-                data-saferedirecturl="https://www.google.com/url?q=http://www.google.de/intl/de/policies/privacy&amp;source=gmail&amp;ust=1705929708114000&amp;usg=AOvVaw2uX-6MC7ZqnH3AtgLsbGnj"
-              >
-                www.google.de/intl/de/policies/privacy
-              </a>
-              .
+              Third Party Information: <br />
+              Google Dublin, Google Ireland Ltd, Gordon House, Barrow Street,
+              Dublin 4, Ireland, Fax: +353 (1) 436 1001,
+              <br />
+              Terms of Use: www.google.com/analytics/terms/de.html,
+              <br /> Privacy Policy:
+              www.google.com/intl/de/analytics/learn/privacy.html,
+              <br /> and the Privacy Policy:
+              www.google.de/intl/de/policies/privacy.
             </p>
             <div className="static-header">Contact Us:</div>
             <p>
