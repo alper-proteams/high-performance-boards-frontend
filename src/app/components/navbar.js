@@ -57,11 +57,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <ul
-            className={`nav transition-opacity ${
-              isNavOpen ? " opacity-100" : "opacity-0 md:opacity-100"
-            }`}
-          >
+          <ul className={`nav ${isNavOpen ? "flex" : "hidden xl:flex"}`}>
             {/* <li>
             <Link
               className={`nav-item ${

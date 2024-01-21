@@ -231,7 +231,7 @@ body {
 }
 
 .nav {
-  @apply flex flex-col md:flex-row gap-12 font-medium 
+  @apply flex-col md:flex-row gap-12 font-medium 
   absolute md:relative
   h-screen md:h-auto
   bg-primary-black md:bg-transparent
