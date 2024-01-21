@@ -28,12 +28,9 @@ export default function Navbar() {
   }, []);
 
   const handleNavToggle = () => {
-    setIsNavOpen((prev) => !prev);
+    // setIsNavOpen((prev) => !prev);
+    setIsNavOpen(false);
   };
-
-  // useEffect(() => {
-  //   console.log("pathname");
-  // }, [pathname]);
 
   const handleLogout = () => {
     AuthService.logout().then(() => {
@@ -129,11 +126,11 @@ export default function Navbar() {
             </li>
           </ul>
 
-          <div className="ml-auto md:ml-0 mr-4 md:mr-0">
+          {/* <div className="ml-auto md:ml-0 mr-4 md:mr-0">
             {user ? (
               <Button
                 className={`scroll-transition items-center px-6 xl:px-20 ${
-                  stickyNav ? "h-9" : "h-12"
+                  stickyNav ? "h-10" : "h-10 xl:h-12"
                 }`}
                 onClick={handleLogout}
               >
@@ -143,98 +140,32 @@ export default function Navbar() {
               <Link href="/login">
                 <Button
                   className={`scroll-transition items-center px-6 xl:px-20 ${
-                    stickyNav ? "h-9" : "h-12"
+                    stickyNav ? "h-10" : "h-10 xl:h-12"
                   }`}
                 >
                   Login
                 </Button>
               </Link>
             )}
-          </div>
+          </div> */}
           <div
-            className="space-y-2 md:hidden"
-            onClick={() => setIsNavOpen((prev) => !prev)}
+            className={`flex xl:hidden items-center justify-center cursor-pointer ${
+              isNavOpen ? "bg-primary-black is-active" : "bg-primary-red"
+            }`}
           >
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <div
+              className={`hamburger flex flex-col items-center justify-center h-10 w-10 space-y-2 md:hidden ${
+                isNavOpen ? "is-active" : ""
+              }`}
+              onClick={() => setIsNavOpen((prev) => !prev)}
+            >
+              <span className="line block h-0.5 w-6 bg-white"></span>
+              <span className="line block h-0.5 w-6 bg-white"></span>
+              <span className="line block h-0.5 w-6 bg-white"></span>
+            </div>
           </div>
         </nav>
       </header>
     </>
   );
-  // return (
-  //   <nav className="bg-white border-gray-200 ">
-  //     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  //       <Link
-  //         className="flex items-center space-x-3 rtl:space-x-reverse"
-  //         href="/"
-  //       >
-  //         <Image
-  //           src="/logo.svg"
-  //           alt="HPB Logo"
-  //           className="h-8"
-  //           width={100}
-  //           height={38}
-  //           priority
-  //         />
-  //       </Link>
-  //       <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-  //         <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
-  //           <li>
-  //             <Link
-  //               className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-400 md:p-0 ${
-  //                 pathname === '/' ? ' text-red-400' : 'text-gray-700'
-  //               }`}
-  //               href="/"
-  //             >
-  //               Home
-  //             </Link>
-  //           </li>
-  //           <li>
-  //             <Link
-  //               className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-400 md:p-0 ${
-  //                 pathname === '/about' ? ' text-red-400' : 'text-gray-700'
-  //               }`}
-  //               href="/about"
-  //             >
-  //               About
-  //             </Link>
-  //           </li>
-  //           <li>
-  //             <Link
-  //               className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-400 md:p-0 ${
-  //                 pathname === '/resources' ? ' text-red-400' : 'text-gray-700'
-  //               }`}
-  //               href="/resources"
-  //             >
-  //               Resources
-  //             </Link>
-  //           </li>
-  //           <li>
-  //             <Link
-  //               className={`block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-400 md:p-0 ${
-  //                 pathname === '/testimonials'
-  //                   ? ' text-red-400'
-  //                   : 'text-gray-700'
-  //               }`}
-  //               href="/testimonials"
-  //             >
-  //               Testimonials
-  //             </Link>
-  //           </li>
-  //         </ul>
-  //       </div>
-  //       <div className="hidden w-full md:block md:w-auto">
-  //         {user ? (
-  //           <Button onClick={handleLogout}>Logout</Button>
-  //         ) : (
-  //           <Link href="/login">
-  //             <Button>Login</Button>
-  //           </Link>
-  //         )}
-  //       </div>
-  //     </div>
-  //   </nav>
-  // );
 }

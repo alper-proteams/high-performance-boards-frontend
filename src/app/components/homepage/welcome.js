@@ -21,8 +21,7 @@ export default function Welcome() {
       <ParallaxProvider>
         <Parallax
           className="absolute -bottom-10 w-[180%] hidden xl:block"
-          speed={5}
-          translateX={[10, -10]}
+          translateX={[20, -70]}
           translateY={[0, 0]}
         >
           <Image
