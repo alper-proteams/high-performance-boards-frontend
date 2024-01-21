@@ -8,11 +8,10 @@ export default function Privacy() {
   return (
     <section className="mt-32 mb-16 xl:px-12">
       <div className="page-header text-center">Privacy Statement</div>
-      <div className="full-container bg-white">
+      <div className="full-container bg-white static">
         <div className="card flex flex-col xl:flex-row items-start p-4 xl:py-20 xl:px-36 gap-4 xl:gap-0">
-          <div className="">
+          <div className="card-content">
             <div className="static-header">Information We Collect:</div>
-
             <ol>
               <li>
                 <strong>Personal Information:</strong>

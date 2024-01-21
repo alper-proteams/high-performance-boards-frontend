@@ -341,5 +341,9 @@ body {
 }
 
 .static-header {
-  @apply h5-bold text-primary-black mt-8;
+  @apply h5-bold text-primary-black mt-8 mb-2;
+}
+.static p {
+  /* @apply break-words; */
+  word-break: break-word;
 }
