@@ -12,10 +12,10 @@ export default function Welcome() {
           Welcome to the
         </div>
         <div className="text-5xl md:text-8xl font-medium text-primary-red">
-          HPB Simulation
+          HPB Board Leadership
         </div>
         <div className="text-5xl md:text-8xl font-light text-white">
-          Experience
+          Simulation Experience
         </div>
       </div>
       <ParallaxProvider>

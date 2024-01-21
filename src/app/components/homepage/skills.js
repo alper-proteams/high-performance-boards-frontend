@@ -4,13 +4,17 @@ import Skill from "@/app/components/homepage/skill";
 export default function Welcome() {
   return (
     <section className="skill-container bg-primary-black py-24">
-      <div className="container flex flex-col gap-32 z-10 relative z-10">
-        <div className="content-header text-white text-center">
-          As you navigate the immersive HPB Simulation,
+      <div className="container flex flex-col gap-32 z-10 relative">
+        <div className="content-header text-white !text-center">
+          As you navigate the immersive
+          <br />
+          HPB Board Leadership Simulation,
           <br />
           <span>
-            you will cultivate essential leadership skills, fostering both your
-            professional acumen and personal growth
+            you will cultivate essential leadership skills,
+            <br />
+            fostering both your professional acumen <br />
+            and personal growth
           </span>
         </div>
 

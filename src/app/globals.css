@@ -339,3 +339,7 @@ body {
   -o-transform: translateY(-10px) rotate(-45deg);
   transform: translateY(-10px) rotate(-45deg);
 }
+
+.static-header {
+  @apply h5-bold text-primary-black mt-8;
+}

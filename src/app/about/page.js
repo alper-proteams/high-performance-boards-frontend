@@ -27,12 +27,13 @@ export default function About() {
                 strategic thinking, crisis management, and the ability to
                 navigate complex situations with agility. Welcome to the "HPB
                 Board Leadership Simulation," an on-site transformative
-                experiential training workshop designed for aspiring or recently
-                appointed Board members of SMEs. The workshop will sharpen their
-                skills to help an organization achieve its purpose and targets
-                over the long run. Developed by Professor Serden Ozcan from WHU
-                Otto Beisheim School of Management and Professor Marc Sachon
-                from IESE Business School, this simulation is based on rigorous
+                experiential training workshop tailored for aspiring or recently
+                appointed Board members across SMEs, family businesses, and
+                listed companies alike. The workshop will sharpen their skills
+                to help an organization achieve its purpose and targets over the
+                long run. Developed by Professor Serden Ozcan from WHU Otto
+                Beisheim School of Management and Professor Marc Sachon from
+                IESE Business School, this simulation is based on rigorous
                 academic research paired with relevant practitioner insights
                 drawn from the feedback of many international senior executives.
               </p>
