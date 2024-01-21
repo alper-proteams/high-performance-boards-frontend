@@ -27,6 +27,14 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavToggle = () => {
+    setIsNavOpen((prev) => !prev);
+  };
+
+  // useEffect(() => {
+  //   console.log("pathname");
+  // }, [pathname]);
+
   const handleLogout = () => {
     AuthService.logout().then(() => {
       setUser(null);
@@ -45,7 +53,7 @@ export default function Navbar() {
         } scroll-transition left-0 right-0 mx-auto w-full bg-white min-h-14 z-20 top-0`}
       >
         <nav className="flex flex-row justify-between container items-center h-full">
-          <Link href="/">
+          <Link onClick={handleNavToggle} href="/">
             <Image
               src="/logo.svg"
               alt="HPB Logo"
@@ -57,7 +65,10 @@ export default function Navbar() {
             />
           </Link>
 
-          <ul className={`nav ${isNavOpen ? "flex" : "hidden xl:flex"}`}>
+          <ul
+            className={`nav ${isNavOpen ? "flex" : "hidden xl:flex"}`}
+            onClick={handleNavToggle}
+          >
             {/* <li>
             <Link
               className={`nav-item ${
