@@ -1,37 +1,24 @@
-"use client";
+'use client';
 
-import React, { useState, useRef } from "react";
-import { useRouter } from "next/navigation";
-
-import AuthService from "@/app/services/auth.service";
+import React, { useState, useRef } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/app/contexts/auth.context';
+// import AuthService from '@/app/services/auth.service';
 
 export default function Login() {
   const router = useRouter();
   const form = useRef();
 
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [formMessage, setFormMessage] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [formMessage, setFormMessage] = useState('');
+  const { login } = useAuth();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    AuthService.login({ identifier: username, password }).then(
-      (res) => {
-        if (res.jwt) {
-          router.push("/board");
-        } else {
-          console.log("res user", res);
-          setFormMessage(res.error.message || res.toString());
-        }
-      },
-      (error) => {
-        const resMessage = error.toString();
-
-        // setLoading(false);
-        setFormMessage(resMessage);
-      }
-    );
+    const error = await login(username, password);
+    setFormMessage(error);
   };
   return (
     <div className=" min-h-screen bg-primary-black flex items-center">

@@ -1,27 +1,16 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import { usePathname, useRouter } from "next/navigation";
-import Link from "next/link";
-import Image from "next/image";
-import Button from "@/app/components/button";
-import AuthService from "@/app/services/auth.service";
+import { useState, useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import Link from 'next/link';
+import Image from 'next/image';
+import Button from '@/app/components/button';
+import { useAuth } from '@/app/contexts/auth.context';
 
 export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    setUser(AuthService.getCurrentUser());
-  }, []);
-
-  const handleLogout = () => {
-    AuthService.logout().then(() => {
-      setUser(null);
-      router.refresh();
-    });
-  };
+  const { user, logout } = useAuth();
 
   return (
     <footer className="bg-primary-black text-white py-7">
