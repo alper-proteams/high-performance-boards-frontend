@@ -1,8 +1,8 @@
 import { useAuth } from '@/app/contexts/auth.context';
 import { useRouter } from 'next/navigation';
 
-const withAuth = (WrappedComponent) => {
-  return (props) => {
+function withAuth(WrappedComponent) {
+  return function WithAuth(props) {
     const router = useRouter();
     const { isAuthenticated } = useAuth();
 
@@ -14,5 +14,6 @@ const withAuth = (WrappedComponent) => {
     }
     return <WrappedComponent {...props} />;
   };
-};
+}
+
 export default withAuth;

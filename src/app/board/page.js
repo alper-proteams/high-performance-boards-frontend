@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import styles from './board.module.css';
 import Button from '@/app/components/button';
-import withAuth from '@/app/hoc/withAuth';
+import withAuth from '@/app/lib/withAuth';
 
 const Board = () => {
   const completed = true;
