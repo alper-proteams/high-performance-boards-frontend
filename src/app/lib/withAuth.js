@@ -8,7 +8,7 @@ function withAuth(WrappedComponent) {
 
     // public pages check
     if (!isAuthenticated) {
-      console.log('isAuthenticated checked:');
+      // console.log('isAuthenticated checked:');
       router.push('/login');
       return;
     }

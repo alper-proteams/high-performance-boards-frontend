@@ -1,12 +1,9 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import { useRouter } from 'next/navigation';
 import { useAuth } from '@/app/contexts/auth.context';
-// import AuthService from '@/app/services/auth.service';
 
 export default function Login() {
-  const router = useRouter();
   const form = useRef();
 
   const [username, setUsername] = useState('');
@@ -17,8 +14,8 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const error = await login(username, password);
-    setFormMessage(error);
+    const loginReq = await login(username, password);
+    setFormMessage(loginReq);
   };
   return (
     <div className=" min-h-screen bg-primary-black flex items-center">

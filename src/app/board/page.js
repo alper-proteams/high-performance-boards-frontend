@@ -1,17 +1,46 @@
 'use client';
 
-import Image from 'next/image';
-import styles from './board.module.css';
-import Button from '@/app/components/button';
+import BoardCard from '@/app/components/boardCard';
 import withAuth from '@/app/lib/withAuth';
 
 const Board = () => {
-  const completed = true;
   return (
     <>
       <section className="h-screen px-12 bg-white flex items-center">
         <div className=" container grid grid-cols-4 gap-5 h-min">
-          <div className={`${styles['completed']} ${styles['phase']}`}>
+          <BoardCard
+            phase="completed"
+            order={1}
+            title={'Pitch & Board Select Phase'}
+            description={
+              'At simulation kick-off, participants will gob through a " Board Selection", pitching themselves as potential board members for HPBM AG to everyone in the session.'
+            }
+          />
+          <BoardCard
+            phase="available"
+            order={2}
+            title={'Construction Phase'}
+            description={
+              'Once the Boards (teams) have been formed, they will go through a “construction” phase.'
+            }
+          />
+          <BoardCard
+            phase="pending"
+            order={3}
+            title={'Decision Phase'}
+            description={
+              'Once the Boards (teams) have been formed, they will go through a “construction” phase.'
+            }
+          />
+          <BoardCard
+            phase="pending"
+            order={4}
+            title={'Construction Phase'}
+            description={
+              'Once the Boards (teams) have been formed, they will go through a “construction” phase.'
+            }
+          />
+          {/* <div className={`${styles['completed']} ${styles['phase']}`}>
             {completed ? (
               <Image
                 src="/images/icons/skill-icon-black.svg"
@@ -54,8 +83,8 @@ const Board = () => {
             <Button disabled className={`${styles['phase-action']}`}>
               Start
             </Button>
-          </div>
-          <div className={`${styles['phase']}`}>
+          </div> */}
+          {/* <div className={`${styles['phase']}`}>
             <div
               className={`${styles['phase-number']}  rounded-full h-12 w-12 flex items-center justify-center`}
             >
@@ -88,7 +117,7 @@ const Board = () => {
             <Button disabled className={`${styles['phase-action']}`}>
               Pending
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

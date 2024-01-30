@@ -57,7 +57,7 @@ export function AuthProvider({ children }) {
   const login = async (username, password) => {
     try {
       const data = await AuthService.login({ identifier: username, password });
-      console.log('Login success data', data);
+      // console.log('Login success data', data);
 
       if (data.user) {
         setIsAuthenticated(true);
@@ -71,8 +71,9 @@ export function AuthProvider({ children }) {
       }
     } catch (error) {
       console.error('Error during login:', error);
-      const serverErrorMessage = error.response?.data?.error;
-      return serverErrorMessage || 'An unexpected error occurred.';
+      const serverErrorMessage =
+        error.message || 'An unexpected error occurred.';
+      return serverErrorMessage;
     }
   };
 

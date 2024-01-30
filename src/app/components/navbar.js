@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/app/components/button';
 import { useAuth } from '@/app/contexts/auth.context';
-import AuthService from '@/app/services/auth.service';
 
 export default function Navbar() {
   const router = useRouter();

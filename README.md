@@ -51,6 +51,14 @@ npm run dev
 yarn dev
 ```
 
+Run the production server:
+
+```bash
+npm run build
+npm run start
+# or
+yarn build
+yarn start
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-

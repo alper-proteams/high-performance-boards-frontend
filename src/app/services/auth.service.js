@@ -1,30 +1,28 @@
-const API_URL = 'https://highperformanceboards.proteams.com/api';
+import apiClient from '@/app/services/api.service';
 
 const login = async (data) => {
-  const res = await fetch(`${API_URL}/auth/local`, {
+  const res = await apiClient({
     method: 'POST',
-    headers: {
-      'Content-type': 'application/json',
-    },
-    body: JSON.stringify(data),
+    endpoint: '/auth/local',
+    data,
   });
-  const userData = await res.json();
-  return userData;
+  if (res.error) {
+    throw res.error;
+  }
+  return res;
 };
 
 const checkAuthStatus = async (jwt) => {
-  const res = await fetch(`${API_URL}/users/me`, {
+  const userData = await apiClient({
     method: 'GET',
+    endpoint: '/users/me',
     headers: {
-      'Content-type': 'application/json',
       Authorization: `Bearer ${jwt}`,
     },
   });
-  const userData = await res.json();
   if (userData.error) {
     throw userData.error;
-  }
-  if (typeof window !== 'undefined' && userData.jwt) {
+  } else if (typeof window !== 'undefined' && userData.jwt) {
     localStorage.setItem('user', JSON.stringify(userData));
   }
   return userData;
