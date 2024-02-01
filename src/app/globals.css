@@ -263,7 +263,7 @@ body {
   @apply h5-bold text-primary-red;
 }
 .cv-subbox {
-  @apply flex gap-6 items-start;
+  @apply flex flex-col md:flex-row gap-6 items-start;
 }
 
 .cv-subbox + .cv-subbox {
@@ -287,7 +287,7 @@ body {
   @apply flex flex-wrap gap-[10px];
 }
 .cv-tags li {
-  @apply bg-[#FFD9D7] text-primary-red p-5;
+  @apply bg-[#FFD9D7] text-primary-red p-3 md:p-5;
 }
 
 .cv-sidebar .cv-box {
