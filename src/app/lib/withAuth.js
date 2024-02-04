@@ -1,15 +1,15 @@
 import { useAuth } from '@/app/contexts/auth.context';
-import { useRouter } from 'next/navigation';
+import { redirect } from 'next/navigation';
 
 function withAuth(WrappedComponent) {
   return function WithAuth(props) {
-    const router = useRouter();
     const { isAuthenticated } = useAuth();
+    // console.log('isAuthenticated checking:', isAuthenticated);
 
     // public pages check
     if (!isAuthenticated) {
-      // console.log('isAuthenticated checked:');
-      router.push('/login');
+      // console.log('isAuthenticated false');
+      redirect('/login');
       return;
     }
     return <WrappedComponent {...props} />;

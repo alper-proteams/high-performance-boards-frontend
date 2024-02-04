@@ -1,123 +1,83 @@
-"use client";
+'use client';
 
-import BoardCard from "@/app/components/boardCard";
-import withAuth from "@/app/lib/withAuth";
+import BoardCard from '@/app/components/boardCard';
+import withAuth from '@/app/lib/withAuth';
+import AuthService from '@/app/services/auth.service';
+import { useEffect, useState } from 'react';
 
 const Board = () => {
+  const [userModule, setUserModule] = useState(null);
+  const [phases, setPhases] = useState([
+    {
+      phase: 'pending',
+      roleName: 'PitchAndBoardPhase',
+      order: 1,
+      title: 'Pitch & Board Select Phase',
+      description:
+        'At simulation kick-off, participants will gob through a " Board Selection", pitching themselves as potential board members for HPBM AG to everyone in the session.',
+    },
+    {
+      phase: 'pending',
+      roleName: 'ConstructionPhase',
+      order: 2,
+      title: 'Construction Phase',
+      description:
+        'Once the Boards (teams) have been formed, they will go through a “construction” phase.',
+    },
+    {
+      phase: 'pending',
+      roleName: 'DecisionPhase',
+      order: 3,
+      title: 'Decision Phase',
+      description:
+        'Once the Boards (teams) have been formed, they will go through a “construction” phase.',
+    },
+    {
+      phase: 'pending',
+      roleName: 'PostSimulationPhase',
+      order: 4,
+      title: 'Post Simulation',
+      description:
+        'Once the Boards (teams) have been formed, they will go through a “construction” phase.',
+    },
+  ]);
+  useEffect(() => {
+    async function getCurrrentModule() {
+      const module = await AuthService.getCurrrentModule();
+      setUserModule(module);
+
+      const completedIndex = phases.findIndex(
+        (x) => x.roleName === module?.RoleName
+      );
+      setPhases(
+        phases.map((phase, index) => {
+          if (index < completedIndex) {
+            phase.phase = 'completed';
+          } else if (index === completedIndex) {
+            phase.phase = 'available';
+          } else {
+            phase.phase = 'pending';
+          }
+          return phase;
+        })
+      );
+    }
+    getCurrrentModule();
+  }, []);
+
   return (
     <>
       <section className="h-screen px-12 bg-white flex items-center">
         <div className="grid grid-cols-4 gap-5 h-min container md:grid py-24">
-          <BoardCard
-            phase="completed"
-            order={1}
-            title={"Pitch & Board Select Phase"}
-            description={
-              'At simulation kick-off, participants will gob through a " Board Selection", pitching themselves as potential board members for HPBM AG to everyone in the session.'
-            }
-          />
-          <BoardCard
-            phase="available"
-            order={2}
-            title={"Construction Phase"}
-            description={
-              "Once the Boards (teams) have been formed, they will go through a “construction” phase."
-            }
-          />
-          <BoardCard
-            phase="pending"
-            order={3}
-            title={"Decision Phase"}
-            description={
-              "Once the Boards (teams) have been formed, they will go through a “construction” phase."
-            }
-          />
-          <BoardCard
-            phase="pending"
-            order={4}
-            title={"Construction Phase"}
-            description={
-              "Once the Boards (teams) have been formed, they will go through a “construction” phase."
-            }
-          />
-          {/* <div className={`${styles['completed']} ${styles['phase']}`}>
-            {completed ? (
-              <Image
-                src="/images/icons/skill-icon-black.svg"
-                alt="skill-icon"
-                width={48}
-                height={48}
-              />
-            ) : (
-              <div
-                className={`${styles['phase-number']} rounded-full h-12 w-12 flex items-center justify-center`}
-              >
-                1
-              </div>
-            )}
-
-            <div className={`${styles['phase-header']} h5-bold`}>
-              Pitch & Board <br />
-              <span>Select Phase</span>
-            </div>
-            <div className="phase-desc">
-              At simulation kick-off, participants will gob through a " Board
-              Selection", pitching themselves as potential board members for
-              HPBM AG to everyone in the session.
-            </div>
-            <Button className={`${styles['phase-action']}`}>Start</Button>
-          </div>
-          <div className={`${styles['available']} ${styles['phase']}`}>
-            <div
-              className={`${styles['phase-number']}  rounded-full h-12 w-12 flex items-center justify-center`}
-            >
-              2
-            </div>
-            <div className={`${styles['phase-header']} h5-bold`}>
-              Construction Phase
-            </div>
-            <div className="phase-desc">
-              Once the Boards (teams) have been formed, they will go through a
-              “construction” phase.
-            </div>
-            <Button disabled className={`${styles['phase-action']}`}>
-              Start
-            </Button>
-          </div> */}
-          {/* <div className={`${styles['phase']}`}>
-            <div
-              className={`${styles['phase-number']}  rounded-full h-12 w-12 flex items-center justify-center`}
-            >
-              3
-            </div>
-            <div className={`${styles['phase-header']} h5-bold`}>
-              Decision Phase
-            </div>
-            <div className="phase-desc">
-              Once the Boards (teams) have been formed, they will go through a
-              “construction” phase.
-            </div>
-            <Button disabled className={`${styles['phase-action']}`}>
-              Pending
-            </Button>
-          </div>
-          <div className={`${styles['phase']}`}>
-            <div
-              className={`${styles['phase-number']}  rounded-full h-12 w-12 flex items-center justify-center`}
-            >
-              4
-            </div>
-            <div className={`${styles['phase-header']} h5-bold`}>
-              Post- Simulation
-            </div>
-            <div className="phase-desc">
-              Once the Boards (teams) have been formed, they will go through a
-              “construction” phase.
-            </div>
-            <Button disabled className={`${styles['phase-action']}`}>
-              Pending
-            </Button>
-          </div> */}
+          {phases.map((phase) => (
+            <BoardCard
+              key={phase.order}
+              phase={phase.phase}
+              order={phase.order}
+              title={phase.title}
+              description={phase.description}
+            />
+          ))}
         </div>
       </section>
     </>

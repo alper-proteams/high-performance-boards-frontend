@@ -12,7 +12,8 @@ const login = async (data) => {
   return res;
 };
 
-const checkAuthStatus = async (jwt) => {
+const checkAuthStatus = async () => {
+  const { jwt } = getLocalUser();
   const userData = await apiClient({
     method: 'GET',
     endpoint: '/users/me',
@@ -28,6 +29,21 @@ const checkAuthStatus = async (jwt) => {
   return userData;
 };
 
+const getCurrrentModule = async () => {
+  const { jwt } = getLocalUser();
+  const authHeader = jwt ? { Authorization: `Bearer ${jwt}` } : {};
+  const userData = await apiClient({
+    method: 'GET',
+    endpoint: '/user-phase/current',
+    headers: authHeader,
+  });
+  if (userData.error) {
+    throw userData.error;
+  } else {
+    return userData.data;
+  }
+};
+
 const getLocalUser = () => {
   let user = null;
   if (typeof window !== 'undefined') {
@@ -41,6 +57,7 @@ const AuthService = {
   login,
   checkAuthStatus,
   getLocalUser,
+  getCurrrentModule,
 };
 
 export default AuthService;

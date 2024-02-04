@@ -128,7 +128,7 @@ export default function Navbar() {
                 }`}
                 onClick={handleLogout}
               >
-                Logout
+                {user.username} / Logout
               </Button>
             ) : (
               <Link href="/login">

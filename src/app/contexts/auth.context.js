@@ -1,12 +1,6 @@
 'use client';
-import {
-  createContext,
-  useContext,
-  ReactNode,
-  useState,
-  useEffect,
-} from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { createContext, useContext, useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import AuthService from '@/app/services/auth.service';
 
 const AuthContext = createContext();
@@ -16,14 +10,11 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
-  const pathname = usePathname();
 
   useEffect(() => {
     const initializeAuth = async () => {
       // Check for the existence of the "authFlag" in local storage
-      const authFlag = localStorage.getItem('authFlag');
-      const localUser = await AuthService.getLocalUser();
-      // console.log('useEffect initializeAuth Running:', pathname, localUser);
+      const authFlag = localStorage.getItem('user');
 
       if (!authFlag) {
         setIsAuthenticated(false);
@@ -34,7 +25,7 @@ export function AuthProvider({ children }) {
       }
 
       try {
-        const data = await AuthService.checkAuthStatus(localUser.jwt);
+        const data = await AuthService.checkAuthStatus();
         setIsAuthenticated(true);
         setUser(data);
         // console.log('setUser:', isAuthenticated, data);
@@ -61,7 +52,7 @@ export function AuthProvider({ children }) {
 
       if (data.user) {
         setIsAuthenticated(true);
-        setUser(data);
+        setUser(data.user);
 
         localStorage.setItem('user', JSON.stringify(data));
 
@@ -84,6 +75,7 @@ export function AuthProvider({ children }) {
       setUser(null);
 
       localStorage.removeItem('user');
+      // console.log('logout removeItem');
     } catch (error) {
       console.error('Error during logout:', error);
     }
