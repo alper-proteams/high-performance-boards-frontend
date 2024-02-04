@@ -43,11 +43,11 @@ const Board = () => {
   ]);
   useEffect(() => {
     async function getCurrrentModule() {
-      const module = await AuthService.getCurrrentModule();
-      setUserModule(module);
+      const currentModule = await AuthService.getCurrrentModule();
+      setUserModule(currentModule);
 
       const completedIndex = phases.findIndex(
-        (x) => x.roleName === module?.RoleName
+        (x) => x.roleName === currentModule?.RoleName
       );
       setPhases(
         phases.map((phase, index) => {
