@@ -1,32 +1,32 @@
-'use client';
+"use client";
 
-import React, { useState, useRef } from 'react';
-import Button from '@/app/components/button';
+import React, { useState, useRef } from "react";
+import Button from "@/app/components/button";
 
-import apiClient from '@/app/services/api.service';
+import apiClient from "@/app/services/api.service";
 
 export default function ContactForm() {
   const form = useRef();
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [formMessage, setFormMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [formMessage, setFormMessage] = useState("");
 
   const handleForm = async (e) => {
     e.preventDefault();
     try {
       const req = await apiClient({
-        method: 'POST',
-        endpoint: '/contact-forms',
+        method: "POST",
+        endpoint: "/contact-forms",
         data: {
           name,
           email,
-          subject: 'Contact Form',
+          subject: "Contact Form",
           message,
         },
       });
-      setFormMessage('Your form has been submitted successfully.');
+      setFormMessage("Your form has been submitted successfully.");
     } catch (error) {
       const resMessage = error.message || error.toString();
       // setLoading(false);
@@ -51,7 +51,6 @@ export default function ContactForm() {
               </label>
               <input
                 type="text"
-                className="border-2 border-opacity-20 block w-full bg-white py-3 px-4"
                 id="name"
                 required
                 value={name}
@@ -69,7 +68,6 @@ export default function ContactForm() {
               </label>
               <input
                 type="email"
-                className="border-2 border-opacity-20 block w-full bg-white py-3 px-4"
                 id="email"
                 required
                 value={email}
@@ -86,7 +84,6 @@ export default function ContactForm() {
                 Your message
               </label>
               <textarea
-                className="border-2 border-opacity-20 block w-full bg-white py-3 px-4"
                 id="message"
                 rows="3"
                 required

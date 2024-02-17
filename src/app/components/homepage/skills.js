@@ -4,7 +4,7 @@ import Skill from "@/app/components/homepage/skill";
 export default function Welcome() {
   return (
     <section className="skill-container bg-primary-black py-24">
-      <div className="container flex flex-col gap-32 z-10 relative">
+      <div className="container flex flex-col gap-8 z-10 relative">
         <div className="content-header text-white !text-center">
           As you navigate the immersive
           <br />

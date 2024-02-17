@@ -174,8 +174,13 @@ body {
 }
 
 .content-header {
-  @apply h3-bold col-span-3 h-fit text-center xl:text-left mb-14 xl:mb-0;
+  @apply h3-bold col-span-3 h-fit mb-14 xl:mb-16;
 }
+.content-subheader {
+  /* @apply h3-bold col-span-3 h-fit mb-14 xl:mb-16; */
+  @apply h5-bold;
+}
+
 .content-detail {
   @apply w-full z-10;
 }
@@ -346,4 +351,9 @@ body {
 .static p {
   /* @apply break-words; */
   word-break: break-word;
+}
+
+input,
+textarea {
+  @apply border-2 border-opacity-20 block w-full bg-white py-3 px-4;
 }
