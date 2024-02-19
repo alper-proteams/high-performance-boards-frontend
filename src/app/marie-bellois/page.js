@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function About() {
+export default function marieBellois() {
   return (
     <section className="mt-32 mb-16 xl:px-12">
       <div className="container md:grid grid-cols-12 py-24 gap-7">
