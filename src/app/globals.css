@@ -80,15 +80,12 @@ body {
 }
 
 .h2-bold {
-  font-size: 56px;
+  @apply text-[40px] md:text-[56px] leading-[40px] md:leading-[51px];
   font-weight: 600;
-  line-height: 51px;
   letter-spacing: -0.02em;
 }
 .h3-bold {
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 48px;
+  @apply text-[24px] leading-[35px] md:text-[48px] md:leading-[48px] font-semibold;
   letter-spacing: -0.02em;
 }
 
@@ -130,7 +127,7 @@ body {
 }
 .card-homepage,
 .card-person {
-  @apply gap-14 items-start;
+  @apply gap-3 md:gap-14 items-start flex-col md:flex-row;
 }
 
 .card-body {

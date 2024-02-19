@@ -2,7 +2,7 @@
 import Image from "next/image";
 import withAuth from "@/app/lib/withAuth";
 import CardPerson from "./../../components/homepage/card-person";
-import AssessmentForm from "./../../components/form/AssessmentForm";
+import AssessmentForm from "./../../components/form/assessmentForm";
 export const CardPersonItems = [
   {
     personImage: "/images/members/01.jpg",
@@ -16,9 +16,18 @@ export const CardPersonItems = [
 const Module1 = () => {
   return (
     <>
-      <section className="relative h-full flex items-center justify-center text-white">
-        <div className="container z-10">
-          <div className="w-1/2 pt-28 pb-12 pr-20">
+      <section className="relative h-full flex flex-col md:flex-row items-center justify-center text-white">
+        <Image
+          className="column-bg md:absolute right-0 top-0 bottom-0 -z-10 w-full md:w-1/2 h-full object-cover"
+          src="/images/detail/module1/featured.jpg"
+          width={960}
+          height={400}
+          priority
+          alt="image"
+        />
+
+        <div className="container z-10 relative">
+          <div className="w-full md:w-1/2 md:pt-28 pb-12 md:pr-20">
             <h1 className="h1-headline my-12">
               Pitch & Board
               <br />
@@ -36,18 +45,18 @@ const Module1 = () => {
               suggestions to enhance your pitch.
             </p>
           </div>
+          <Image
+            className="block md:hidden section-bg absolute left-0 top-0 right-0 bottom-0 -z-20 w-full h-full"
+            src="/images/detail/module1/hero.jpg"
+            width={1920}
+            height={1080}
+            priority
+            alt="image"
+          />
         </div>
 
         <Image
-          className="column-bg absolute right-0 top-0 bottom-0 -z-10 w-1/2 h-full object-cover"
-          src="/images/detail/module1/featured.jpg"
-          width={960}
-          height={400}
-          priority
-          alt="image"
-        />
-        <Image
-          className="section-bg absolute left-0 top-0 right-0 bottom-0 -z-20 w-full"
+          className="hidden md:block section-bg absolute left-0 top-0 right-0 bottom-0 -z-20 w-full"
           src="/images/detail/module1/hero.jpg"
           width={1920}
           height={1080}
@@ -59,8 +68,8 @@ const Module1 = () => {
         <h2 className="container h2-bold text-white ">HPBM AG</h2>
       </section>
       <section className="bg-white">
-        <div className="container md:grid grid-cols-12 py-24 gap-7">
-          <div className="content-header sticky top-36 bg-white">About</div>
+        <div className="container md:grid grid-cols-12 py-12 md:py-24 gap-7">
+          <div className="content-header md:sticky top-36 bg-white">About</div>
           <div className="content-detail col-span-8 col-start-5">
             <p>
               High-Performance Bavarian Manufacturing AG (HPB), headquartered in
@@ -174,7 +183,7 @@ const Module1 = () => {
               outside of China.
             </p>
           </div>
-          <div className="content-header sticky top-36 bg-white">
+          <div className="content-header md:sticky mt-7 md:mt-0 top-36 bg-white">
             Top Management
           </div>
           <div className="content-detail col-span-8 col-start-5">

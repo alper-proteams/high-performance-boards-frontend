@@ -26,35 +26,35 @@ const AssessmentForm = () => {
 
   return (
     <form className="container">
-      <div className="flex flex-col w-10/12 mx-auto bg-secondary-gray p-4 gap-1">
+      <div className="flex flex-col w-full md:w-10/12 mx-auto bg-secondary-gray p-4 gap-1">
         <div className="flex gap-1 text-sm text-left">
-          <label className="w-1/4">Surname, Name</label>
-          <label className="w-1/3">
+          <label className="w-full md:w-1/4">Surname, Name</label>
+          <label className="w-full md:w-1/3">
             What you saw as a good fit for HPBM´s Board
           </label>
-          <label className="w-1/3">
+          <label className="w-full md:w-1/3">
             What you perceived as lacking for HPBM´s Board
           </label>
           <label className="w-12"></label>
         </div>
         {memberRecords.map((record, index) => (
-          <div className="flex gap-1" key={index}>
+          <div className="flex gap-1 flex-col md:flex-row" key={index}>
             <input
-              className="w-1/4"
+              className="w-full md:w-1/4"
               name={`member-name-${index}`}
               type="text"
               value={record.name}
               onChange={(e) => handleInputChange(index, "name", e.target.value)}
             />
             <input
-              className="w-1/3"
+              className="w-full md:w-1/3"
               name={`member-good-${index}`}
               type="text"
               value={record.good}
               onChange={(e) => handleInputChange(index, "good", e.target.value)}
             />
             <input
-              className="w-1/3"
+              className="w-full md:w-1/3"
               name={`member-lack-${index}`}
               type="text"
               value={record.lack}
