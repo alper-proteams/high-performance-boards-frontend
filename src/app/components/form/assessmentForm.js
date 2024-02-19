@@ -27,7 +27,7 @@ const AssessmentForm = () => {
   return (
     <form className="container">
       <div className="flex flex-col w-full md:w-10/12 mx-auto bg-secondary-gray p-4 gap-1">
-        <div className="flex gap-1 text-sm text-left">
+        <div className="flex gap-1 text-xs text-left">
           <label className="w-full md:w-1/4">Surname, Name</label>
           <label className="w-full md:w-1/3">
             What you saw as a good fit for HPBM´s Board
@@ -35,6 +35,7 @@ const AssessmentForm = () => {
           <label className="w-full md:w-1/3">
             What you perceived as lacking for HPBM´s Board
           </label>
+          <label className="w-full md:w-[75px]">Points</label>
           <label className="w-12"></label>
         </div>
         {memberRecords.map((record, index) => (
@@ -59,6 +60,16 @@ const AssessmentForm = () => {
               type="text"
               value={record.lack}
               onChange={(e) => handleInputChange(index, "lack", e.target.value)}
+            />
+
+            <input
+              className="w-full md:w-[75px]"
+              name={`member-lack-${index}`}
+              type="number"
+              value={record.point}
+              onChange={(e) =>
+                handleInputChange(index, "point", e.target.value)
+              }
             />
 
             {index === memberRecords.length - 1 && (
