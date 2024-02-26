@@ -54,7 +54,7 @@ export default function marieBellois() {
           <div className="cv-box">
             <div className="cv-box-header">Professional Summary</div>
             <p>
-              At simulation kick-off, participants will gob through a " Board
+              At simulation kick-off, participants will go through a " Board
               Selection", pitching themselves as potential board members for
               HPBM AG to everyone in the session.
             </p>

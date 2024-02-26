@@ -36,7 +36,7 @@ export const CardHomepageItems = [
     cardContent: (
       <>
         <p>
-          After the Boards (teams) have been formed, they will proceed to a
+          After the Boards have been formed, they will proceed to a
           "construction" phase, where they must decide on the Board Chair and
           establish the necessary committees.
         </p>
@@ -56,10 +56,10 @@ export const CardHomepageItems = [
     cardContent: (
       <>
         <p>
-          During this phase the Boards (teams) will be confronted with a
-          sequence of events which require the Board’s active involvement and
-          governance. There will be several joint de-briefings where all teams
-          will explain their decisions regarding the events that took place.
+          During this phase the Boards will be confronted with a sequence of
+          events which require the Board’s active involvement and governance.
+          There will be several joint de-briefings where all teams will explain
+          their decisions regarding the events that took place.
         </p>
       </>
     ),

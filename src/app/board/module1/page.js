@@ -2,7 +2,7 @@
 import Image from "next/image";
 import withAuth from "@/app/lib/withAuth";
 import CardPerson from "./../../components/homepage/card-person";
-import AssessmentForm from "./../../components/form/assessmentForm";
+import AssessmentForm from "./../../components/form/AssessmentForm";
 export const CardPersonItems = [
   {
     personImage: "/images/members/01.jpg",
@@ -45,24 +45,25 @@ const Module1 = () => {
               suggestions to enhance your pitch.
             </p>
           </div>
+          <div className="block md:hidden section-bg">
+            <Image
+              src="/images/detail/module1/featured.jpg"
+              width={1920}
+              height={1080}
+              priority
+              alt="image"
+            />
+          </div>
+        </div>
+        <div className="hidden md:block section-bg">
           <Image
-            className="block md:hidden section-bg absolute left-0 top-0 right-0 bottom-0 -z-20 w-full h-full"
-            src="/images/detail/module1/hero.jpg"
+            src="/images/detail/module1/featured.jpg"
             width={1920}
             height={1080}
             priority
             alt="image"
           />
         </div>
-
-        <Image
-          className="hidden md:block section-bg absolute left-0 top-0 right-0 bottom-0 -z-20 w-full"
-          src="/images/detail/module1/hero.jpg"
-          width={1920}
-          height={1080}
-          priority
-          alt="image"
-        />
       </section>
       <section className="bg-primary-red py-10">
         <h2 className="container h2-bold text-white ">HPBM AG</h2>
@@ -72,10 +73,10 @@ const Module1 = () => {
           <div className="content-header md:sticky top-36 bg-white">About</div>
           <div className="content-detail col-span-8 col-start-5">
             <p>
-              High-Performance Bavarian Manufacturing AG (HPB), headquartered in
-              Augsburg, is a Tier 1 supplier to the automotive industry. It was
-              taken public in 2017 and is a member of the German mid-cap MDAX
-              index with total sales of €3.375 billion in 2023.
+              High-Performance Bavarian Manufacturing AG (HPBM), headquartered
+              in Augsburg, is a Tier 1 supplier to the automotive industry. It
+              was taken public in 2017 and is a member of the German mid-cap
+              MDAX index with total sales of €3.375 billion in 2023.
             </p>
             <Image
               src="/images/detail/module1/image1.jpg"
@@ -223,12 +224,10 @@ const Module1 = () => {
       <section className="bg-white py-20">
         <div className="container text-center">
           <div className="content-header text-center">
-            HPBM Board Member Pitch Assessment
+            HPBM Board Construction Presentation
           </div>
           <div className="content-detail col-span-8 col-start-5">
-            <div className="content-subheader text-center">
-              Candidates first round:
-            </div>
+            <div className="content-subheader text-center">Candidates:</div>
             <AssessmentForm />
           </div>
         </div>

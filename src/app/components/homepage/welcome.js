@@ -8,7 +8,7 @@ export default function Welcome() {
   return (
     <section className="welcome relative min-h-screen text-center flex flex-col justify-center overflow-hidden">
       <div className="container">
-        <div className="text-5xl md:text-8xl font-medium text-white">
+        <div className="text-5xl md:text-8xl font-medium text-white tracking-tighter">
           Welcome to the
         </div>
         <div className="text-5xl md:text-8xl font-medium text-primary-red">
@@ -20,7 +20,7 @@ export default function Welcome() {
       </div>
       <ParallaxProvider>
         <Parallax
-          className="absolute -bottom-10 w-[180%] hidden xl:block"
+          className="absolute bottom-0 md:-bottom-10 w-[600%] md:w-[180%] block"
           translateX={[20, -70]}
           translateY={[0, 0]}
         >

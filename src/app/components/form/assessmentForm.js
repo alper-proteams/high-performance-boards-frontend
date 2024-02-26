@@ -28,7 +28,7 @@ const AssessmentForm = () => {
     <form className="container">
       <div className="flex flex-col w-full md:w-10/12 mx-auto bg-secondary-gray p-4 gap-1">
         <div className="flex gap-1 text-xs text-left">
-          <label className="w-full md:w-1/4">Surname, Name</label>
+          <label className="w-full md:w-1/4">Name, Surname</label>
           <label className="w-full md:w-1/3">
             What you saw as a good fit for HPBM´s Board
           </label>

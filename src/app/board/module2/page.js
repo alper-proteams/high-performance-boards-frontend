@@ -48,24 +48,26 @@ const Module2 = () => {
               construction and rationale to your peers.
             </p>
           </div>
+          <div className="block md:hidden section-bg">
+            <Image
+              src="/images/detail/module2/featured.jpg"
+              width={1920}
+              height={1080}
+              priority
+              alt="image"
+            />
+          </div>
+        </div>
+
+        <div className="hidden md:block section-bg">
           <Image
-            className="block md:hidden section-bg absolute left-0 top-0 right-0 bottom-0 -z-20 w-full h-full"
-            src="/images/detail/module2/hero.jpg"
+            src="/images/detail/module2/featured.jpg"
             width={1920}
             height={1080}
             priority
             alt="image"
           />
         </div>
-
-        <Image
-          className="hidden md:block section-bg absolute left-0 top-0 right-0 bottom-0 -z-20 w-full"
-          src="/images/detail/module2/hero.jpg"
-          width={1920}
-          height={1080}
-          priority
-          alt="image"
-        />
       </section>
 
       <section className="bg-primary-red py-10">

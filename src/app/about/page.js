@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 export const metadata = {
   title: "HPB - About",
   description: "High Performance Board",
@@ -31,9 +33,28 @@ export default function About() {
                 appointed Board members across SMEs, family businesses, and
                 listed companies alike. The workshop will sharpen their skills
                 to help an organization achieve its purpose and targets over the
-                long run. Developed by Professor Serden Ozcan from WHU Otto
-                Beisheim School of Management and Professor Marc Sachon from
-                IESE Business School, this simulation is based on rigorous
+                long run. Developed by
+                <Link
+                  className="mx-[6px] border-b-[1px] border-b-[#bbb]"
+                  href="https://www.whu.edu/en/faculty-research/entrepreneurship-and-innovation-group/innovation-and-corporate-transformation/serden-ozcan/"
+                >
+                  Professor Serden Ozcan
+                </Link>
+                from
+                <Link
+                  className="mx-[6px] border-b-[1px] border-b-[#bbb]"
+                  href="https://www.whu.edu/de/"
+                >
+                  WHU Otto Beisheim School of Management
+                </Link>
+                and
+                <Link
+                  className="mx-[6px] border-b-[1px] border-b-[#bbb]"
+                  href="https://www.iese.edu/faculty-research/faculty/marc-sachon/"
+                >
+                  Professor Marc Sachon
+                </Link>
+                from IESE Business School, this simulation is based on rigorous
                 academic research paired with relevant practitioner insights
                 drawn from the feedback of many international senior executives.
               </p>
