@@ -31,7 +31,7 @@ const Module1 = () => {
             <h1 className="h1-headline my-12">
               Pitch & Board
               <br />
-              <span>Select Phase</span>
+              <span>Phase</span>
             </h1>
             <p className="body-default-18 my-12">
               HPBM AG is a hypothetical Germany-based Tier 1 supplier to the

@@ -31,7 +31,7 @@ const Module2 = () => {
             <h1 className="h1-headline my-12">
               Construction
               <br />
-              <span>Select Phase</span>
+              <span>Phase</span>
             </h1>
             <p className="body-default-18 my-12">
               Following your successful navigation of the Board Pitch and
