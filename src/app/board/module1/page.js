@@ -1,15 +1,16 @@
-"use client";
-import Image from "next/image";
-import withAuth from "@/app/lib/withAuth";
-import CardPerson from "./../../components/homepage/card-person";
-import AssessmentForm from "./../../components/form/AssessmentForm";
+'use client';
+
+import Image from 'next/image';
+import withAuth from '@/app/lib/withAuth';
+import CardPerson from '@/app/components/homepage/card-person';
+import AssessmentForm from '@/app/components/form/assessmentForm';
 export const CardPersonItems = [
   {
-    personImage: "/images/members/01.jpg",
-    personName: "Fred Hammerschmidt",
-    personTitle: "Chief Executive Officer",
+    personImage: '/images/members/01.jpg',
+    personName: 'Fred Hammerschmidt',
+    personTitle: 'Chief Executive Officer',
     personContent:
-      "Dynamic and experienced CEO with more than 30 years of business experience and an impressive career in the automotive industry. Recognized for strong leadership, strategic vision, and expertise in automotive lighting solutions. Extensive experience in Europe and North America, with a desire to expand into emerging markets. Exceptional mechanical and electrical engineering background.",
+      'Dynamic and experienced CEO with more than 30 years of business experience and an impressive career in the automotive industry. Recognized for strong leadership, strategic vision, and expertise in automotive lighting solutions. Extensive experience in Europe and North America, with a desire to expand into emerging markets. Exceptional mechanical and electrical engineering background.',
   },
 ];
 
