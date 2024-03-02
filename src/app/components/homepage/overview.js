@@ -8,7 +8,7 @@ export const CardHomepageItems = [
       <>
         Pitch & Board
         <br />
-        <span>Select Phase</span>
+        <span>Phase</span>
       </>
     ),
     cardContent: (

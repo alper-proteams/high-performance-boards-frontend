@@ -101,6 +101,9 @@ body {
   line-height: 40px;
   letter-spacing: -0.02em;
 }
+.card {
+  @apply relative;
+}
 .content-header span,
 .card-header span,
 .h1-headline span,
@@ -313,7 +316,7 @@ body {
 /* cv end */
 
 .scroll-transition {
-  transition: height 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 /* todo */
@@ -355,7 +358,7 @@ textarea {
   @apply border-2 border-opacity-20 block w-full bg-white py-3 px-4;
 }
 .section-bg {
-  @apply absolute left-0 top-0 right-0 bottom-0 -z-20 w-full h-full;
+  @apply absolute left-0 top-0 right-0 bottom-0 -z-20 w-full h-full overflow-hidden;
 }
 .section-bg:after {
   content: "";

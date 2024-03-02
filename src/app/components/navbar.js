@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
-import Link from 'next/link';
-import Image from 'next/image';
-import Button from '@/app/components/button';
-import { useAuth } from '@/app/contexts/auth.context';
+import { useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import Button from "@/app/components/button";
+import { useAuth } from "@/app/contexts/auth.context";
 
 export default function Navbar() {
   const router = useRouter();
@@ -20,8 +20,8 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleNavToggle = () => {
@@ -39,8 +39,8 @@ export default function Navbar() {
       <header
         className={` ${
           stickyNav
-            ? 'h-[72px] xl:h-14 top-0 fixed'
-            : 'h-[72px] xl:h-24 top-10 absolute'
+            ? "h-[72px] xl:h-14 top-0 fixed"
+            : "h-[72px] xl:h-24 top-10 absolute"
         } scroll-transition left-0 right-0 mx-auto w-full bg-white min-h-14 z-20 top-0`}
       >
         <nav className="flex flex-row justify-between container items-center h-full">
@@ -49,7 +49,7 @@ export default function Navbar() {
               src="/logo.svg"
               alt="HPB Logo"
               className={`scroll-transition w-auto ${
-                stickyNav ? 'h-8 xl:h-8' : 'h-8 xl:h-16 '
+                stickyNav ? "h-8 xl:h-8" : "h-8 xl:h-16 "
               }`}
               width={205}
               height={52}
@@ -57,7 +57,7 @@ export default function Navbar() {
           </Link>
 
           <ul
-            className={`nav ${isNavOpen ? 'flex' : 'hidden xl:flex'}`}
+            className={`nav ${isNavOpen ? "flex" : "hidden xl:flex"}`}
             onClick={handleNavToggle}
           >
             {/* <li>
@@ -73,9 +73,9 @@ export default function Navbar() {
             <li>
               <Link
                 className={`nav-item ${
-                  pathname === '/about'
-                    ? ' text-red-400'
-                    : 'text-white md:text-gray-700'
+                  pathname === "/about"
+                    ? " text-red-400"
+                    : "text-white md:text-gray-700"
                 }`}
                 href="/about"
               >
@@ -109,9 +109,9 @@ export default function Navbar() {
             <li>
               <Link
                 className={`nav-item ${
-                  pathname === '/contact'
-                    ? ' text-red-400'
-                    : 'text-white md:text-gray-700'
+                  pathname === "/contact"
+                    ? " text-red-400"
+                    : "text-white md:text-gray-700"
                 }`}
                 href="/contact"
               >
@@ -124,7 +124,7 @@ export default function Navbar() {
             {user ? (
               <Button
                 className={`scroll-transition items-center px-6 xl:px-20 ${
-                  stickyNav ? 'h-10' : 'h-10 xl:h-12'
+                  stickyNav ? "h-10" : "h-10 xl:h-12"
                 }`}
                 onClick={handleLogout}
               >
@@ -134,7 +134,7 @@ export default function Navbar() {
               <Link href="/login">
                 <Button
                   className={`scroll-transition items-center px-6 xl:px-20 ${
-                    stickyNav ? 'h-10' : 'h-10 xl:h-12'
+                    stickyNav ? "h-10" : "h-10 xl:h-12"
                   }`}
                 >
                   Login
@@ -144,12 +144,12 @@ export default function Navbar() {
           </div>
           <div
             className={`flex xl:hidden items-center justify-center cursor-pointer ${
-              isNavOpen ? 'bg-primary-black is-active' : 'bg-primary-red'
+              isNavOpen ? "bg-primary-black is-active" : "bg-primary-red"
             }`}
           >
             <div
               className={`hamburger flex flex-col items-center justify-center h-10 w-10 space-y-2 md:hidden ${
-                isNavOpen ? 'is-active' : ''
+                isNavOpen ? "is-active" : ""
               }`}
               onClick={() => setIsNavOpen((prev) => !prev)}
             >
@@ -159,6 +159,25 @@ export default function Navbar() {
             </div>
           </div>
         </nav>
+        <div
+          className={`absolute scroll-transition right-5 bg-primary-red p-5 z-50 ${
+            stickyNav ? " top-20 " : " top-32  "
+          }`}
+        >
+          <div className="text-white flex gap-4 mb-5">
+            <Image
+              src="/images/common/envelope.svg"
+              alt="E-mail"
+              width={27}
+              height={21}
+            />
+            Email
+          </div>
+          <div className="bg-white p-8 text-primary-black flex flex-col items-start gap-6 md:min-w-80">
+            Email from Board Chair
+            <Button>Open</Button>
+          </div>
+        </div>
       </header>
     </>
   );
