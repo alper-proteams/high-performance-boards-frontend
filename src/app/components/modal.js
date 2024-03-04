@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
 export default function Modal({ showModal, setShowModal, title, children }) {
   return (
     <>
       {showModal ? (
         <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none my-20">
+            <div className="relative mx-auto w-full max-w-3xl h-full">
               {/*content*/}
-              <div className="border-0 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+              <div className="shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
-                <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+                <div className="flex items-start justify-between p-5">
                   <h3 className="text-primary-red text-3xl font-semibold">
                     {title}
                   </h3>
@@ -24,6 +24,15 @@ export default function Modal({ showModal, setShowModal, title, children }) {
                   </button>
                 </div>
                 {/*body*/}
+
+                {/* <button
+                  className="m-6 ml-auto bg-transparent border-2 border-solid border-primary-red "
+                  onClick={() => setShowModal(false)}
+                >
+                  <span className="bg-transparent justify-center items-center text-primary-red h-6 w-6 text-2xl flex">
+                    ×
+                  </span>
+                </button> */}
                 {children}
                 {/*footer*/}
               </div>
@@ -31,7 +40,7 @@ export default function Modal({ showModal, setShowModal, title, children }) {
           </div>
           <div
             onClick={() => setShowModal(false)}
-            className="opacity-25 fixed inset-0 z-40 bg-black"
+            className=" opacity-85 fixed inset-0 z-40 bg-primary-black"
           ></div>
         </>
       ) : null}
