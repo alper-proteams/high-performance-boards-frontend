@@ -1,30 +1,33 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/app/components/button";
 import Modal from "@/app/components/modal";
+import MailPopup from "@/app/components/mailPopup";
 
-export default function About() {
-  // const [showModal2, setShowModal2] = React.useState(false);
+export default function Module3() {
+  const [stickyNav, setStickyNav] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(true);
+  };
+
+  const handleScroll = () => {
+    window.scrollY >= 39 ? setStickyNav(true) : setStickyNav(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="relative">
-      {/* <Modal
-        showModal={showModal2}
-        setShowModal={setShowModal2}
-        title={"Take Over Letter"}
-      >
-        <div className="relative p-6 flex-auto">
-          In the upcoming phase of the simulation, you and your fellow board
-          members will face a series of unexpected events demanding the Board's
-          immediate involvement and governance. These hypothetical scenarios
-          will intensify the pressure on the Board, compelling critical
-          decisions.
-        </div>
-        <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
-          <Button onClick={() => setShowModal2(false)}>Proceed</Button>
-        </div>
-      </Modal> */}
+      {isOpen && <MailPopup />}
+
       <div className="full-container ">
         <div className="card container flex flex-col xl:flex-row-reverse items-start p-4 xl:pt-52 xl:pb-20 gap-4 xl:gap-0">
           <Image
@@ -47,7 +50,7 @@ export default function About() {
                 compelling critical decisions.
               </p>
 
-              {/* <Button onClick={() => setShowModal2(true)}>Proceed2y</Button> */}
+              <Button onClick={handleClick}>Proceed</Button>
             </div>
           </div>
         </div>

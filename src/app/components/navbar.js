@@ -9,9 +9,8 @@ import { useAuth } from "@/app/contexts/auth.context";
 import Modal from "@/app/components/modal";
 
 export default function Navbar() {
-  const router = useRouter();
   const pathname = usePathname();
-  // const [user, setUser] = useState(null);
+
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [stickyNav, setStickyNav] = useState(false);
   const { user, logout } = useAuth();
@@ -161,32 +160,8 @@ export default function Navbar() {
             </div>
           </div>
         </nav>
-        <div
-          className={`absolute scroll-transition right-5 bg-primary-red p-5 ${
-            stickyNav ? "top-20" : "top-32"
-          }`}
-        >
-          <div className="text-white flex gap-4 mb-5">
-            <Image
-              src="/images/common/envelope.svg"
-              alt="E-mail"
-              width={27}
-              height={21}
-            />
-            Email
-          </div>
-          <div className="bg-white p-6 text-primary-black flex flex-col items-start gap-5 md:min-w-80 font-semibold">
-            Email from
-            <br />
-            Board Chair
-            <Button
-              onClick={() => setShowModal(true)}
-              className={"!bg-primary-black"}
-            >
-              Open
-            </Button>
-          </div>
-        </div>
+
+        {/* Mail Modal */}
         <Modal
           showModal={showModal}
           setShowModal={setShowModal}
