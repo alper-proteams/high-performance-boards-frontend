@@ -1,6 +1,12 @@
 "use client";
 
-export default function Modal({ showModal, setShowModal, title, children }) {
+export default function Modal({
+  showModal,
+  setShowModal,
+  title,
+  hideClose,
+  children,
+}) {
   return (
     <>
       {showModal ? (
@@ -10,19 +16,25 @@ export default function Modal({ showModal, setShowModal, title, children }) {
               {/*content*/}
               <div className="shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
-                <div className="flex items-start justify-between p-5">
-                  <h3 className="text-primary-red text-3xl font-semibold">
-                    {title}
-                  </h3>
-                  <button
-                    className="p-1 ml-auto bg-transparent border-2 border-solid border-primary-red text-black float-right text-3xl leading-none font-semibold"
-                    onClick={() => setShowModal(false)}
-                  >
-                    <span className="bg-transparent justify-center items-center text-primary-red h-6 w-6 text-2xl flex">
-                      ×
-                    </span>
-                  </button>
-                </div>
+                {title && !hideClose && (
+                  <div className="flex items-start justify-between p-5">
+                    {title && (
+                      <h3 className="text-primary-red text-3xl font-semibold">
+                        {title}
+                      </h3>
+                    )}
+                    {!hideClose && (
+                      <button
+                        className="p-1 ml-auto bg-transparent border-2 border-solid border-primary-red text-black float-right text-3xl leading-none font-semibold"
+                        onClick={() => setShowModal(false)}
+                      >
+                        <span className="bg-transparent justify-center items-center text-primary-red h-6 w-6 text-2xl flex">
+                          ×
+                        </span>
+                      </button>
+                    )}
+                  </div>
+                )}
                 {/*body*/}
 
                 {/* <button

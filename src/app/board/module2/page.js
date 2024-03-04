@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import withAuth from '@/app/lib/withAuth';
-import CardPerson from '@/app/components/homepage/card-person';
-import DocForm from '@/app/components/form/docForm';
+import Image from "next/image";
+import withAuth from "@/app/lib/withAuth";
+import CardPerson from "@/app/components/homepage/card-person";
+import DocForm from "@/app/components/form/docForm";
 export const CardPersonItems = [
   {
-    personImage: '/images/members/01.jpg',
-    personName: 'Fred Hammerschmidt',
-    personTitle: 'Chief Executive Officer',
+    personImage: "/images/members/01.jpg",
+    personName: "Fred Hammerschmidt",
+    personTitle: "Chief Executive Officer",
     personContent:
-      'Dynamic and experienced CEO with more than 30 years of business experience and an impressive career in the automotive industry. Recognized for strong leadership, strategic vision, and expertise in automotive lighting solutions. Extensive experience in Europe and North America, with a desire to expand into emerging markets. Exceptional mechanical and electrical engineering background.',
+      "Dynamic and experienced CEO with more than 30 years of business experience and an impressive career in the automotive industry. Recognized for strong leadership, strategic vision, and expertise in automotive lighting solutions. Extensive experience in Europe and North America, with a desire to expand into emerging markets. Exceptional mechanical and electrical engineering background.",
   },
 ];
 
@@ -103,7 +103,7 @@ const Module2 = () => {
       <section className="bg-white py-20">
         <div className="container text-center">
           <div className="content-header text-center">
-            HPBM Board Member Pitch Assessment
+            HPBM Board Construction Presentation
           </div>
           <div className="content-detail col-span-8 col-start-5">
             <DocForm />
