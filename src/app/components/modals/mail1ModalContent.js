@@ -1,31 +1,13 @@
+import React, { useState, useEffect } from "react";
+
 import Button from "@/app/components/button";
 import Image from "next/image";
+import Link from "next/link";
 import Modal from "@/app/components/modal";
 
-import { useState, useEffect } from "react";
-
-export default function NotifyCard({ showModal = "available", setShowModal }) {
-  const [stickyNav, setStickyNav] = useState(false);
-  const handleScroll = () => {
-    if (window.scrollY >= 39) {
-      setStickyNav(true);
-    } else {
-      setStickyNav(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+export default function Mail1ModalContent({ submitActions }) {
   return (
-    <Modal
-      showModal={showModal}
-      setShowModal={setShowModal}
-      // title={"Take Over Letter"}
-    >
+    <>
       <div className="relative p-6 flex-auto">
         <div className="grid grid-cols-4 gap-4 mb-8">
           <div className="text-primary-red max-w-[75px] col-span-1">TO</div>
@@ -37,9 +19,7 @@ export default function NotifyCard({ showModal = "available", setShowModal }) {
           <div className="text-primary-red max-w-[75px] col-span-1">
             SUBJECT
           </div>
-          <div className="col-span-3">
-            MAIL1 Call for an Extraordinary Meeting
-          </div>
+          <div className="col-span-3">Call for an Extraordinary Meeting</div>
         </div>
 
         <p className="body-default-16 mb-5">Dear Directors,</p>
@@ -99,17 +79,12 @@ export default function NotifyCard({ showModal = "available", setShowModal }) {
         <Button
           className={"w-full"}
           onClick={() => {
-            {
-              setShowMail1Modal(false);
-              setNotify1IsOpen(false);
-              setIsPreSectionOpen(true);
-              setIsHeroectionOpen(false);
-            }
+            submitActions();
           }}
         >
-          Proceed322
+          Proceed {submitActions}
         </Button>
       </div>
-    </Modal>
+    </>
   );
 }
