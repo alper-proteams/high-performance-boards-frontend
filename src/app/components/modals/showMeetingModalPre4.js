@@ -6,24 +6,22 @@ export default function showMeetingModalPre4({ submitActions }) {
   return (
     <>
       <div className="relative p-6 flex-auto">
-        <p className="body-default-16 mb-5">
-          Below, you'll find the latest financial information for the company.
-        </p>
-        <h2>Financials</h2>
-        <Image
-          className="mx-auto"
-          src="/images/detail/module3/finance-table.jpg"
-          alt="E-mail"
-          width={700}
-          height={300}
-          responsive
-        />
+        <div class="aspect-video">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/feooCAynw4c?si=96S5LntH775k-RzF&amp;controls=0"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          ></iframe>
+        </div>
       </div>
       <div className="flex items-center justify-end p-6">
         <Button
           className={"w-full"}
           onClick={() => {
-            submitActions();
+            setShowMeetingModalPre4(false);
+            setIsPreSectionOpen(false);
+            setIsExtraOrdinaryOpen(true);
           }}
         >
           Proceed
