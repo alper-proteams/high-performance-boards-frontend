@@ -19,7 +19,7 @@ export default function marieBellois() {
           <div className="cv-sidebar-content bg-white">
             <Image
               className="mb-6"
-              src="/images/members/01.jpg"
+              src="/images/members/fred-hammerschmidt.jpg"
               alt="skill-icon"
               layout="responsive"
               width={100}

@@ -6,7 +6,7 @@ import CardPerson from "@/app/components/homepage/card-person";
 import DocForm from "@/app/components/form/docForm";
 export const CardPersonItems = [
   {
-    personImage: "/images/members/01.jpg",
+    personImage: "/images/members/fred-hammerschmidt.jpg",
     personName: "Fred Hammerschmidt",
     personTitle: "Chief Executive Officer",
     personContent:

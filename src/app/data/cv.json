@@ -1,0 +1,20 @@
+[
+  {
+    "personImage": "/images/members/fred-hammerschmidt.jpg",
+    "personName": "Fred Hammerschmidt",
+    "personTitle": "CEO",
+    "personContent": "Dynamic and experienced CEO with more than 30 years of business experience and an impressive career in the automotive industry. Recognized for strong leadership, strategic vision, and expertise in automotive lighting solutions. Extensive experience in Europe and North America, with a desire to expand into emerging markets. Exceptional mechanical and electrical engineering background."
+  },
+  {
+    "personImage": "/images/members/marie-bellois.jpg",
+    "personName": "Marie Bellois",
+    "personTitle": "CFO",
+    "personContent": "Accomplished CFO with extensive international business acumen, strong people skills, and background in competitive sports. More than a decade of senior management experience in the automotive and digital arena."
+  },
+  {
+    "personImage": "/images/members/mats-blenderquist.jpg",
+    "personName": "Mats Blenderquist",
+    "personTitle": "Chief Executive Officer",
+    "personContent": "Seasoned COO with extensive experience in global manufacturing sector and consulting. Successful development, implementation and execution of new global production and supply chain strategies. Multi-cultural leadership and communication qualities."
+  }
+]
