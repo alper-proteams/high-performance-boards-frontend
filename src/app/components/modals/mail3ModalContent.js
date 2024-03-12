@@ -74,7 +74,7 @@ export default function mail3ModalContent({ submitActions }) {
               submitActions();
             }}
           >
-            Proceed
+            Proceed mail3
           </Button>
         </Link>
       </div>

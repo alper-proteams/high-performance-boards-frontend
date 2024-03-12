@@ -6,9 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Modal from "@/app/components/modal";
-import CardPerson from "@/app/components/homepage/card-person";
-import CardPersonItems from "@/app/data/cv.json";
 import NotifyCard from "@/app/components/notify/notifyCard";
+import SubmitModal from "@/app/components/modals/submitModal";
 import Mail1ModalContent from "@/app/components/modals/mail1ModalContent";
 import Mail2ModalContent from "@/app/components/modals/mail2ModalContent";
 import Mail3ModalContent from "@/app/components/modals/mail3ModalContent";
@@ -16,6 +15,7 @@ import ShowMeetingModalPre1 from "@/app/components/modals/showMeetingModalPre1";
 import ShowMeetingModalPre2 from "@/app/components/modals/showMeetingModalPre2";
 import ShowMeetingModalPre3 from "@/app/components/modals/showMeetingModalPre3";
 import ShowMeetingModalPre4 from "@/app/components/modals/showMeetingModalPre4";
+import TaskForm from "@/app/components/form/taskForm";
 
 export default function Module3() {
   const Notify1 = () => {
@@ -26,12 +26,18 @@ export default function Module3() {
     setNotify2IsOpen(true);
   };
 
+  const Notify3 = () => {
+    setNotify3IsOpen(true);
+  };
+
   const [isHeroectionOpen, setIsHeroectionOpen] = useState(true);
   const [isPreSectionOpen, setIsPreSectionOpen] = useState(false);
   const [isExtraOrdinaryOpen, setIsExtraOrdinaryOpen] = useState(false);
+  const [isTaskFormOpen, setIsTaskFormOpen] = useState(false);
 
   const [isNotify1Open, setNotify1IsOpen] = useState(false);
   const [isNotify2Open, setNotify2IsOpen] = useState(false);
+  const [isNotify3Open, setNotify3IsOpen] = useState(false);
 
   const [showMail1Modal, setShowMail1Modal] = React.useState(false);
   const [showMail2Modal, setShowMail2Modal] = React.useState(false);
@@ -41,9 +47,8 @@ export default function Module3() {
   const [showMeetingModalPre2, setShowMeetingModalPre2] = React.useState(false);
   const [showMeetingModalPre3, setShowMeetingModalPre3] = React.useState(false);
   const [showMeetingModalPre4, setShowMeetingModalPre4] = React.useState(false);
-  const [showEOMSubmitModal, setShowEOMSubmitModal] = React.useState(false);
 
-  const [showNotify, setShowNotify] = useState(false);
+  const [showEOMSubmitModal, setShowEOMSubmitModal] = React.useState(false);
 
   return (
     <section className="relative">
@@ -188,6 +193,7 @@ export default function Module3() {
         <Mail3ModalContent
           submitActions={() => {
             setShowMail3Modal(false);
+            Notify3();
           }}
         />
       </Modal>
@@ -244,28 +250,6 @@ export default function Module3() {
             setIsExtraOrdinaryOpen(true);
           }}
         />
-        {/* <div className="relative p-6 flex-auto">
-          <div class="aspect-video">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/feooCAynw4c?si=96S5LntH775k-RzF&amp;controls=0"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            ></iframe>
-          </div>
-        </div>
-        <div className="flex items-center justify-end p-6">
-          <Button
-            className={"w-full"}
-            onClick={() => {
-              setShowMeetingModalPre4(false);
-              setIsPreSectionOpen(false);
-              setIsExtraOrdinaryOpen(true);
-            }}
-          >
-            Proceed
-          </Button>
-        </div> */}
       </Modal>
 
       {/* Show after ExtraOrdinary form submit */}
@@ -275,27 +259,13 @@ export default function Module3() {
         // title={"WHSE Promotional Video"}
         hideClose={true}
       >
-        <div className="meeting-card flex flex-col py-8 px-8 bg-white">
-          <Image
-            className="mx-auto my-auto"
-            src="/images/common/meeting-envelope.svg"
-            alt="E-mail"
-            width={250}
-            height={250}
-          />
-          <div className="h5-bold text-primary-red text-center my-11">
-            Kindly proceed back to the lecture room for debriefing
-          </div>
-          <Button
-            className={"w-full mt-auto"}
-            onClick={() => {
-              setShowEOMSubmitModal(false);
-              Notify2();
-            }}
-          >
-            Review
-          </Button>
-        </div>
+        <SubmitModal
+          submitActions={() => {
+            setShowEOMSubmitModal(false);
+            Notify2();
+          }}
+          submitText={"Kindly proceed back to the lecture room for debriefing"}
+        />
       </Modal>
 
       {/* Show after video watch */}
@@ -359,6 +329,9 @@ export default function Module3() {
         </div>
       )}
 
+      {/* Show after video watch */}
+      {isTaskFormOpen && <TaskForm />}
+
       {/* Meeting 1 Notify Popup */}
       {isNotify1Open && (
         <NotifyCard
@@ -376,6 +349,21 @@ export default function Module3() {
             recipient="Board Chair"
             content="Meeting notes"
             handleOpen={() => setShowMail2Modal(true)}
+          />
+        </>
+      )}
+
+      {/* Meeting 2 Mail Popup */}
+      {isNotify3Open && (
+        <>
+          <NotifyCard
+            recipient="xxxTask1"
+            content="xxxTask2"
+            handleOpen={() => {
+              setIsTaskFormOpen(true);
+              setIsExtraOrdinaryOpen(false);
+              setNotify3IsOpen(false);
+            }}
           />
         </>
       )}

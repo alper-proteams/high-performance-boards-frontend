@@ -19,10 +19,13 @@ export default function showMeetingModalPre4({ submitActions }) {
         <Button
           className={"w-full"}
           onClick={() => {
-            setShowMeetingModalPre4(false);
-            setIsPreSectionOpen(false);
-            setIsExtraOrdinaryOpen(true);
+            submitActions();
           }}
+          // onClick={() => {
+          //   setShowMeetingModalPre4(false);
+          //   setIsPreSectionOpen(false);
+          //   setIsExtraOrdinaryOpen(true);
+          // }}
         >
           Proceed
         </Button>

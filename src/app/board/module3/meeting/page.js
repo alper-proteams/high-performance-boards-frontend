@@ -6,6 +6,7 @@ import Image from "next/image";
 import Button from "@/app/components/button";
 import Modal from "@/app/components/modal";
 import Link from "next/link";
+import SubmitModal from "@/app/components/modals/submitModal";
 
 export default function Meeting() {
   const [showMeetingModalPre1, setShowMeetingModalPre1] = React.useState(false);
@@ -491,27 +492,13 @@ export default function Meeting() {
         // title={"WHSE Promotional Video"}
         hideClose={true}
       >
-        <div className="meeting-card flex flex-col py-8 px-8 bg-white">
-          <Image
-            className="mx-auto my-auto"
-            src="/images/common/meeting-envelope.svg"
-            alt="E-mail"
-            width={250}
-            height={250}
-          />
-          <div className="h5-bold text-primary-red text-center my-11">
-            Kindly proceed back to the lecture room for debriefing
-          </div>
-          <Button
-            className={"w-full mt-auto"}
-            onClick={() => {
-              setShowExtraOrdinarySubmit(false);
-              handleClick();
-            }}
-          >
-            Review4
-          </Button>
-        </div>
+        <SubmitModal
+          submitActions={() => {
+            setShowExtraOrdinarySubmit(false);
+            handleClick();
+          }}
+          submitText={"Kindly proceed back to the lecture room for debriefing"}
+        />
       </Modal>
 
       {/* Show after video watch */}
