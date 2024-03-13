@@ -1,6 +1,6 @@
 import Button from "@/app/components/button";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export default function NotifyCard({
   recipient = "available",
@@ -8,20 +8,30 @@ export default function NotifyCard({
   handleOpen,
 }) {
   const [stickyNav, setStickyNav] = useState(false);
-  const handleScroll = () => {
+
+  const handleScroll = useCallback(() => {
     if (window.scrollY >= 39) {
       setStickyNav(true);
     } else {
       setStickyNav(false);
     }
-  };
+  }, []);
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
+  // const handleOpenCallback = useCallback(() => {
+  //   handleOpen();
+  // }, [handleOpen]);
+
+  const handleOpenCallback = () => {
+    handleOpen();
+  };
+
   return (
     <div
       className={`fixed scroll-transition right-5 bg-primary-red z-10 p-5 ${
@@ -42,7 +52,11 @@ export default function NotifyCard({
         Email from
         <br />
         {recipient}
-        <Button onClick={handleOpen} className="!bg-primary-black">
+        <Button
+          // onClick={() => handleOpenCallback()}
+          onClick={handleOpenCallback}
+          className="!bg-primary-black"
+        >
           Open
         </Button>
       </div>

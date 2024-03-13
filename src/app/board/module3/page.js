@@ -14,30 +14,30 @@ import Mail3ModalContent from "@/app/components/modals/mail3ModalContent";
 import ShowMeetingModalPre1 from "@/app/components/modals/showMeetingModalPre1";
 import ShowMeetingModalPre2 from "@/app/components/modals/showMeetingModalPre2";
 import ShowMeetingModalPre3 from "@/app/components/modals/showMeetingModalPre3";
-import ShowMeetingModalPre4 from "@/app/components/modals/showMeetingModalPre4";
+import ShowVideoContentModal from "@/app/components/modals/showVideoContentModal";
 import TaskForm from "@/app/components/form/taskForm";
 
 export default function Module3() {
   const Notify1 = () => {
-    setNotify1IsOpen(true);
+    setnotify1isopen(true);
   };
-  const [isNotify1Open, setNotify1IsOpen] = useState(false);
+  const [isNotifyOpen1, setnotify1isopen] = useState(false);
 
   const Notify2 = () => {
-    setNotify2IsOpen(true);
+    setNotifyOpen2(true);
   };
-  const [isNotify2Open, setNotify2IsOpen] = useState(false);
+  const [isNotifyOpen2, setNotifyOpen2] = useState(false);
 
   const Notify3 = () => {
-    setNotify3IsOpen(true);
+    setNotifyIsOpen3(true);
   };
-  const [isNotify3Open, setNotify3IsOpen] = useState(false);
+  const [isNotifyOpen3, setNotifyIsOpen3] = useState(false);
 
   const Notify4 = () => {
     setNotify4IsOpen(true);
   };
 
-  const [isNotify4Open, setNotify4IsOpen] = useState(false);
+  const [isNotifyOpen4, setNotify4IsOpen] = useState(false);
 
   const [isHeroectionOpen, setIsHeroectionOpen] = useState(true);
   const [isPreSectionOpen, setIsPreSectionOpen] = useState(false);
@@ -51,9 +51,12 @@ export default function Module3() {
   const [showMeetingModalPre1, setShowMeetingModalPre1] = React.useState(false);
   const [showMeetingModalPre2, setShowMeetingModalPre2] = React.useState(false);
   const [showMeetingModalPre3, setShowMeetingModalPre3] = React.useState(false);
-  const [showMeetingModalPre4, setShowMeetingModalPre4] = React.useState(false);
+  const [showVideoContentModal, setShowVideoContentModal] =
+    React.useState(false);
 
   const [showEOMSubmitModal, setShowEOMSubmitModal] = React.useState(false);
+
+  const videoSrc = "";
 
   return (
     <section className="relative">
@@ -81,7 +84,7 @@ export default function Module3() {
                     the Board, compelling critical decisions.
                   </p>
 
-                  <Button onClick={Notify1}>Proceed</Button>
+                  <Button onClick={() => Notify1()}>Proceed</Button>
                 </div>
               </div>
             </div>
@@ -157,11 +160,14 @@ export default function Module3() {
                 alt="E-mail"
                 width={350}
                 height={250}
-                onClick={() => setShowMeetingModalPre4(true)}
+                onClick={() => {
+                  setShowVideoContentModal(true);
+                  console.log("video1 watched");
+                }}
               />
               {/* <Button
                 className={"w-full mt-auto"}
-                onClick={() => setShowMeetingModalPre4(true)}
+                onClick={() => setShowVideoContentModal(true)}
               >
                 Review
               </Button> */}
@@ -175,7 +181,7 @@ export default function Module3() {
         <Mail1ModalContent
           submitActions={() => {
             setShowMail1Modal(false);
-            setNotify1IsOpen(false);
+            setnotify1isopen(false);
             setIsPreSectionOpen(true);
             setIsHeroectionOpen(false);
           }}
@@ -186,7 +192,7 @@ export default function Module3() {
       <Modal showModal={showMail2Modal} setShowModal={setShowMail2Modal}>
         <Mail2ModalContent
           submitActions={() => {
-            setNotify2IsOpen(false);
+            setNotifyOpen2(false);
             setShowMail2Modal(false);
             setShowMail3Modal(true);
           }}
@@ -242,17 +248,22 @@ export default function Module3() {
         />
       </Modal>
 
-      {/* showMeetingModalPre4 Modal */}
+      {/* showVideoContentModal Modal */}
       <Modal
-        showModal={showMeetingModalPre4}
-        setShowModal={setShowMeetingModalPre4}
+        showModal={showVideoContentModal}
+        setShowModal={setShowVideoContentModal}
         title={"WHSE Promotional Video"}
       >
-        <ShowMeetingModalPre4
+        <ShowVideoContentModal
+          videoSrc={videoSrc}
+          // videoSrc={
+          //   "https://www.youtube.com/embed/feooCAynw4c?si=96S5LntH775k-RzF&amp;controls=0"
+          // }
           submitActions={() => {
-            setShowMeetingModalPre4(false);
+            setShowVideoContentModal(false);
             setIsPreSectionOpen(false);
             setIsExtraOrdinaryOpen(true);
+            console.log("isExtraOrdinaryOpened");
           }}
         />
       </Modal>
@@ -268,6 +279,7 @@ export default function Module3() {
           submitActions={() => {
             setShowEOMSubmitModal(false);
             Notify2();
+            console.log("isExtraOrdinary Submit");
           }}
           submitText={"Kindly proceed back to the lecture room for debriefing"}
         />
@@ -340,7 +352,7 @@ export default function Module3() {
           submitActions={() => {
             Notify4();
             // setShowMail1Modal(false);
-            // setNotify1IsOpen(false);
+            // setnotify1isopen(false);
             // setIsPreSectionOpen(true);
             // setIsHeroectionOpen(false);
           }}
@@ -348,49 +360,60 @@ export default function Module3() {
       )}
 
       {/* Meeting 1 Notify Popup */}
-      {isNotify1Open && (
+      {isNotifyOpen1 && (
         <NotifyCard
-          recipient="Board Chair"
+          recipient="Board Chair1"
           content="Meeting notes"
-          handleOpen={() => setShowMail1Modal(true)}
+          handleOpen={() => {
+            setShowMail1Modal(true);
+            console.log("isNotifyOpen1");
+          }}
         />
       )}
 
       {/* Show after video watch */}
       {/* Meeting 2 Mail Popup */}
-      {isNotify2Open && (
+      {isNotifyOpen2 && (
         <>
           <NotifyCard
-            recipient="Board Chair"
+            recipient="Board Chair2"
             content="Meeting notes"
-            handleOpen={() => setShowMail2Modal(true)}
+            handleOpen={() => {
+              setShowMail2Modal(true);
+              console.log("isNotifyOpen2");
+            }}
           />
         </>
       )}
 
       {/* Meeting 2 Mail Popup */}
-      {isNotify3Open && (
+      {isNotifyOpen3 && (
         <>
           <NotifyCard
             recipient="xxxTask1"
             content="xxxTask2"
             handleOpen={() => {
+              console.log("isNotifyOpen3");
               setIsTaskFormOpen(true);
               setIsExtraOrdinaryOpen(false);
-              setNotify3IsOpen(false);
+              setNotifyIsOpen3(false);
             }}
           />
         </>
       )}
 
       {/* Meeting 3 Mail Popup */}
-      {isNotify4Open && (
+      {isNotifyOpen4 && (
         <>
           <NotifyCard
             recipient="VideoModalOpenerNotify"
             content="VideoModalOpenerNotify"
             handleOpen={() => {
-              setShowMeetingModalPre4(true);
+              console.log("isNotifyOpen4");
+              setShowVideoContentModal(true, {
+                videoSrc:
+                  "https://www.youtube.com/embed/NRV3H_bO6oE?si=QOR6mo8FvJQadTb7",
+              });
             }}
           />
         </>
