@@ -21,23 +21,28 @@ export default function Module3() {
   const Notify1 = () => {
     setNotify1IsOpen(true);
   };
+  const [isNotify1Open, setNotify1IsOpen] = useState(false);
 
   const Notify2 = () => {
     setNotify2IsOpen(true);
   };
+  const [isNotify2Open, setNotify2IsOpen] = useState(false);
 
   const Notify3 = () => {
     setNotify3IsOpen(true);
   };
+  const [isNotify3Open, setNotify3IsOpen] = useState(false);
+
+  const Notify4 = () => {
+    setNotify4IsOpen(true);
+  };
+
+  const [isNotify4Open, setNotify4IsOpen] = useState(false);
 
   const [isHeroectionOpen, setIsHeroectionOpen] = useState(true);
   const [isPreSectionOpen, setIsPreSectionOpen] = useState(false);
   const [isExtraOrdinaryOpen, setIsExtraOrdinaryOpen] = useState(false);
   const [isTaskFormOpen, setIsTaskFormOpen] = useState(false);
-
-  const [isNotify1Open, setNotify1IsOpen] = useState(false);
-  const [isNotify2Open, setNotify2IsOpen] = useState(false);
-  const [isNotify3Open, setNotify3IsOpen] = useState(false);
 
   const [showMail1Modal, setShowMail1Modal] = React.useState(false);
   const [showMail2Modal, setShowMail2Modal] = React.useState(false);
@@ -330,7 +335,17 @@ export default function Module3() {
       )}
 
       {/* Show after video watch */}
-      {isTaskFormOpen && <TaskForm />}
+      {isTaskFormOpen && (
+        <TaskForm
+          submitActions={() => {
+            Notify4();
+            // setShowMail1Modal(false);
+            // setNotify1IsOpen(false);
+            // setIsPreSectionOpen(true);
+            // setIsHeroectionOpen(false);
+          }}
+        />
+      )}
 
       {/* Meeting 1 Notify Popup */}
       {isNotify1Open && (
@@ -363,6 +378,19 @@ export default function Module3() {
               setIsTaskFormOpen(true);
               setIsExtraOrdinaryOpen(false);
               setNotify3IsOpen(false);
+            }}
+          />
+        </>
+      )}
+
+      {/* Meeting 3 Mail Popup */}
+      {isNotify4Open && (
+        <>
+          <NotifyCard
+            recipient="VideoModalOpenerNotify"
+            content="VideoModalOpenerNotify"
+            handleOpen={() => {
+              setShowMeetingModalPre4(true);
             }}
           />
         </>

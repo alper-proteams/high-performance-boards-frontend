@@ -89,7 +89,7 @@ export default function Meeting() {
             </div>
             <div className="meeting-card flex flex-col py-8 px-8 bg-white">
               <div className="h5-bold text-primary-red text-center m-11">
-                WHSE Promotional Video
+                2WHSE Promotional Video
               </div>
               <Image
                 className="mx-auto"

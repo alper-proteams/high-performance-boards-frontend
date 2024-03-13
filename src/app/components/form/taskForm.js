@@ -29,7 +29,7 @@ export default function SubmitModal({ submitActions, submitText }) {
 
           <Button
             onClick={() => {
-              setShowEOMSubmitModal(true);
+              submitActions();
             }}
             // type="submit"
             className={"ml-auto w-full max-w-80"}
