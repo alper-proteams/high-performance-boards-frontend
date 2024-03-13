@@ -1,15 +1,14 @@
-import Button from "@/app/components/button";
-import Image from "next/image";
-import Link from "next/link";
+import Button from '@/app/components/button';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function showVideoContentModal({ submitActions, videoSrc }) {
   return (
     <>
       <div className="relative p-6 flex-auto">
-        <div class="aspect-video">
+        <div className="aspect-video">
           <iframe
             className="w-full h-full"
-            isnotify4open
             src={videoSrc}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -18,7 +17,7 @@ export default function showVideoContentModal({ submitActions, videoSrc }) {
       </div>
       <div className="flex items-center justify-end p-6">
         <Button
-          className={"w-full"}
+          className={'w-full'}
           onClick={() => {
             submitActions();
           }}

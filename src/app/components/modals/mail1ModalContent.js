@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import Button from "@/app/components/button";
-import Image from "next/image";
-import Link from "next/link";
-import Modal from "@/app/components/modal";
+import Button from '@/app/components/button';
+import Image from 'next/image';
+import Link from 'next/link';
+import Modal from '@/app/components/modal';
 
 export default function Mail1ModalContent({ submitActions }) {
   return (
@@ -77,12 +77,12 @@ export default function Mail1ModalContent({ submitActions }) {
       </div>
       <div className="flex items-center justify-end p-6">
         <Button
-          className={"w-full"}
+          className={'w-full'}
           onClick={() => {
             submitActions();
           }}
         >
-          Proceed {submitActions}
+          Proceed
         </Button>
       </div>
     </>
