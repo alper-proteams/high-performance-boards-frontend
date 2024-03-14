@@ -19,7 +19,7 @@ export default function mail2ModalContent({ submitActions }) {
           <div className="col-span-3">Call for an Extraordinary Meeting</div>
         </div>
 
-        <p className="body-default-16 mb-5">MAIL2 Dear Directors,</p>
+        <p className="body-default-16 mb-5">Dear Directors,</p>
         <p className="body-default-16 mb-5">
           I hope this message finds you well. Today, in the midst of delicate
           takeover proceedings, I received an anonymous whistleblower email

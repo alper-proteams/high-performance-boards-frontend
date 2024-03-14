@@ -48,12 +48,14 @@ export default function Module3() {
     React.useState(false);
 
   const [showEOMSubmitModal, setShowEOMSubmitModal] = React.useState(false);
+  const [showEOMSubmitModal14, setShowEOMSubmitModal14] = React.useState(false);
 
   const [isEomSubmitted, setIsEomSubmitted] = useState(false);
   const videoSrc = "";
 
   return (
     <section className="relative">
+      {/* 000 */}
       {isHeroectionOpen && (
         <>
           <div className="full-container ">
@@ -79,11 +81,14 @@ export default function Module3() {
                     the Board, compelling critical decisions.
                   </p>
 
-                  <Button onClick={() => setShowNotify1(true)}>
-                    Proceed setShowNotify1
+                  <Button
+                    onClick={() => {
+                      console.log("000");
+                      setShowNotify1(true);
+                    }}
+                  >
+                    Proceed
                   </Button>
-
-                  {/* onClick={() => setShowNotify1(true)} */}
                 </div>
               </div>
             </div>
@@ -100,6 +105,79 @@ export default function Module3() {
         </>
       )}
 
+      {/* 001 */}
+      {/* Notify1 */}
+      <Notify
+        showNotify={showNotify1}
+        setShowNotshowNotify={setShowNotify1}
+        recipient="Board Chair"
+        content="Meeting notes"
+        handleOpen={() => {
+          console.log("001");
+          setShowMailModal1(true);
+          setShowNotify1(false);
+        }}
+      ></Notify>
+
+      {/* 002 */}
+      {/* Mail 1 Modal */}
+      <Modal showModal={showMailModal1} setShowModal={setShowMailModal1}>
+        <MailModalContent1
+          submitActions={() => {
+            console.log("002 ");
+            setShowMailModal1(false);
+            setIsPreSectionOpen(true);
+            setIsHeroectionOpen(false);
+          }}
+        />
+      </Modal>
+
+      {/* 003 */}
+      {/* showMeetingModalPre1 Modal */}
+      <Modal
+        showModal={showMeetingModalPre1}
+        setShowModal={setShowMeetingModalPre1}
+        title={"Take Over Letter"}
+      >
+        <ShowMeetingModalPre1
+          submitActions={() => {
+            setShowMeetingModalPre1(false);
+            console.log("003");
+          }}
+        />
+      </Modal>
+
+      {/* 004 */}
+      {/* showMeetingModalPre2 Modal */}
+      <Modal
+        showModal={showMeetingModalPre2}
+        setShowModal={setShowMeetingModalPre2}
+        title={"COMPANY DESCRIPTION: WHSE INC."}
+      >
+        <ShowMeetingModalPre2
+          submitActions={() => {
+            console.log("004");
+            setShowMeetingModalPre2(false);
+          }}
+        />
+      </Modal>
+
+      {/* 005 */}
+      {/* showMeetingModalPre3 Modal */}
+      <Modal
+        showModal={showMeetingModalPre3}
+        setShowModal={setShowMeetingModalPre3}
+        title={"COMPANY FINANCIAL DATA: WHSE INC."}
+      >
+        <ShowMeetingModalPre3
+          submitActions={() => {
+            console.log("005");
+            setShowMeetingModalPre3(false);
+          }}
+        />
+      </Modal>
+
+      {/* 006 */}
       {/* Hide after video watch */}
       {isPreSectionOpen && (
         <div className="full-container bg-[#E9EBEF] mt-32 mb-16 xl:px-12">
@@ -119,7 +197,6 @@ export default function Module3() {
                 alt="E-mail"
                 width={250}
                 height={250}
-                // style={{ width: "100%", height: "auto" }}
               />
               <Button
                 className={"w-full mt-auto"}
@@ -148,7 +225,6 @@ export default function Module3() {
                 height={250}
                 onClick={() => setShowMeetingModalPre3(true)}
               />
-              {/* <Button className={"w-full mt-auto"}>Review</Button> */}
             </div>
             <div className="meeting-card flex flex-col py-8 px-8 bg-white">
               <div className="h5-bold text-primary-red text-center m-11">
@@ -161,95 +237,16 @@ export default function Module3() {
                 width={350}
                 height={250}
                 onClick={() => {
+                  console.log("006");
                   setShowVideoContentModal(true);
-                  console.log("video1 watched");
                 }}
               />
-              {/* <Button
-                className={"w-full mt-auto"}
-                onClick={() => setShowVideoContentModal(true)}
-              >
-                Review
-              </Button> */}
             </div>
           </div>
         </div>
       )}
 
-      {/* Mail 1 Modal */}
-      <Modal showModal={showMailModal1} setShowModal={setShowMailModal1}>
-        <MailModalContent1
-          submitActions={() => {
-            console.log("mail modal 1 submit action");
-            setShowMailModal1(false);
-            // setNotify1IsOpen(false);
-            setIsPreSectionOpen(true);
-            setIsHeroectionOpen(false);
-          }}
-        />
-      </Modal>
-
-      {/* Mail 2 Modal */}
-      <Modal showModal={showMailModal2} setShowModal={setShowMailModal2}>
-        <MailModalContent2
-          submitActions={() => {
-            // setNotify2(false);
-            console.log("mail modal 2 submit action");
-            setShowMailModal2(false);
-            setShowMailModal3(true);
-          }}
-        />
-      </Modal>
-
-      {/* Mail 3 Modal */}
-      <Modal showModal={showMailModal3} setShowModal={setShowMailModal3}>
-        <MailModalContent3
-          submitActions={() => {
-            setShowMailModal3(false);
-            setShowNotify3(true);
-          }}
-        />
-      </Modal>
-
-      {/* showMeetingModalPre1 Modal */}
-      <Modal
-        showModal={showMeetingModalPre1}
-        setShowModal={setShowMeetingModalPre1}
-        title={"Take Over Letter"}
-      >
-        <ShowMeetingModalPre1
-          submitActions={() => {
-            setShowMeetingModalPre1(false);
-          }}
-        />
-      </Modal>
-
-      {/* showMeetingModalPre2 Modal */}
-      <Modal
-        showModal={showMeetingModalPre2}
-        setShowModal={setShowMeetingModalPre2}
-        title={"COMPANY DESCRIPTION: WHSE INC."}
-      >
-        <ShowMeetingModalPre2
-          submitActions={() => {
-            setShowMeetingModalPre2(false);
-          }}
-        />
-      </Modal>
-
-      {/* showMeetingModalPre3 Modal */}
-      <Modal
-        showModal={showMeetingModalPre3}
-        setShowModal={setShowMeetingModalPre3}
-        title={"COMPANY FINANCIAL DATA: WHSE INC."}
-      >
-        <ShowMeetingModalPre3
-          submitActions={() => {
-            setShowMeetingModalPre3(false);
-          }}
-        />
-      </Modal>
-
+      {/* 007 */}
       {/* showVideoContentModal Modal */}
       <Modal
         showModal={showVideoContentModal}
@@ -261,33 +258,15 @@ export default function Module3() {
             "https://www.youtube.com/embed/feooCAynw4c?si=96S5LntH775k-RzF&amp;controls=0"
           }
           submitActions={() => {
+            console.log("007");
             setShowVideoContentModal(false);
             setIsPreSectionOpen(false);
             setIsExtraOrdinaryOpen(true);
-            console.log("isExtraOrdinaryOpened");
           }}
         />
       </Modal>
 
-      {/* Show after ExtraOrdinary form submit */}
-      <Modal
-        showModal={showEOMSubmitModal}
-        setShowModal={setShowEOMSubmitModal}
-        // title={"WHSE Promotional Video"}
-        hideClose={true}
-      >
-        <SubmitModal
-          submitActions={() => {
-            setShowEOMSubmitModal(false);
-
-            setShowNotify2(true);
-            console.log("isExtraOrdinary Submit modal opened");
-          }}
-          // onClick={() => setShowNotify1(true)}
-          submitText={"Kindly proceed back to the lecture room for debriefing"}
-        />
-      </Modal>
-
+      {/* 008 */}
       {/* Show after video watch */}
       {isExtraOrdinaryOpen && (
         <div className="full-container bg-[#E9EBEF] mt-32 mb-16 xl:px-12">
@@ -341,11 +320,10 @@ export default function Module3() {
               </div>
               <Button
                 onClick={() => {
+                  console.log("008");
                   setShowEOMSubmitModal(true);
-                  console.log("submit 1");
                   setIsEomSubmitted(true);
                 }}
-                // type="submit"
                 className={"ml-auto w-full max-w-80"}
               >
                 Submit
@@ -355,89 +333,122 @@ export default function Module3() {
         </div>
       )}
 
-      {/* Show after video watch */}
-      {isTaskFormOpen && (
-        <TaskForm
+      {/* 009 */}
+      {/* Show after ExtraOrdinary form submit */}
+      <Modal
+        showModal={showEOMSubmitModal}
+        setShowModal={setShowEOMSubmitModal}
+        // title={"WHSE Promotional Video"}
+        hideClose={true}
+      >
+        <SubmitModal
           submitActions={() => {
-            setShowNotify4(true);
-            // setShowMailModal1(false);
-            // setNotify1IsOpen(false);
-            // setIsPreSectionOpen(true);
-            // setIsHeroectionOpen(false);
+            console.log("009");
+            setShowEOMSubmitModal(false);
+            setShowNotify2(true);
           }}
+          submitText={"Kindly proceed back to the lecture room for debriefing"}
         />
-      )}
+      </Modal>
 
-      {/* Notify1 */}
-      <Notify
-        showNotify={showNotify1}
-        setShowNotshowNotify={setShowNotify1}
-        recipient="Board Chair1"
-        content="Meeting notes"
-        handleOpen={() => {
-          setShowMailModal1(true);
-          setShowNotify1(false);
-          console.log("Notify1 Handle");
-        }}
-      ></Notify>
-
+      {/* 010 */}
       {/* Notify2 */}
       <Notify
         showNotify={showNotify2}
         setShowNotshowNotify={setShowNotify2}
-        recipient="Board Chair2"
+        recipient="Board Chair"
         content="Meeting notes"
         handleOpen={() => {
+          console.log("010");
           setShowMailModal2(true);
           setShowNotify2(false);
-          console.log("isNotifyOpen2");
         }}
       ></Notify>
 
-      {/* Meeting 2 Mail Popup */}
-      {/* {isNotifyOpen3 && (
-        <>
-          <NotifyCard
-            recipient="xxxTask1"
-            content="xxxTask2"
-            handleOpen={() => {
-              console.log("isNotifyOpen3");
-              setIsTaskFormOpen(true);
-              setIsExtraOrdinaryOpen(false);
-              setNotifyIsOpen3(false);
-            }}
-          />
-        </>
-      )} */}
+      {/* 011 */}
+      {/* Mail 2 Modal */}
+      <Modal showModal={showMailModal2} setShowModal={setShowMailModal2}>
+        <MailModalContent2
+          submitActions={() => {
+            console.log("011");
+            setShowMailModal2(false);
+            setShowMailModal3(true);
+          }}
+        />
+      </Modal>
 
+      {/* 012 */}
+      {/* Mail 3 Modal */}
+      <Modal showModal={showMailModal3} setShowModal={setShowMailModal3}>
+        <MailModalContent3
+          submitActions={() => {
+            console.log("012");
+            setShowMailModal3(false);
+            setShowNotify3(true);
+          }}
+        />
+      </Modal>
+
+      {/* 013 */}
       {/* Notify3 */}
       <Notify
         showNotify={showNotify3}
         setShowNotshowNotify={setShowNotify3}
-        recipient="Board Chair3"
+        recipient="Board Chair"
         content="Meeting notes"
         handleOpen={() => {
-          console.log("isNotifyOpen3");
+          console.log("013");
           setIsTaskFormOpen(true);
           setIsExtraOrdinaryOpen(false);
-          // setNotifyIsOpen3(false);
           setShowNotify3(false);
         }}
       ></Notify>
 
+      {/* 014 */}
+      {isTaskFormOpen && (
+        <TaskForm
+          submitActions={() => {
+            console.log("014");
+            setShowEOMSubmitModal14(true);
+
+            // setShowNotify4(true);
+            // get submit modal
+          }}
+        />
+      )}
+
+      {/* 014 new */}
+      <Modal
+        showModal={showEOMSubmitModal14}
+        setShowModal={setShowEOMSubmitModal14}
+        // title={"WHSE Promotional Video"}
+        hideClose={true}
+      >
+        <SubmitModal
+          submitActions={() => {
+            console.log("014 New");
+
+            setShowEOMSubmitModal14(false);
+            setShowNotify4(true);
+          }}
+          submitText={"Kindly proceed back to the lecture room for debriefing"}
+        />
+      </Modal>
+
+      {/* 015 */}
       {/* Notify4 */}
       <Notify
         showNotify={showNotify4}
         setShowNotshowNotify={setShowNotify4}
-        recipient="Board Chair3"
+        recipient="Board Chair"
         content="Meeting notes"
         handleOpen={() => {
+          console.log("015");
           setShowVideoContentModal(true, {
             videoSrc:
               "https://www.youtube.com/embed/NRV3H_bO6oE?si=QOR6mo8FvJQadTb7",
           });
-          setShowNotify4(false);
-          console.log("isNotifyOpen4");
+          // setShowNotify4(false);
         }}
       ></Notify>
     </section>

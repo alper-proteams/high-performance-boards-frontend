@@ -20,7 +20,7 @@ export default function mail3ModalContent({ submitActions }) {
         </div>
 
         <p className="body-default-16 mb-5">
-          MAIL3 Esteemed member of Supervisory Board of HPBM,
+          Esteemed member of Supervisory Board of HPBM,
         </p>
         <p className="body-default-16 mb-5">
           I hope this email reaches you under the strictest confidence. I regret
@@ -73,7 +73,7 @@ export default function mail3ModalContent({ submitActions }) {
               submitActions();
             }}
           >
-            Proceed mail3
+            Proceed
           </Button>
         </Link>
       </div>

@@ -24,7 +24,7 @@ export default function SubmitModal({ submitActions, submitText }) {
             submitActions();
           }}
         >
-          Review4
+          Review
         </Button>
       </div>
     </>
