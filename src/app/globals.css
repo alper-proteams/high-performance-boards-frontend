@@ -370,3 +370,13 @@ textarea {
     top: 0; */
   opacity: 95%;
 }
+
+.form-disabled {
+  @apply pointer-events-none;
+}
+
+.form-disabled textarea {
+  @apply bg-[#e6e6e6];
+  /* opacity: 0.2; */
+  color: #999;
+}
