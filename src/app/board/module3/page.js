@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Modal from "@/app/components/modal";
+import Notify from "@/app/components/notify";
+
 import NotifyCard from "@/app/components/notify/notifyCard";
 import SubmitModal from "@/app/components/modals/submitModal";
 import Mail1ModalContent from "@/app/components/modals/mail1ModalContent";
@@ -15,6 +17,7 @@ import ShowMeetingModalPre1 from "@/app/components/modals/showMeetingModalPre1";
 import ShowMeetingModalPre2 from "@/app/components/modals/showMeetingModalPre2";
 import ShowMeetingModalPre3 from "@/app/components/modals/showMeetingModalPre3";
 import ShowVideoContentModal from "@/app/components/modals/showVideoContentModal";
+
 import TaskForm from "@/app/components/form/taskForm";
 
 export default function Module3() {
@@ -47,6 +50,10 @@ export default function Module3() {
   const [showMail1Modal, setShowMail1Modal] = React.useState(false);
   const [showMail2Modal, setShowMail2Modal] = React.useState(false);
   const [showMail3Modal, setShowMail3Modal] = React.useState(false);
+  const [showNotify1, setShowNotify1] = React.useState(false);
+  const [showNotify2, setShowNotify2] = React.useState(false);
+  const [showNotify3, setShowNotify3] = React.useState(false);
+  const [showNotify4, setShowNotify4] = React.useState(false);
 
   const [showMeetingModalPre1, setShowMeetingModalPre1] = React.useState(false);
   const [showMeetingModalPre2, setShowMeetingModalPre2] = React.useState(false);
@@ -85,7 +92,11 @@ export default function Module3() {
                     the Board, compelling critical decisions.
                   </p>
 
-                  <Button onClick={() => Notify1()}>Proceed</Button>
+                  <Button onClick={() => setShowNotify1(true)}>
+                    Proceed setShowNotify1
+                  </Button>
+
+                  {/* onClick={() => setShowNotify1(true)} */}
                 </div>
               </div>
             </div>
@@ -367,7 +378,7 @@ export default function Module3() {
       )}
 
       {/* Meeting 1 Notify Popup */}
-      {isNotifyOpen1 && (
+      {/* {isNotifyOpen1 && (
         <NotifyCard
           recipient="Board Chair1"
           content="Meeting notes"
@@ -376,7 +387,19 @@ export default function Module3() {
             console.log("isNotifyOpen1");
           }}
         />
-      )}
+      )} */}
+
+      {/* Notify1 */}
+      <Notify
+        showNotify={showNotify1}
+        setShowNotshowNotify={setShowNotify1}
+        recipient="Board Chair1"
+        content="Meeting notes"
+        handleOpen={() => {
+          setShowMail1Modal(true);
+          console.log("Notify1 HandleOpen000");
+        }}
+      ></Notify>
 
       {/* Show after video watch */}
       {/* Meeting 2 Mail Popup */}
