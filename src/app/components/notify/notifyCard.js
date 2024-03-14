@@ -44,6 +44,7 @@ export default function NotifyCard({
           alt="E-mail"
           width={27}
           height={21}
+          // style={{ width: "100%", height: "auto" }}
         />
         Email
       </div>

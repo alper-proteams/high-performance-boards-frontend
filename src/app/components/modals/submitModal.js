@@ -13,6 +13,7 @@ export default function SubmitModal({ submitActions, submitText }) {
           alt="E-mail"
           width={250}
           height={250}
+          // style={{ width: "100%", height: "auto" }}
         />
         <div className="h5-bold text-primary-red text-center my-11 max-w-[400px] mx-auto">
           {submitText}

@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
-import Link from 'next/link';
-import Image from 'next/image';
-import Button from '@/app/components/button';
-import { useAuth } from '@/app/contexts/auth.context';
+import { useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import Button from "@/app/components/button";
+import { useAuth } from "@/app/contexts/auth.context";
 
 export default function Navbar() {
   const router = useRouter();
@@ -33,6 +33,7 @@ export default function Navbar() {
                   alt="skill-icon"
                   width={24}
                   height={20}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </Link>
             </li>
@@ -43,6 +44,7 @@ export default function Navbar() {
                   alt="skill-icon"
                   width={24}
                   height={20}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </Link>
             </li>
@@ -53,6 +55,7 @@ export default function Navbar() {
                   alt="skill-icon"
                   width={24}
                   height={20}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </Link>
             </li>
@@ -63,6 +66,7 @@ export default function Navbar() {
                   alt="skill-icon"
                   width={24}
                   height={20}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </Link>
             </li>

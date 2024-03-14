@@ -48,6 +48,9 @@ export default function Notify({
                 alt="E-mail"
                 width={27}
                 height={21}
+                // style={{ width: "100%", height: "auto" }}
+                // style={{ objectFit: "contain" }}
+                // layout="responsive"
               />
               Email
             </div>
@@ -57,7 +60,10 @@ export default function Notify({
               <br />
               {recipient}
               <Button
-                onClick={handleOpenCallback}
+                // onClick={handleOpenCallback}
+                onClick={() => {
+                  handleOpenCallback();
+                }}
                 className="!bg-primary-black"
               >
                 Open
@@ -65,8 +71,11 @@ export default function Notify({
             </div>
           </div>
           <div
-            onClick={() => setShowNotify(false)}
-            className=" opacity-85 fixed inset-0 z-40 bg-primary-black"
+            onClick={() => {
+              setShowNotify(false);
+              console.log("Notify modal click");
+            }}
+            className=" opacity-25 fixed inset-0 z-40 bg-primary-black"
           ></div>
         </>
       ) : null}
