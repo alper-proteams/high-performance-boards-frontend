@@ -14,7 +14,6 @@ export default function showMeetingModalPre2({ submitActions }) {
           alt="WHSE Inc"
           width={1224}
           height={418}
-          responsive
         />
         <p className="body-default-16 mb-5">
           WHSE Inc. is a prominent US-based company with a strong presence in
