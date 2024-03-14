@@ -16,7 +16,6 @@ export default function showMeetingModalPre3({ submitActions }) {
           alt="E-mail"
           width={700}
           height={300}
-          responsive
         />
       </div>
       <div className="flex items-center justify-end p-6">

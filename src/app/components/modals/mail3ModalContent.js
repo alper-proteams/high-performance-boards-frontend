@@ -63,7 +63,6 @@ export default function mail3ModalContent({ submitActions }) {
           alt="WHSE Inc"
           width={793}
           height={500}
-          responsive
         />
       </div>
       <div className="flex items-center justify-end p-6">
