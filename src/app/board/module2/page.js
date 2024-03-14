@@ -105,7 +105,11 @@ const Module2 = () => {
           <div className="content-header text-center">
             HPBM Board Construction Presentation
           </div>
+
           <div className="content-detail col-span-8 col-start-5">
+            <div className="content-subheader text-center">
+              Please submit your construction presentation below
+            </div>
             <DocForm />
           </div>
         </div>

@@ -15,7 +15,7 @@ export default function SubmitModal({ submitActions, submitText }) {
         <div>
           <div className="text-primary-red">Your task</div>
           <p>
-            12Develop a comprehensive action plan to address the whistleblower
+            Develop a comprehensive action plan to address the whistleblower
             situation.
           </p>
         </div>

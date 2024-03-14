@@ -48,9 +48,9 @@ export default function Notify({
                 alt="E-mail"
                 width={27}
                 height={21}
-                // style={{ width: "100%", height: "auto" }}
+                className=" w-auto h-auto"
+                // style={{ width: "auto", height: "auto" }}
                 // style={{ objectFit: "contain" }}
-                // layout="responsive"
               />
               Email
             </div>

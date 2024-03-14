@@ -137,6 +137,7 @@ export default function showMeetingModalPre2({ submitActions }) {
             personContent={card.personContent}
           />
         ))}
+        {/* TODO: Update people */}
       </div>
       <div className="flex items-center justify-end p-6">
         <Button

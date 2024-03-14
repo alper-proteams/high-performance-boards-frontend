@@ -11,7 +11,7 @@ export default function showMeetingModalPre3({ submitActions }) {
         </p>
         <h2>Financials</h2>
         <Image
-          className="mx-auto"
+          className="mx-auto w-auto h-auto"
           src="/images/detail/module3/finance-table.jpg"
           alt="E-mail"
           width={700}

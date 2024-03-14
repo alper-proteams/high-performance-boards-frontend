@@ -2,7 +2,7 @@ import Button from "@/app/components/button";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function showMeetingModalPre1({ submitActions }) {
+export default function showMeetingModalPre1({ submitActions, disableButton }) {
   return (
     <>
       <div className="relative p-6 flex-auto">

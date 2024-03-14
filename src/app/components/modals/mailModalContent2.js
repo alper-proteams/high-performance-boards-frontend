@@ -52,7 +52,20 @@ export default function mail2ModalContent({ submitActions }) {
           Board, HPBM AG.
         </p>
       </div>
-      <div className="flex items-center justify-end p-6">
+      <div className="content-subheader text-center text-primary-red mb-6">
+        Attachment
+      </div>
+      <Image
+        className="mx-auto mb-12 cursor-pointer"
+        src="/images/common/attachment.svg"
+        alt="E-mail"
+        width={250}
+        height={250}
+        onClick={() => {
+          submitActions();
+        }}
+      />
+      {/* <div className="flex items-center justify-end p-6">
         <Link className={"w-full"} href="#">
           <Button
             className={"w-full"}
@@ -69,8 +82,10 @@ export default function mail2ModalContent({ submitActions }) {
           >
             Proceed
           </Button>
+
+          
         </Link>
-      </div>
+      </div> */}
     </>
   );
 }

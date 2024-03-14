@@ -196,7 +196,7 @@ body {
   @apply body-default-20;
 }
 .content-detail p {
-  @apply body-default-18;
+  @apply body-default-18 mb-10;
 }
 .content-detail img {
   @apply mb-12;

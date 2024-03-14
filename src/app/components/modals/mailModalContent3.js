@@ -65,6 +65,7 @@ export default function mail3ModalContent({ submitActions }) {
           height={500}
         />
       </div>
+
       <div className="flex items-center justify-end p-6">
         <Link className={"w-full"} href="#">
           <Button

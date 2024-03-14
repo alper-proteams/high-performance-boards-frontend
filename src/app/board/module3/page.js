@@ -50,6 +50,8 @@ export default function Module3() {
   const [showEOMSubmitModal, setShowEOMSubmitModal] = React.useState(false);
   const [showEOMSubmitModal14, setShowEOMSubmitModal14] = React.useState(false);
 
+  // const [disableButton, setDisableButton] = useState(false);
+
   const [isEomSubmitted, setIsEomSubmitted] = useState(false);
   const videoSrc = "";
 
@@ -143,6 +145,7 @@ export default function Module3() {
           submitActions={() => {
             setShowMeetingModalPre1(false);
             console.log("003");
+            // TODO: Add button disable
           }}
         />
       </Modal>
@@ -200,7 +203,12 @@ export default function Module3() {
               />
               <Button
                 className={"w-full mt-auto"}
-                onClick={() => setShowMeetingModalPre1(true)}
+                // disabled={disableButton}
+                onClick={() => {
+                  setShowMeetingModalPre1(true);
+                  // setDisableButton(true);
+                  console.log("006-1");
+                }}
               >
                 Review
               </Button>
@@ -210,7 +218,7 @@ export default function Module3() {
                 WHSE Inc.
               </div>
               <Image
-                className="mx-auto my-1 cursor-pointer"
+                className="mx-auto my-1 cursor-pointer w-auto h-auto"
                 src="/images/common/meeting-whse-1.svg"
                 alt="E-mail"
                 width={350}
@@ -218,7 +226,7 @@ export default function Module3() {
                 onClick={() => setShowMeetingModalPre2(true)}
               />
               <Image
-                className="mx-auto my-1 cursor-pointer"
+                className="mx-auto my-1 cursor-pointer w-auto h-auto"
                 src="/images/common/meeting-whse-2.svg"
                 alt="E-mail"
                 width={350}
@@ -231,13 +239,13 @@ export default function Module3() {
                 WHSE Promotional Video
               </div>
               <Image
-                className="mx-auto"
+                className="mx-auto w-auto h-auto"
                 src="/images/common/meeting-video.svg"
                 alt="E-mail"
                 width={350}
                 height={250}
                 onClick={() => {
-                  console.log("006");
+                  console.log("006-2");
                   setShowVideoContentModal(true);
                 }}
               />
@@ -326,7 +334,7 @@ export default function Module3() {
                 }}
                 className={"ml-auto w-full max-w-80"}
               >
-                Submit
+                Proceed
               </Button>
             </form>
           </div>

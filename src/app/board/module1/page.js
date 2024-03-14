@@ -71,20 +71,15 @@ const Module1 = () => {
               was taken public in 2017 and is a member of the German mid-cap
               MDAX index with total sales of €3.375 billion in 2023.
             </p>
-            <Image
-              src="/images/detail/module1/image1.jpg"
-              alt="content-image"
-              layout="responsive"
-              width={100}
-              height={100}
-            />
-            <Image
-              src="/images/detail/module1/image2.jpg"
-              alt="content-image"
-              layout="responsive"
-              width={100}
-              height={100}
-            />
+            <p>
+              HPBM AG employs 19,365 people globally. It operates manufacturing
+              and assembly facilities in Germany, Hungary, Mexico, and China.
+              HPBM´s R&D activities are carried out in around 10 facilities
+              worldwide. At its HQ in Germany the company operates two R&D
+              centres, one for lighting, the other for power electronics.
+              Additional major R&D hubs are located close to Chicago and
+              Shanghai.
+            </p>
             <p>
               HPBM operates through three divisions designated as Automotive
               Lighting, Automotive Electronics, and Aftermarket. Automotive
@@ -101,7 +96,29 @@ const Module1 = () => {
               of HPBM to experience double digit unit volume growth in all three
               divisions.
             </p>
-            <p>
+            <Image
+              src="/images/detail/module1/image1.jpg"
+              alt="content-image"
+              layout="responsive"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="/images/detail/module1/image3.jpg"
+              alt="content-image"
+              layout="responsive"
+              width={100}
+              height={100}
+            />
+            {/* <Image
+              src="/images/detail/module1/image2.jpg"
+              alt="content-image"
+              layout="responsive"
+              width={100}
+              height={100}
+            /> */}
+
+            {/* <p>
               Car manufacturers (“OEMs”), however, were under pressure to
               finance their costly transition to battery electric vehicles
               (BEV). Due to expensive batteries and power electronics (approx.
@@ -110,13 +127,6 @@ const Module1 = () => {
               to the market. OEMs leveraged their suppliers to generate savings
               in purchasing, resulting in margin squeeze for HPBM and others.
             </p>
-            <Image
-              src="/images/detail/module1/image3.jpg"
-              alt="content-image"
-              layout="responsive"
-              width={100}
-              height={100}
-            />
             <p>
               It operates manufacturing and assembly facilities in Germany,
               Hungary, Mexico, and China. HPBM´s R&D activities were carried out
@@ -124,57 +134,45 @@ const Module1 = () => {
               company operated two R&D centers, one for lighting, the other for
               power electronics. Additional major R&D hubs were located close to
               Chicago and Shanghai.
+            </p> */}
+            <p>
+              Between 2014 and 2017, HPBM's performance lagged behind its sector
+              peers, plagued by misjudgments in the Chinese market, delays in
+              R&D projects, and fallout from the Diesel scandal. To address
+              these challenges, a management overhaul took place in the summer
+              of 2017, with the CEO being replaced and a new leadership team
+              brought in. Despite these efforts, the onset of the Covid-19
+              pandemic in Q1 of 2020 dealt a severe blow to the automotive
+              industry as a whole, leading to widespread supply chain
+              disruptions and factory shutdowns.
             </p>
             <p>
-              Between 2014 and 2017 the company performed worse than the sector.
-              The leadership had misjudged the development of the Chinese
-              market, R&D projects did not deliver on schedule, and the company
-              was not prepared for the fallout from the Diesel scandal of 2015
-              (e.g., the shift towards electric mobility). To overcome this
-              sub-par performance, in the summer of 2017 HPBM´s Board replaced
-              the CEO and promoted the former COO to lead the company on a five
-              year-contract. As part of this management shake-up, two executive
-              committee members resigned. The Board also hired a new CFO, a
-              former SVP from a leading OEM who had a lot of international and
-              leadership experience. Over the past years the CEO and the CFO
-              developed a good working relationship. She is known to be an
-              ambitious person with CEO aspirations.
+              For HPBM, this translated into its worst financial results in a
+              decade during the fiscal year 2019/2020. Automotive Lighting and
+              Aftermarket segments were particularly affected by production
+              adjustments and reduced demand, while Electronics struggled with
+              disrupted chip supply chains that persisted until 2022. Although
+              demand showed signs of recovery in 2021, it did not fully rebound
+              to pre-Covid levels.
             </p>
             <p>
-              The arrival of Covid in Q1 of 2020 posed a severe challenge to the
-              automotive industry: government regulations and market
-              uncertainties led to severe supply chain disruptions around the
-              globe and subsequent factory shutdowns. For FY 2019/2020 HPBM
-              recorded its worst financial results in a decade: Automotive
-              Lighting suffered from the downward adjustment of production
-              targets issues by OEM´s within days after governments around the
-              world imposed lock-downs. Aftermarket suffered from a reduction in
-              maintenance and repair demand due to lower traffic volumes and
-              accidents. Electronics suffered from ruptured chip supply chains
-              and until 2022, continued to face challenges stemming from the
-              cancellation of orders to the chip fabs in Taiwan, Asia, and
-              Europe (as a result of their reaction to Covid shutdowns). In
-              2021, demand recovered but did not reach pre-Covid levels. In
-              January 2022 the Board decided to prolong the contract of the CEO
-              by 4 years until summer 2026.
+              Recognizing the challenges ahead, the Board extended the CEO's
+              contract until summer 2026 in January 2022, demonstrating
+              confidence in the leadership's ability to navigate the company
+              through uncertain times. Despite projections of continued growth,
+              albeit at a slower pace, management remains cautious due to
+              anticipated rising costs and ongoing supply chain disruptions.
             </p>
             <p>
-              n the last earnings call for FY 2021/2022, top management
-              predicted that the positive momentum would continue until 2026
-              albeit at a slower rate. It expected rising cost pressures due to
-              inflationary environment and continuing supply chain
-              uncertainties. The company also plans to build a plant in South
-              Africa to take advantage of favorable trade agreements (cars can
-              be exported to Americas and Europe without any tariffs) and access
-              its competitive labor market.
-            </p>
-            <p>
-              At the annual shareholder meeting in October 2022, investors
-              voiced concerns that HPBM was not prepared for the shift in the
-              automotive sector towards China: OEMs like BYD were at the center
-              of attention due to their significant production volumes, advanced
-              digital capabilities, and aggressive growth targets for markets
-              outside of China.
+              In pursuit of strategic expansion, HPBM plans to establish a
+              manufacturing plant in South Africa, capitalizing on favorable
+              trade agreements and access to a competitive labor market.
+              However, investor concerns have emerged regarding the company's
+              readiness for the automotive sector's shifting dynamics,
+              particularly towards China, where competitors like BYD are rapidly
+              gaining ground with their advanced capabilities and ambitious
+              growth plans. Addressing these concerns will be crucial for HPBM
+              as it charts its course in an evolving industry landscape.
             </p>
           </div>
           <div className="content-header md:sticky mt-7 md:mt-0 top-36 bg-white">
@@ -221,6 +219,7 @@ const Module1 = () => {
           </div>
           <div className="content-detail col-span-8 col-start-5">
             <div className="content-subheader text-center">Candidates:</div>
+
             <AssessmentForm />
           </div>
         </div>
