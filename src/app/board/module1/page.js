@@ -185,15 +185,18 @@ const Module1 = () => {
             </p>
           </div>
           <div className="content-detail col-span-8 col-start-5">
-            {CardPersonItems.map((card, index) => (
-              <CardPerson
-                key={index}
-                personImage={card.personImage}
-                personTitle={card.personTitle}
-                personName={card.personName}
-                personContent={card.personContent}
-              />
-            ))}
+            {CardPersonItems.filter((card) => card.memberType === "core").map(
+              (card, index) => (
+                <CardPerson
+                  key={index}
+                  personImage={card.personImage}
+                  personTitle={card.personTitle}
+                  personName={card.personName}
+                  personContent={card.personContent}
+                  cvUrl={card.cvUrl}
+                />
+              )
+            )}
           </div>
         </div>
       </section>

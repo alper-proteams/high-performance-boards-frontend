@@ -7,6 +7,8 @@ export default function CardPerson({
   personTitle,
   personName,
   personContent,
+  memberType,
+  cvUrl,
   className,
   ...props
 }) {
@@ -28,11 +30,12 @@ export default function CardPerson({
             {personTitle && <div className="card-subheader">{personTitle}</div>}
           </div>
         )}
-
         {personContent && <div className="card-content">{personContent}</div>}
-        <Link className="text-primary-red" href="#">
-          See Full CV
-        </Link>
+        {cvUrl && (
+          <Link className="text-primary-red" href={cvUrl}>
+            See Full CV
+          </Link>
+        )}
       </div>
     </div>
   );

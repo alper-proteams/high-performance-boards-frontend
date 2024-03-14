@@ -4,15 +4,17 @@ import Image from "next/image";
 import withAuth from "@/app/lib/withAuth";
 import CardPerson from "@/app/components/homepage/card-person";
 import DocForm from "@/app/components/form/docForm";
-export const CardPersonItems = [
-  {
-    personImage: "/images/members/fred-hammerschmidt.jpg",
-    personName: "Fred Hammerschmidt",
-    personTitle: "Chief Executive Officer",
-    personContent:
-      "Dynamic and experienced CEO with more than 30 years of business experience and an impressive career in the automotive industry. Recognized for strong leadership, strategic vision, and expertise in automotive lighting solutions. Extensive experience in Europe and North America, with a desire to expand into emerging markets. Exceptional mechanical and electrical engineering background.",
-  },
-];
+import CardPersonItems from "@/app/data/cv.json";
+
+// export const CardPersonItems = [
+//   {
+//     personImage: "/images/members/fred-hammerschmidt.jpg",
+//     personName: "Fred Hammerschmidt",
+//     personTitle: "Chief Executive Officer",
+//     personContent:
+//       "Dynamic and experienced CEO with more than 30 years of business experience and an impressive career in the automotive industry. Recognized for strong leadership, strategic vision, and expertise in automotive lighting solutions. Extensive experience in Europe and North America, with a desire to expand into emerging markets. Exceptional mechanical and electrical engineering background.",
+//   },
+// ];
 
 const Module2 = () => {
   return (
@@ -87,13 +89,16 @@ const Module2 = () => {
             </p>
           </div>
           <div className="content-detail col-span-8 col-start-5">
-            {CardPersonItems.map((card, index) => (
+            {CardPersonItems.filter(
+              (card) => card.memberType === "candidate"
+            ).map((card, index) => (
               <CardPerson
                 key={index}
                 personImage={card.personImage}
                 personTitle={card.personTitle}
                 personName={card.personName}
                 personContent={card.personContent}
+                cvUrl={card.cvUrl}
               />
             ))}
           </div>
@@ -108,7 +113,7 @@ const Module2 = () => {
 
           <div className="content-detail col-span-8 col-start-5">
             <div className="content-subheader text-center">
-              Please submit your construction presentation below
+              Pleae submit your construction presentation below
             </div>
             <DocForm />
           </div>

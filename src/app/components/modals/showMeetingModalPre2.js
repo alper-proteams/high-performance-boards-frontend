@@ -127,16 +127,19 @@ export default function showMeetingModalPre2({ submitActions }) {
           advanced lighting features that offer improved aesthetics,
           functionality, and energy efficiency.
         </p>
-        {CardPersonItems.map((card, index) => (
-          <CardPerson
-            className={"mb-10"}
-            key={index}
-            personImage={card.personImage}
-            personTitle={card.personTitle}
-            personName={card.personName}
-            personContent={card.personContent}
-          />
-        ))}
+        {CardPersonItems.filter((card) => card.memberType === "choosen").map(
+          (card, index) => (
+            <CardPerson
+              className={"mb-10"}
+              key={index}
+              personImage={card.personImage}
+              personTitle={card.personTitle}
+              personName={card.personName}
+              personContent={card.personContent}
+              cvUrl={card.cvUrl}
+            />
+          )
+        )}
         {/* TODO: Update people */}
       </div>
       <div className="flex items-center justify-end p-6">

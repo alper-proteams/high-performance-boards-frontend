@@ -3,18 +3,88 @@
     "personImage": "/images/members/fred-hammerschmidt.jpg",
     "personName": "Fred Hammerschmidt",
     "personTitle": "CEO",
-    "personContent": "Dynamic and experienced CEO with more than 30 years of business experience and an impressive career in the automotive industry. Recognized for strong leadership, strategic vision, and expertise in automotive lighting solutions. Extensive experience in Europe and North America, with a desire to expand into emerging markets. Exceptional mechanical and electrical engineering background."
+    "personContent": "Dynamic and experienced CEO with more than 30 years of business experience and an impressive career in the automotive industry. Recognized for strong leadership, strategic vision, and expertise in automotive lighting solutions. Extensive experience in Europe and North America, with a desire to expand into emerging markets. Exceptional mechanical and electrical engineering background.",
+    "memberType": "core",
+    "cvUrl": "https://highperformanceboards.net"
   },
   {
     "personImage": "/images/members/marie-bellois.jpg",
     "personName": "Marie Bellois",
     "personTitle": "CFO",
-    "personContent": "Accomplished CFO with extensive international business acumen, strong people skills, and background in competitive sports. More than a decade of senior management experience in the automotive and digital arena."
+    "personContent": "Accomplished CFO with extensive international business acumen, strong people skills, and background in competitive sports. More than a decade of senior management experience in the automotive and digital arena.",
+    "memberType": "core",
+    "cvUrl": "https://highperformanceboards.net"
   },
   {
     "personImage": "/images/members/mats-blenderquist.jpg",
     "personName": "Mats Blenderquist",
     "personTitle": "Chief Executive Officer",
-    "personContent": "Seasoned COO with extensive experience in global manufacturing sector and consulting. Successful development, implementation and execution of new global production and supply chain strategies. Multi-cultural leadership and communication qualities."
+    "personContent": "Seasoned COO with extensive experience in global manufacturing sector and consulting. Successful development, implementation and execution of new global production and supply chain strategies. Multi-cultural leadership and communication qualities.",
+    "memberType": "core",
+    "cvUrl": "https://highperformanceboards.net"
+  },
+
+  {
+    "personImage": "/images/members/michael-willard.jpg",
+    "personName": "Michael S. Willard",
+    "personTitle": "Chair, CEO, and President of WHSE Inc.",
+    "personContent": "Michael S. Willard, aged 62, has served as the Chair, President, and CEO of WHSE Inc. for the past six years. Before joining WHSE Inc., he held various leadership roles at BorgWarner, a Detroit-based automotive supplier. During his tenure at BorgWarner, Mr. Willard spent 15 years in different positions, including serving as the President of the Drive Train Division, which was the largest division within the company.",
+    "memberType": "choosen"
+  },
+  {
+    "personImage": "/images/members/nathan-anderson.jpg",
+    "personName": "Nathan Anderson",
+    "personTitle": "Chief Financial Officer",
+    "personContent": "Nathan Anderson, aged 54, has been the CFO of WHSE Inc. for the past four years. Prior to his role as CFO, Anderson served as the Vice President and Corporate Controller of WHSE Inc. from 2015 to 2018. He joined WHSE in 2002 and subsequently held various finance-related positions in both North America and Latin America in Lightstar International Inc. Nathan earned a Bachelor’s degree in Accounting from Penn State and an MBA degree from the University of Michigan.",
+    "memberType": "choosen"
+  },
+  {
+    "personImage": "/images/members/daniel-bennett.jpg",
+    "personName": "Daniel A. Bennett",
+    "personTitle": "Chief Operating Officer of WHSE Inc.",
+    "personContent": "Daniel A. Bennett, aged 58, serves as the COO of WHSE Inc. In this capacity, Bennett oversees Product Development, Quality, and Operations at WHSE Inc. Prior to assuming his current role, he held the position of Executive Vice President of Global Strategic Sourcing for five years. Before joining WHSE, Bennett accumulated over a decade of experience at General Motors, where he held various roles in innovation, purchasing, and supply chain management. A Detroit native, Bennett obtained a bachelor’s degree in mechanical engineering from Michigan State University, and an MBA in International Business from the University of Michigan.",
+    "memberType": "choosen"
+  },
+  {
+    "personImage": "/images/members/michael-willard2.jpg",
+    "personName": "Michael S. Willard",
+
+    "personContent": "Member of Board since 2022 (until 2027); Member of Workers’ Council of HPBM since 2018; 2007 - 2018: purchasing department; 2006 - 2007: HR department; Education: vocational training in child care",
+    "memberType": "candidate"
+  },
+  {
+    "personImage": "/images/members/susanne-maier.jpg",
+    "personName": "Susanne Maier",
+
+    "personContent": "Member of Board since 2022 (until 2027); 2018 - 2019: Material planning; 2019 - now: technical purchasing; Education: vocational training in technical purchasing; academic degree in business",
+    "memberType": "candidate"
+  },
+  {
+    "personImage": "/images/members/willibald-wunderberg.jpg",
+    "personName": "Willibald Wunderberg",
+
+    "personContent": "Member of Board since 2020 (until 2025); Chairman of the Workers` Council of Plant 1 (since 1999); 1990 - 1999: employee of metal shop in Plant 1; Education: 'Meister' in metal working",
+    "memberType": "candidate"
+  },
+  {
+    "personImage": "/images/members/maria-leonie-beetz.jpg",
+    "personName": "Maria-Leonie Beetz",
+
+    "personContent": "Member of Board since 2022 (until 2027); Member of Workers’ Council of HPBM since 2015; Group leader in machine shop Plant 2; vocational training",
+    "memberType": "candidate"
+  },
+  {
+    "personImage": "/images/members/claudia-breuninger.jpg",
+    "personName": "Dr. Claudia Breuninger",
+
+    "personContent": "Member of Board since 2022 (until 2027); Second Chairperson of North Rhine District of German Metal Workers Union (IG Metall), PhD in Industrial Economics, Head of Controlling and Compliance at IG Metall, Other Board Mandates: Deutz AG",
+    "memberType": "candidate"
+  },
+  {
+    "personImage": "/images/members/jorg-riedl.jpg",
+    "personName": "Jörg Riedl",
+
+    "personContent": "Member of Board since 2020 (until 2025); German Metal Workers´ Union (IG Metall) District Manager, Regensburg; Completed his training as a mechanical engineer, has been working as a trade union manager since 2010",
+    "memberType": "candidate"
   }
 ]
