@@ -14,6 +14,7 @@ import MailModalContent1 from "@/app/components/modals/mailModalContent1";
 import MailModalContent2 from "@/app/components/modals/mailModalContent2";
 import MailModalContent3 from "@/app/components/modals/mailModalContent3";
 import MailModalContent4 from "@/app/components/modals/mailModalContent4";
+import MailModalContent5 from "@/app/components/modals/mailModalContent5";
 import ShowMeetingModalPre1 from "@/app/components/modals/showMeetingModalPre1";
 import ShowMeetingModalPre2 from "@/app/components/modals/showMeetingModalPre2";
 import ShowMeetingModalPre3 from "@/app/components/modals/showMeetingModalPre3";
@@ -31,6 +32,7 @@ export default function Module3() {
   const [showNotify2, setShowNotify2] = React.useState(false);
   const [showNotify3, setShowNotify3] = React.useState(false);
   const [showNotify4, setShowNotify4] = React.useState(false);
+  const [showNotify5, setShowNotify5] = React.useState(false);
 
   //Olds:
   // const [isNotifyOpen1, setNotify1IsOpen] = useState(false);
@@ -42,6 +44,7 @@ export default function Module3() {
   const [showMailModal2, setShowMailModal2] = React.useState(false);
   const [showMailModal3, setShowMailModal3] = React.useState(false);
   const [showMailModal4, setShowMailModal4] = React.useState(false);
+  const [showMailModal5, setShowMailModal5] = React.useState(false);
 
   const [showMeetingModalPre1, setShowMeetingModalPre1] = React.useState(false);
   const [showMeetingModalPre2, setShowMeetingModalPre2] = React.useState(false);
@@ -55,7 +58,7 @@ export default function Module3() {
   // const [disableButton, setDisableButton] = useState(false);
 
   const [isEomSubmitted, setIsEomSubmitted] = useState(false);
-  const videoSrc = "";
+  const [videoUrl, setVideoUrl] = useState("");
 
   return (
     <section className="relative">
@@ -249,6 +252,9 @@ export default function Module3() {
                 onClick={() => {
                   console.log("006-2");
                   setShowVideoContentModal(true);
+                  setVideoUrl(
+                    "https://www.youtube.com/embed/feooCAynw4c?si=96S5LntH775k-RzF&controls=0"
+                  );
                 }}
               />
             </div>
@@ -264,14 +270,13 @@ export default function Module3() {
         title={"WHSE Promotional Video"}
       >
         <ShowVideoContentModal
-          videoSrc={
-            "https://www.youtube.com/embed/feooCAynw4c?si=96S5LntH775k-RzF&amp;controls=0"
-          }
+          videoSrc={videoUrl}
           submitActions={() => {
             console.log("007");
             setShowVideoContentModal(false);
             setIsPreSectionOpen(false);
             setIsExtraOrdinaryOpen(true);
+            setVideoUrl("");
           }}
         />
       </Modal>
@@ -447,7 +452,6 @@ export default function Module3() {
       </Modal>
 
       {/* 015 */}
-      {/* Notify4 */}
       <Notify
         showNotify={showNotify4}
         setShowNotshowNotify={setShowNotify4}
@@ -461,14 +465,44 @@ export default function Module3() {
       ></Notify>
 
       {/* 016 */}
-
       <Modal showModal={showMailModal4} setShowModal={setShowMailModal4}>
         <MailModalContent4
           submitActions={() => {
-            console.log(
-              "016 open setShowVideoContentModal with different video"
-            );
+            console.log("016");
             setShowMailModal4(false); //Self Close
+            console.log("wait breaking notify");
+            setTimeout(() => {
+              setShowNotify5(true);
+              console.log("breaking notify triggered");
+            }, 5000);
+            //TODO: make task disable
+            setVideoUrl(
+              "https://www.youtube.com/embed/8Xf6gyW_o0U?si=bLqlaABblmbhBmbw&controls=0"
+            );
+          }}
+        />
+      </Modal>
+
+      {/* 017 */}
+      <Notify
+        showNotify={showNotify5}
+        setShowNotshowNotify={setShowNotify5}
+        recipient="BREAKING NEWS"
+        content="Meeting notes"
+        handleOpen={() => {
+          console.log("017 breaking notify show");
+          setShowMailModal5(true);
+          setShowNotify5(false);
+        }}
+      ></Notify>
+
+      {/* 018 Breaking News Video */}
+      <Modal showModal={showMailModal5} setShowModal={setShowMailModal5}>
+        <MailModalContent5
+          submitActions={() => {
+            console.log("018 breaking video show");
+            setShowMailModal5(false);
+            console.log("show the task 2");
           }}
         />
       </Modal>
