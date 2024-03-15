@@ -13,6 +13,7 @@ import SubmitModal from "@/app/components/modals/submitModal";
 import MailModalContent1 from "@/app/components/modals/mailModalContent1";
 import MailModalContent2 from "@/app/components/modals/mailModalContent2";
 import MailModalContent3 from "@/app/components/modals/mailModalContent3";
+import MailModalContent4 from "@/app/components/modals/mailModalContent4";
 import ShowMeetingModalPre1 from "@/app/components/modals/showMeetingModalPre1";
 import ShowMeetingModalPre2 from "@/app/components/modals/showMeetingModalPre2";
 import ShowMeetingModalPre3 from "@/app/components/modals/showMeetingModalPre3";
@@ -40,6 +41,7 @@ export default function Module3() {
   const [showMailModal1, setShowMailModal1] = React.useState(false);
   const [showMailModal2, setShowMailModal2] = React.useState(false);
   const [showMailModal3, setShowMailModal3] = React.useState(false);
+  const [showMailModal4, setShowMailModal4] = React.useState(false);
 
   const [showMeetingModalPre1, setShowMeetingModalPre1] = React.useState(false);
   const [showMeetingModalPre2, setShowMeetingModalPre2] = React.useState(false);
@@ -392,17 +394,19 @@ export default function Module3() {
           submitActions={() => {
             console.log("012");
             setShowMailModal3(false);
-            setShowNotify3(true);
+            // setShowNotify3(true);
+            setIsTaskFormOpen(true);
+            setIsExtraOrdinaryOpen(false);
           }}
         />
       </Modal>
 
       {/* 013 */}
       {/* Notify3 */}
-      <Notify
+      {/* <Notify
         showNotify={showNotify3}
         setShowNotshowNotify={setShowNotify3}
-        recipient="Board Chair"
+        recipient="Board Chair13"
         content="Meeting notes"
         handleOpen={() => {
           console.log("013");
@@ -410,7 +414,7 @@ export default function Module3() {
           setIsExtraOrdinaryOpen(false);
           setShowNotify3(false);
         }}
-      ></Notify>
+      ></Notify> */}
 
       {/* 014 */}
       {isTaskFormOpen && (
@@ -435,7 +439,6 @@ export default function Module3() {
         <SubmitModal
           submitActions={() => {
             console.log("014 New");
-
             setShowEOMSubmitModal14(false);
             setShowNotify4(true);
           }}
@@ -452,13 +455,23 @@ export default function Module3() {
         content="Meeting notes"
         handleOpen={() => {
           console.log("015");
-          setShowVideoContentModal(true, {
-            videoSrc:
-              "https://www.youtube.com/embed/NRV3H_bO6oE?si=QOR6mo8FvJQadTb7",
-          });
-          // setShowNotify4(false);
+          setShowMailModal4(true);
+          setShowNotify4(false);
         }}
       ></Notify>
+
+      {/* 016 */}
+
+      <Modal showModal={showMailModal4} setShowModal={setShowMailModal4}>
+        <MailModalContent4
+          submitActions={() => {
+            console.log(
+              "016 open setShowVideoContentModal with different video"
+            );
+            setShowMailModal4(false); //Self Close
+          }}
+        />
+      </Modal>
     </section>
   );
 }

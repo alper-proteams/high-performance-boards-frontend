@@ -23,7 +23,7 @@ export default function SubmitModal({ submitActions, submitText }) {
             submitActions();
           }}
         >
-          Review
+          Proceed
         </Button>
       </div>
     </>
