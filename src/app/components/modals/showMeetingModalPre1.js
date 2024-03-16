@@ -6,7 +6,6 @@ export default function showMeetingModalPre1({ submitActions, disableButton }) {
   return (
     <>
       <div className="relative p-6 flex-auto">
-        <p className="body-default-16 mb-5">April 10, 2024</p>
         <div className="grid grid-cols-4 gap-4 mb-8">
           <div className="text-primary-red max-w-[75px] col-span-1">FROM</div>
           <div className="col-span-3">
@@ -17,7 +16,8 @@ export default function showMeetingModalPre1({ submitActions, disableButton }) {
           <div className="col-span-3">
             Chair of the Supervisory Board, HPBM AG
           </div>
-
+          <div className="text-primary-red max-w-[75px] col-span-1">DATE</div>
+          <div className="col-span-3">April 10, 2024</div>
           <div className="text-primary-red max-w-[75px] col-span-1">
             SUBJECT
           </div>

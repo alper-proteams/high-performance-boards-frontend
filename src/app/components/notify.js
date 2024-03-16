@@ -9,6 +9,7 @@ export default function Notify({
   setShowNotify,
   children,
   recipient = "available",
+  imageLink,
   handleOpen,
 }) {
   const [stickyNav, setStickyNav] = useState(false);
@@ -37,7 +38,7 @@ export default function Notify({
       {showNotify ? (
         <>
           <div
-            className={`fixed scroll-transition right-5 bg-primary-red z-50 p-5 ${
+            className={`fixed scroll-transition right-5 bg-primary-red max-w-[360px] z-50 p-5 ${
               stickyNav ? "top-20" : "top-40"
             }`}
           >
@@ -55,20 +56,48 @@ export default function Notify({
               Email
             </div>
 
-            <div className="bg-white p-6 text-primary-black flex flex-col items-start gap-5 md:min-w-80 font-semibold">
-              Email from
-              <br />
-              {recipient}
-              <Button
-                // onClick={handleOpenCallback}
-                onClick={() => {
-                  handleOpenCallback();
-                }}
-                className="!bg-primary-black"
-              >
-                Open
-              </Button>
-            </div>
+            {imageLink && (
+              <div className="bg-white p-4 text-primary-black flex flex-col items-start gap-5 md:min-w-80 font-semibold">
+                <Image
+                  onClick={() => {
+                    handleOpenCallback();
+                  }}
+                  src={imageLink}
+                  width={500}
+                  height={300}
+                  priority
+                  alt="image"
+                  className="cursor-pointer"
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <Button
+                  onClick={() => {
+                    handleOpenCallback();
+                  }}
+                  className="!bg-primary-black w-full"
+                >
+                  Watch MNBC Video
+                </Button>
+              </div>
+            )}
+
+            {!imageLink && (
+              <div className="bg-white p-6 text-primary-black flex flex-col items-start gap-5 md:min-w-80 font-semibold">
+                Email from
+                <br />
+                {recipient}
+                {!imageLink && (
+                  <Button
+                    onClick={() => {
+                      handleOpenCallback();
+                    }}
+                    className="!bg-primary-black"
+                  >
+                    Open
+                  </Button>
+                )}
+              </div>
+            )}
           </div>
           <div
             onClick={() => {

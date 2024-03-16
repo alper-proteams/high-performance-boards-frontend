@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Button from "@/app/components/button";
 import Image from "next/image";
 
-export default function SubmitModal2({ submitActions, submitText }) {
+export default function TaskForm2({ submitActions, submitText }) {
   const [isTaskForm2Submitted, setIsTaskForm2Submitted] = useState(false);
   const [disableButton, setDisableButton] = useState(false);
 
@@ -16,8 +16,8 @@ export default function SubmitModal2({ submitActions, submitText }) {
         <div>
           <div className="text-primary-red">Your task</div>
           <p>
-            2Develop a comprehensive action plan to address the whistleblower
-            situation.
+            Formulate a strategic response plan in light of the now-publicized
+            takeover offer.
           </p>
         </div>
         {/* <form className="col-span-2 flex flex-col gap-4"> */}
@@ -35,6 +35,7 @@ export default function SubmitModal2({ submitActions, submitText }) {
               id="input1"
               className=" min-h-48"
               disabled={isTaskForm2Submitted}
+              placeholder="02"
             />
           </div>
 

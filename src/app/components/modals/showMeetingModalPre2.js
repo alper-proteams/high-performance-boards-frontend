@@ -68,7 +68,16 @@ export default function showMeetingModalPre2({ submitActions }) {
           remains committed to driving growth and fostering innovation across
           its operating segments.
         </p>
-        <h2>Lightstar</h2>
+        <Image
+          className="mt-8 mb-5"
+          src="/images/common/lightstar-logo.png"
+          alt="E-mail"
+          width={250}
+          height={250}
+          onClick={() => {
+            submitActions();
+          }}
+        />
         <p className="body-default-16 mb-5">
           Lghstar International Inc., a prominent lighting solutions company
           headquartered in Detroit, Michigan, specializes in providing
