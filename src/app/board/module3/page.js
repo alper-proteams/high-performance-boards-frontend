@@ -21,12 +21,14 @@ import ShowMeetingModalPre3 from "@/app/components/modals/showMeetingModalPre3";
 import ShowVideoContentModal from "@/app/components/modals/showVideoContentModal";
 
 import TaskForm from "@/app/components/form/taskForm";
+import TaskForm2 from "@/app/components/form/taskForm2";
 
 export default function Module3() {
   const [isHeroectionOpen, setIsHeroectionOpen] = useState(true);
   const [isPreSectionOpen, setIsPreSectionOpen] = useState(false);
   const [isExtraOrdinaryOpen, setIsExtraOrdinaryOpen] = useState(false);
   const [isTaskFormOpen, setIsTaskFormOpen] = useState(false);
+  const [isTaskForm2Open, setIsTaskForm2Open] = useState(false);
 
   const [showNotify1, setShowNotify1] = React.useState(false);
   const [showNotify2, setShowNotify2] = React.useState(false);
@@ -54,8 +56,8 @@ export default function Module3() {
 
   const [showEOMSubmitModal, setShowEOMSubmitModal] = React.useState(false);
   const [showEOMSubmitModal14, setShowEOMSubmitModal14] = React.useState(false);
-
-  // const [disableButton, setDisableButton] = useState(false);
+  const [showTask2SubmitModal, setShowTask2SubmitModal] = React.useState(false);
+  const [disableButton, setDisableButton] = useState(false);
 
   const [isEomSubmitted, setIsEomSubmitted] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
@@ -208,10 +210,10 @@ export default function Module3() {
               />
               <Button
                 className={"w-full mt-auto"}
-                // disabled={disableButton}
+                disabled={disableButton}
                 onClick={() => {
                   setShowMeetingModalPre1(true);
-                  // setDisableButton(true);
+                  setDisableButton(true);
                   console.log("006-1");
                 }}
               >
@@ -503,7 +505,41 @@ export default function Module3() {
             console.log("018 breaking video show");
             setShowMailModal5(false);
             console.log("show the task 2");
+            setIsTaskForm2Open(true);
           }}
+        />
+      </Modal>
+      {/* 019 */}
+      {isTaskForm2Open && (
+        <TaskForm2
+          submitActions={() => {
+            console.log("019");
+            setShowTask2SubmitModal(true);
+
+            // setShowNotify4(true);
+            // get submit modal
+          }}
+        />
+      )}
+
+      {/* 020 */}
+      {/* Show after ExtraOrdinary form submit */}
+      <Modal
+        showModal={showTask2SubmitModal}
+        setShowModal={setShowTask2SubmitModal}
+        // title={"WHSE Promotional Video"}
+        hideClose={true}
+      >
+        Task2Submit
+        <SubmitModal
+          submitActions={() => {
+            console.log("009");
+            // setShowEOMSubmitModal(false);
+            // setShowNotify2(true);
+            setShowTask2SubmitModal(false);
+            console.log("020 Task2 submitModal closed");
+          }}
+          submitText={"Kindly proceed back to the lecture room for debriefing"}
         />
       </Modal>
     </section>
