@@ -261,7 +261,7 @@ export default function Module3() {
                   console.log("006-2");
                   setShowVideoContentModal(true);
                   setVideoUrl(
-                    "https://www.youtube.com/embed/feooCAynw4c?si=96S5LntH775k-RzF&controls=0"
+                    "https://www.youtube.com/embed/hLMMUwzB3pg?si=96S5LntH775k-RzF&controls=0"
                   );
                 }}
               />
@@ -551,7 +551,7 @@ export default function Module3() {
       <Notify
         showNotify={showNotify6}
         setShowNotshowNotify={setShowNotify6}
-        recipient="Email for meeting"
+        recipient="Board Chair"
         content="Meeting notes"
         handleOpen={() => {
           // console.log("021 Meet mail 6 opener");

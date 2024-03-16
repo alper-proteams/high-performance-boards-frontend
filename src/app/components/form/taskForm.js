@@ -18,7 +18,7 @@ export default function TaskForm1({ submitActions, submitText }) {
         <div>
           <div className="text-primary-red">Your task</div>
           <p>
-            Develop a comprehensive action plan to address the whistleblower
+            01 Develop a comprehensive action plan to address the whistleblower
             situation.
           </p>
         </div>

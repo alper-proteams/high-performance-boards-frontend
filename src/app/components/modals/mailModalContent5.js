@@ -9,7 +9,7 @@ export default function mail4ModalContent({ submitActions }) {
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/S3Dpfyc15qQ?si=N2GptmP0A2d6GnLf"
+          src="https://www.youtube.com/embed/B6zysk1eFwk?si=N2GptmP0A2d6GnLf"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
@@ -22,7 +22,7 @@ export default function mail4ModalContent({ submitActions }) {
               submitActions();
             }}
           >
-            Breaking Video Watched
+            Proceed
           </Button>
         </Link>
       </div>

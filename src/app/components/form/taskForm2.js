@@ -16,8 +16,8 @@ export default function TaskForm2({ submitActions, submitText }) {
         <div>
           <div className="text-primary-red">Your task</div>
           <p>
-            Formulate a strategic response plan in light of the now-publicized
-            takeover offer.
+            02 Formulate a strategic response plan in light of the
+            now-publicized takeover offer.
           </p>
         </div>
         {/* <form className="col-span-2 flex flex-col gap-4"> */}
