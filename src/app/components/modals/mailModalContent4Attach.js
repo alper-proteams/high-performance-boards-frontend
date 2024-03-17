@@ -9,7 +9,7 @@ export default function mail4ModalContentAttach({ submitActions }) {
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/4fChuH8QNSI?si=N2GptmP0A2d6GnLf"
+          src="https://www.youtube.com/embed/B6zysk1eFwk?si=N2GptmP0A2d6GnLf"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
