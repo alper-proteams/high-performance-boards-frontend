@@ -14,6 +14,7 @@ import MailModalContent1 from "@/app/components/modals/mailModalContent1";
 import MailModalContent2 from "@/app/components/modals/mailModalContent2";
 import MailModalContent3 from "@/app/components/modals/mailModalContent3";
 import MailModalContent4 from "@/app/components/modals/mailModalContent4";
+import MailModalContent4Attach from "@/app/components/modals/mailModalContent4Attach";
 import MailModalContent5 from "@/app/components/modals/mailModalContent5";
 import MailModalContent6 from "@/app/components/modals/mailModalContent6";
 import MailModalContent7 from "@/app/components/modals/mailModalContent7";
@@ -22,9 +23,9 @@ import ShowMeetingModalPre2 from "@/app/components/modals/showMeetingModalPre2";
 import ShowMeetingModalPre3 from "@/app/components/modals/showMeetingModalPre3";
 import ShowVideoContentModal from "@/app/components/modals/showVideoContentModal";
 
-import TaskForm from "@/app/components/form/taskForm";
-import TaskForm2 from "@/app/components/form/taskForm2";
-import TaskForm3 from "@/app/components/form/taskForm3";
+import TaskFormMeeting2 from "@/app/components/form/taskFormMeeting2";
+import TaskForm2 from "@/app/components/form/taskForm33";
+import TaskForm3New from "@/app/components/form/taskForm3New";
 import TaskForm4 from "@/app/components/form/taskForm4";
 
 export default function Module3() {
@@ -33,7 +34,7 @@ export default function Module3() {
   const [isExtraOrdinaryOpen, setIsExtraOrdinaryOpen] = useState(false);
   const [isTaskFormOpen, setIsTaskFormOpen] = useState(false);
   const [isTaskForm2Open, setIsTaskForm2Open] = useState(false);
-  const [isTaskForm3Open, setIsTaskForm3Open] = useState(false);
+  const [isTaskForm3NewOpen, setIsTaskForm3NewOpen] = useState(false);
   const [isTaskForm4Open, setIsTaskForm4Open] = useState(false);
 
   const [showNotify1, setShowNotify1] = React.useState(false);
@@ -47,6 +48,8 @@ export default function Module3() {
   const [showMailModal2, setShowMailModal2] = React.useState(false);
   const [showMailModal3, setShowMailModal3] = React.useState(false);
   const [showMailModal4, setShowMailModal4] = React.useState(false);
+  const [showMailModal4Attach, setShowMailModal4Attach] = React.useState(false);
+
   const [showMailModal5, setShowMailModal5] = React.useState(false);
   const [showMailModal6, setShowMailModal6] = React.useState(false);
   const [showMailModal7, setShowMailModal7] = React.useState(false);
@@ -290,7 +293,7 @@ export default function Module3() {
       </Modal>
 
       {/* 008 */}
-      {/* Show after video watch */}
+      {/* Taskform 1 Show after video watch */}
       {isExtraOrdinaryOpen && (
         <div className="full-container bg-[#E9EBEF] mt-32 mb-16 xl:px-12">
           <div className="container">
@@ -407,7 +410,6 @@ export default function Module3() {
           submitActions={() => {
             console.log("012");
             setShowMailModal3(false);
-            // setShowNotify3(true);
             setIsTaskFormOpen(true);
             setIsExtraOrdinaryOpen(false);
           }}
@@ -429,15 +431,12 @@ export default function Module3() {
         }}
       ></Notify> */}
 
-      {/* 014 */}
+      {/* 013 */}
       {isTaskFormOpen && (
-        <TaskForm
+        <TaskFormMeeting2
           submitActions={() => {
-            console.log("014");
+            console.log("013");
             setShowEOMSubmitModal14(true);
-
-            // setShowNotify4(true);
-            // get submit modal
           }}
         />
       )}
@@ -451,7 +450,7 @@ export default function Module3() {
       >
         <SubmitModal
           submitActions={() => {
-            console.log("014 New");
+            console.log("014");
             setShowEOMSubmitModal14(false);
             setShowNotify4(true);
           }}
@@ -469,6 +468,7 @@ export default function Module3() {
           console.log("015");
           setShowMailModal4(true);
           setShowNotify4(false);
+          // Meeting3
         }}
       ></Notify>
 
@@ -478,20 +478,73 @@ export default function Module3() {
           submitActions={() => {
             console.log("016");
             setShowMailModal4(false); //Self Close
-            console.log("wait breaking notify");
-            setTimeout(() => {
-              setShowNotify5(true);
-              console.log("breaking notify triggered");
-            }, 5000);
+            setShowMailModal4Attach(true); //Attach opener
+            //Open video
+
+            // console.log("wait breaking notify");
+            // setTimeout(() => {
+            //   setShowNotify5(true);
+            //   console.log("breaking notify triggered");
+            // }, 5000);
             //TODO: make task disable
-            setVideoUrl(
-              "https://www.youtube.com/embed/8Xf6gyW_o0U?si=bLqlaABblmbhBmbw&controls=0"
-            );
+            // setVideoUrl(
+            //   "https://www.youtube.com/embed/4fChuH8QNSI?si=bLqlaABblmbhBmbw&controls=0"
+            // );
           }}
         />
       </Modal>
 
       {/* 017 */}
+      <Modal
+        showModal={showMailModal4Attach}
+        setShowModal={setShowMailModal4Attach}
+      >
+        <MailModalContent4Attach
+          submitActions={() => {
+            console.log("017");
+            setShowMailModal4Attach(false); //Self Close
+            setIsTaskFormOpen(false);
+            setIsTaskForm2Open(true);
+
+            // console.log("wait breaking notify");
+            // setTimeout(() => {
+            //   setShowNotify5(true);
+            //   console.log("breaking notify triggered");
+            // }, 5000);
+            //TODO: make task disable
+            // setVideoUrl(
+            //   "https://www.youtube.com/embed/8Xf6gyW_o0U?si=bLqlaABblmbhBmbw&controls=0"
+            // );
+          }}
+        />
+      </Modal>
+
+      {/* 018 */}
+      <Modal
+        showModal={showTask2SubmitModal}
+        setShowModal={setShowTask2SubmitModal}
+        // title={"WHSE Promotional Video"}
+        hideClose={true}
+      >
+        <SubmitModal
+          submitActions={() => {
+            console.log("009");
+            setShowTask2SubmitModal(false);
+            console.log("018 Task2 submitModal closed");
+            setIsTaskForm3NewOpen(true);
+
+            setTimeout(() => {
+              setShowNotify5(true);
+              console.log("breaking notify triggered");
+            }, 2500);
+
+            // setShowNotify6(true); //Move down
+          }}
+          submitText={"Kindly proceed back to the lecture room for debriefing"}
+        />
+      </Modal>
+
+      {/* 0 breaking notify*/}
       <Notify
         showNotify={showNotify5}
         setShowNotshowNotify={setShowNotify5}
@@ -499,11 +552,21 @@ export default function Module3() {
         content="Meeting notes"
         imageLink="/images/common/breaking.jpg"
         handleOpen={() => {
-          console.log("017 breaking notify show");
+          console.log("0 breaking notify show");
           setShowMailModal5(true);
           setShowNotify5(false);
         }}
       ></Notify>
+
+      {/* 019 */}
+      {isTaskForm3NewOpen && (
+        <TaskForm3New
+          submitActions={() => {
+            console.log("019 TaskForm3New Submitted");
+            setShowTask3SubmitModal(true);
+          }}
+        />
+      )}
 
       {/* 018 Breaking News Video */}
       <Modal showModal={showMailModal5} setShowModal={setShowMailModal5}>
@@ -512,7 +575,7 @@ export default function Module3() {
             console.log("018 breaking video show");
             setShowMailModal5(false);
             console.log("show the task 2");
-            setIsTaskForm2Open(true);
+            // setIsTaskForm2Open(true); Move up
           }}
         />
       </Modal>
@@ -525,27 +588,6 @@ export default function Module3() {
           }}
         />
       )}
-
-      {/* 020 */}
-      <Modal
-        showModal={showTask2SubmitModal}
-        setShowModal={setShowTask2SubmitModal}
-        // title={"WHSE Promotional Video"}
-        hideClose={true}
-      >
-        Task2Submit
-        <SubmitModal
-          submitActions={() => {
-            console.log("009");
-            // setShowEOMSubmitModal(false);
-            // setShowNotify2(true);
-            setShowTask2SubmitModal(false);
-            console.log("020 Task2 submitModal closed");
-            setShowNotify6(true);
-          }}
-          submitText={"Kindly proceed back to the lecture room for debriefing"}
-        />
-      </Modal>
 
       {/* 021 */}
       <Notify
@@ -580,21 +622,11 @@ export default function Module3() {
             //Close tasks and open task 3
             setIsTaskFormOpen(false);
             setIsTaskForm2Open(false);
-            setIsTaskForm3Open(true);
+            // setIsTaskForm3NewOpen(true);
             // setIsTaskForm2Open(true);
           }}
         />
       </Modal>
-
-      {/* 024 */}
-      {isTaskForm3Open && (
-        <TaskForm3
-          submitActions={() => {
-            console.log("024 TaskForm3 Submitted");
-            setShowTask3SubmitModal(true);
-          }}
-        />
-      )}
 
       {/* 025 */}
       <Modal
@@ -607,7 +639,7 @@ export default function Module3() {
         <SubmitModal
           submitActions={() => {
             setShowTask3SubmitModal(false);
-            setIsTaskForm3Open(false);
+            setIsTaskForm3NewOpen(false);
             setIsTaskForm4Open(true);
             console.log("025 Task3 submitModal closed");
           }}

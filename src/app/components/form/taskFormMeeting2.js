@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import Button from "@/app/components/button";
 import Image from "next/image";
 
-export default function TaskForm3({ submitActions, submitText }) {
-  const [isTaskForm3Submitted, setIsTaskForm3Submitted] = useState(false);
+export default function TaskForm1({ submitActions, submitText }) {
+  const [isTaskFormSubmitted, setIsTaskFormSubmitted] = useState(false);
   const [disableButton, setDisableButton] = useState(false);
 
   return (
@@ -18,36 +18,36 @@ export default function TaskForm3({ submitActions, submitText }) {
         <div>
           <div className="text-primary-red">Your task</div>
           <p>
-            03 Develop a comprehensive action plan to address the whistleblower
+            02-Develop a comprehensive action plan to address the whistleblower
             situation.
           </p>
         </div>
         {/* <form className="col-span-2 flex flex-col gap-4"> */}
         <form
           className={`col-span-2 flex flex-col gap-4 ${
-            isTaskForm3Submitted ? "form-disabled" : ""
+            isTaskFormSubmitted ? "form-disabled" : ""
           }`}
         >
           <div className="flex bg-[#F6F6F7] p-6 gap-3">
             <label htmlFor="input1" className="">
-              1
+              2
             </label>
             <textarea
               type="text"
               id="input1"
               className=" min-h-48"
-              disabled={isTaskForm3Submitted}
-              placeholder="03"
+              disabled={isTaskFormSubmitted}
+              placeholder="02"
             />
           </div>
 
           <Button
-            disabled={isTaskForm3Submitted}
+            disabled={isTaskFormSubmitted}
             onClick={() => {
               submitActions();
-              setIsTaskForm3Submitted(true);
+              setIsTaskFormSubmitted(true);
               setDisableButton(true);
-              console.log("TaskForm3 Submitted");
+              console.log("TaskForm Submitted");
             }}
             // type="submit"
             className={"ml-auto w-full max-w-80"}

@@ -3,29 +3,34 @@ import React, { useState, useEffect } from "react";
 import Button from "@/app/components/button";
 import Image from "next/image";
 
-export default function TaskForm1({ submitActions, submitText }) {
-  const [isTaskFormSubmitted, setIsTaskFormSubmitted] = useState(false);
+export default function TaskForm3({ submitActions, submitText }) {
+  const [isTaskForm3Submitted, setIsTaskForm3Submitted] = useState(false);
   const [disableButton, setDisableButton] = useState(false);
 
   return (
+    // <div className="full-container bg-[#E9EBEF] mb-16 pt-8 xl:px-12">
     <div className="full-container bg-[#E9EBEF] mt-32 xl:px-12">
+      {/* <div className="container bg-primary-red text-white w-fit !ml-12 h-11 flex items-center text-base font-semibold">
+        New
+      </div> */}
       <div className="container">
         <div className="py-8 xl:py-14 text-3xl font-semibold ">
-          Extraordinary Meeting #2
+          Extraordinary Meeting #3
         </div>
       </div>
+
       <div className="container flex flex-col md:grid grid-cols-3 gap-5 h-min bg-white p-12">
         <div>
           <div className="text-primary-red">Your task</div>
           <p>
-            01 Develop a comprehensive action plan to address the whistleblower
-            situation.
+            03-Formulate a strategic response plan in light of the
+            now-publicized takeover offer.
           </p>
         </div>
         {/* <form className="col-span-2 flex flex-col gap-4"> */}
         <form
           className={`col-span-2 flex flex-col gap-4 ${
-            isTaskFormSubmitted ? "form-disabled" : ""
+            isTaskForm3Submitted ? "form-disabled" : ""
           }`}
         >
           <div className="flex bg-[#F6F6F7] p-6 gap-3">
@@ -36,18 +41,18 @@ export default function TaskForm1({ submitActions, submitText }) {
               type="text"
               id="input1"
               className=" min-h-48"
-              disabled={isTaskFormSubmitted}
-              placeholder="01"
+              // disabled={isTaskForm2Submitted}
+              placeholder="03"
             />
           </div>
 
           <Button
-            disabled={isTaskFormSubmitted}
+            // disabled={isTaskForm2Submitted}
             onClick={() => {
               submitActions();
-              setIsTaskFormSubmitted(true);
+              // setIsTaskForm2Submitted(true);
               setDisableButton(true);
-              console.log("TaskForm Submitted");
+              console.log("TaskForm2 Submitted");
             }}
             // type="submit"
             className={"ml-auto w-full max-w-80"}
