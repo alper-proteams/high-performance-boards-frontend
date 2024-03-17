@@ -16,8 +16,8 @@ export default function TaskForm3New({ submitActions, submitText }) {
         <div>
           <div className="text-primary-red">Your task</div>
           <p>
-            03NEW-Develop a comprehensive action plan to address the
-            whistleblower situation.
+            03NEW-Create a strategic response plan in response to the corruption
+            news.
           </p>
         </div>
         {/* <form className="col-span-2 flex flex-col gap-4"> */}
@@ -35,7 +35,7 @@ export default function TaskForm3New({ submitActions, submitText }) {
               id="input1"
               className=" min-h-48"
               disabled={isTaskForm3NewSubmitted}
-              placeholder="02"
+              placeholder="03 New Task"
             />
           </div>
 
