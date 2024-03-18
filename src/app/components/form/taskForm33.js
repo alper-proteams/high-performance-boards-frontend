@@ -4,7 +4,21 @@ import Button from "@/app/components/button";
 import Image from "next/image";
 
 export default function TaskForm3({ submitActions, submitText }) {
-  const [isFormDisable, setIsFormDisable] = useState(false);
+  const [isFormDisable, setIsFormDisable] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsFormDisable(false);
+      // }, 26 * 60 * 1000); // 26 dakika sonra setIsFormDisable(false) 1560000
+    }, 5000); // 26 dakika sonra setIsFormDisable(false) 1560000
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClick = () => {
+    submitActions();
+    setIsFormDisable(true);
+  };
 
   return (
     <div className="full-container bg-[#E9EBEF] mt-32 xl:px-12">
@@ -23,11 +37,7 @@ export default function TaskForm3({ submitActions, submitText }) {
           </p>
         </div>
         {/* <form className="col-span-2 flex flex-col gap-4"> */}
-        <form
-          className={`col-span-2 flex flex-col gap-4 ${
-            isFormDisable ? "form-disabled" : ""
-          }`}
-        >
+        <form className={`col-span-2 flex flex-col gap-4`}>
           <div className="flex bg-[#F6F6F7] p-6 gap-3">
             <label htmlFor="input1" className="">
               1
@@ -36,17 +46,18 @@ export default function TaskForm3({ submitActions, submitText }) {
               type="text"
               id="input1"
               className=" min-h-48"
-              disabled={isFormDisable}
+              // disabled={isFormDisable}
               placeholder=""
             />
           </div>
 
           <Button
             disabled={isFormDisable}
-            onClick={() => {
-              submitActions();
-              setIsFormDisable(true);
-            }}
+            onClick={handleClick}
+            // onClick={() => {
+            //   submitActions();
+            //   setIsFormDisable(true);
+            // }}
             // type="submit"
             className={"ml-auto w-full max-w-80"}
           >

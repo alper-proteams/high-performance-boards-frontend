@@ -160,7 +160,6 @@ export default function Module3() {
           submitActions={() => {
             setShowMeetingModalPre1(false);
             console.log("003");
-            // TODO: Add button disable
           }}
         />
       </Modal>
@@ -251,7 +250,7 @@ export default function Module3() {
                 WHSE Promotional Video
               </div>
               <Image
-                className="mx-auto w-auto h-auto"
+                className="mx-auto w-auto h-auto cursor-pointer"
                 src="/images/common/meeting-video.svg"
                 alt="E-mail"
                 width={350}
@@ -358,9 +357,6 @@ export default function Module3() {
             console.log("taskform1 action");
             setShowEOMSubmitModal(true);
             setIsEomSubmitted(true);
-            // setShowEOMSubmitModal(true);
-            // setIsEomSubmitted(true);
-            // setShowTask2SubmitModal(true);
           }}
         />
       )}
@@ -476,6 +472,10 @@ export default function Module3() {
             setShowMailModal4Attach(false);
             setIsTaskFormOpen(false);
             setIsTaskForm3Open(true);
+            setTimeout(() => {
+              setShowNotify5(true);
+              console.log("breaking notify triggered");
+            }, 3000); //1500000 for 25min
           }}
         />
       </Modal>
@@ -499,7 +499,7 @@ export default function Module3() {
         <TaskForm3
           submitActions={() => {
             console.log("018");
-            setShowTask2SubmitModal(true);
+            // setShowTask2SubmitModal(true);
           }}
         />
       )}
@@ -515,10 +515,6 @@ export default function Module3() {
           submitActions={() => {
             setShowTask2SubmitModal(false);
             console.log("019");
-            setTimeout(() => {
-              setShowNotify5(true);
-              console.log("breaking notify triggered");
-            }, 2500);
           }}
           submitText={"Kindly proceed back to the lecture room for debriefing"}
         />
