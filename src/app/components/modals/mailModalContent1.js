@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import Button from '@/app/components/button';
-import Image from 'next/image';
-import Link from 'next/link';
-import Modal from '@/app/components/modal';
+import Button from "@/app/components/button";
+import Image from "next/image";
+import Link from "next/link";
+import Modal from "@/app/components/modal";
 
 export default function Mail1ModalContent({ submitActions }) {
   return (
@@ -50,9 +50,9 @@ export default function Mail1ModalContent({ submitActions }) {
           strategy, which aligns with our company’s best interests.
         </p>
         <p className="body-default-16 mb-5">
-          I kindly request alldirectors to thoroughly review the takeover letter
-          and any relevant supporting materials prior to the meetings. Please
-          come prepared to share your perspectives, insights, and
+          I kindly request all directors to thoroughly review the takeover
+          letter and any relevant supporting materials prior to the meetings.
+          Please come prepared to share your perspectives, insights, and
           recommendations.
         </p>
         <p className="body-default-16 mb-5">
@@ -77,7 +77,7 @@ export default function Mail1ModalContent({ submitActions }) {
       </div>
       <div className="flex items-center justify-end p-6">
         <Button
-          className={'w-full'}
+          className={"w-full"}
           onClick={() => {
             submitActions();
           }}

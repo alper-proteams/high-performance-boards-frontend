@@ -39,9 +39,9 @@ export default function mail2ModalContent({ submitActions }) {
           for a comprehensive discussion during the upcoming meeting.
         </p>
         <p className="body-default-16 mb-5">
-          I kindly request alldirectors to thoroughly review the takeover letter
-          and any relevant supporting materials prior to the meetings. Please
-          come prepared to share your perspectives, insights, and
+          I kindly request all directors to thoroughly review the takeover
+          letter and any relevant supporting materials prior to the meetings.
+          Please come prepared to share your perspectives, insights, and
           recommendations.
         </p>
 
