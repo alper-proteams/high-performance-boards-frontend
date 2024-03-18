@@ -29,7 +29,7 @@ export default function TaskForm1({ submitActions, submitText }) {
         >
           <div className="flex bg-[#F6F6F7] p-6 gap-3">
             <label htmlFor="input1" className="">
-              2
+              1
             </label>
             <textarea
               type="text"
