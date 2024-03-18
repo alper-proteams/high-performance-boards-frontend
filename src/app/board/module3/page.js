@@ -475,7 +475,7 @@ export default function Module3() {
             setTimeout(() => {
               setShowNotify5(true);
               console.log("breaking notify triggered");
-            }, 3000); //1500000 for 25min
+            }, 1500000); //1500000 for 25min // 3000
           }}
         />
       </Modal>

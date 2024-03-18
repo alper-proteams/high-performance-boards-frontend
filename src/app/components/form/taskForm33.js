@@ -9,8 +9,7 @@ export default function TaskForm3({ submitActions, submitText }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsFormDisable(false);
-      // }, 26 * 60 * 1000); // 26 dakika sonra setIsFormDisable(false) 1560000
-    }, 5000); // 26 dakika sonra setIsFormDisable(false) 1560000
+    }, 1560000); // 26 min 1560000 // 5000
 
     return () => clearTimeout(timer);
   }, []);
@@ -51,7 +50,7 @@ export default function TaskForm3({ submitActions, submitText }) {
             />
           </div>
 
-          <Button
+          {/* <Button
             disabled={isFormDisable}
             onClick={handleClick}
             // onClick={() => {
@@ -62,7 +61,7 @@ export default function TaskForm3({ submitActions, submitText }) {
             className={"ml-auto w-full max-w-80"}
           >
             Proceed
-          </Button>
+          </Button> */}
         </form>
       </div>
     </div>
