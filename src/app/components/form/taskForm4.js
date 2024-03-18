@@ -18,8 +18,8 @@ export default function TaskForm4({ submitActions, submitText }) {
         <div>
           <div className="text-primary-red">Your task</div>
           <p>
-            04 Develop a comprehensive action plan to address the whistleblower
-            situation.
+            Create a strategic response plan based on the outcomes of the
+            conference call.
           </p>
         </div>
         {/* <form className="col-span-2 flex flex-col gap-4"> */}
@@ -47,7 +47,7 @@ export default function TaskForm4({ submitActions, submitText }) {
               submitActions();
               setIsTaskForm4Submitted(true);
               setDisableButton(true);
-              console.log("TaskForm4 Submitted");
+              // console.log("TaskForm4 Submitted");
             }}
             // type="submit"
             className={"ml-auto w-full max-w-80"}

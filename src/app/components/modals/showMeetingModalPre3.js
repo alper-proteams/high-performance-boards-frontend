@@ -9,7 +9,7 @@ export default function showMeetingModalPre3({ submitActions }) {
         <p className="body-default-16 mb-5">
           Below, you'll find the latest financial information for the company.
         </p>
-        <h2>Financials</h2>
+        {/* <h2>Financials</h2> */}
         <Image
           className="mx-auto w-auto h-auto"
           src="/images/detail/module3/finance-table.jpg"

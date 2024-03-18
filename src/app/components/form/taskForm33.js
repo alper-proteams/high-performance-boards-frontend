@@ -23,8 +23,8 @@ export default function TaskForm3({ submitActions, submitText }) {
         <div>
           <div className="text-primary-red">Your task</div>
           <p>
-            03-Formulate a strategic response plan in light of the
-            now-publicized takeover offer.
+            Formulate a strategic response plan in light of the now-publicized
+            takeover offer.
           </p>
         </div>
         {/* <form className="col-span-2 flex flex-col gap-4"> */}
@@ -52,7 +52,7 @@ export default function TaskForm3({ submitActions, submitText }) {
               submitActions();
               // setIsTaskForm2Submitted(true);
               setDisableButton(true);
-              console.log("TaskForm2 Submitted");
+              // console.log("TaskForm2 Submitted");
             }}
             // type="submit"
             className={"ml-auto w-full max-w-80"}

@@ -8,16 +8,15 @@ export default function TaskForm3New({ submitActions, submitText }) {
   const [disableButton, setDisableButton] = useState(false);
 
   return (
-    <div className="full-container bg-[#E9EBEF] mt-32 xl:px-12">
-      <div className="container bg-primary-red text-white w-fit !ml-12 h-11 flex items-center text-base font-semibold">
+    <div className="full-container bg-[#E9EBEF] pt-12 pb-24">
+      <div className="container bg-primary-red text-white w-fit !ml-24 h-11 flex items-center text-base font-semibold">
         New
       </div>
       <div className="container flex flex-col md:grid grid-cols-3 gap-5 h-min bg-white p-12">
         <div>
           <div className="text-primary-red">Your task</div>
           <p>
-            03NEW-Create a strategic response plan in response to the corruption
-            news.
+            Create a strategic response plan in response to the corruption news.
           </p>
         </div>
         {/* <form className="col-span-2 flex flex-col gap-4"> */}
@@ -45,7 +44,6 @@ export default function TaskForm3New({ submitActions, submitText }) {
               submitActions();
               setIsTaskForm3NewSubmitted(true);
               setDisableButton(true);
-              console.log("TaskForm3New Submitted");
             }}
             // type="submit"
             className={"ml-auto w-full max-w-80"}

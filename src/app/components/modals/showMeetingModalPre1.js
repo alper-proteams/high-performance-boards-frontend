@@ -7,10 +7,9 @@ export default function showMeetingModalPre1({ submitActions, disableButton }) {
     <>
       <div className="relative p-6 flex-auto">
         <div className="grid grid-cols-4 gap-4 mb-8">
-          <div className="text-primary-red max-w-[75px] col-span-1">FROM</div>
+          <div className="text-primary-red max-w-[75px] col-span-1">TO</div>
           <div className="col-span-3">
             Fred Hammerschmidt CEO (Chairman of the Management Board) HPBM AG
-            Industriestrasse 1, Schwabing-West, 80796 Germany
           </div>
           <div className="text-primary-red max-w-[75px] col-span-1">CC</div>
           <div className="col-span-3">

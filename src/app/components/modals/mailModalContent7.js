@@ -18,51 +18,42 @@ export default function mail7ModalContent({ submitActions }) {
           </div>
           <div className="col-span-3">Call for an Extraordinary Meeting</div>
         </div>
-        TRANSCRIPT
-        <p className="body-default-16 mb-5">Dear Directors,</p>
-        <p className="body-default-16 mb-5">
-          I hope this email finds you well. I am writing to inform you about a
-          conference call I had this morning with Mr. Willard, the Chair,
-          President & CEO of WHSE Inc., along with our General Counsel, Dr.
-          Meier, WHSE's General Counsel, Mr. Shapiro, and WHSE's Board
-          Secretary, Mr. Johansen.
+        <p className="body-default-16 mb-5 text-primary-red !font-semibold">
+          Summary of key remarks by Mr Willard, the CEO of WHSE Inc.
         </p>
-        <p className="body-default-16 mb-5">
-          The conference call, initiated by Mr. Willard yesterday evening, took
-          place from 06:30 to 08:15 this morning. Notably, Mr. Willard requested
-          that no member of our leadership team participate in the call due to
-          the current news flow surrounding South Africa. In the interest of
-          prudence, I respected his request.
+        <p className="body-default-16 mb-5 italic !font-light">
+          "While we are disappointed by the rejection, we remain highly
+          enthusiastic about the potential merger. We firmly believe that our
+          proposal offers compelling advantages for your shareholders,
+          delivering immediate and significant value."
         </p>
-        <p className="body-default-16 mb-5">
-          I have attached the transcript of our conversation for your reference.
-          It clearly illustrates Mr. Willard's unwavering commitment to
-          completing the deal and his willingness to go the extra mile.
+        <p className="body-default-16 mb-5 italic !font-light">
+          "The current news surrounding South Africa has not dampened our
+          interest. However, we do have concerns and are curious about what may
+          come next. The recent 7% drop in the share price since the news
+          emerged indicates a lack of investor confidence in the current
+          leadership."
         </p>
-        <p className="body-default-16 mb-5">
-          Considering the insights gained from this conference call, I believe
-          it is essential to convene another extraordinary meeting to discuss
-          the way forward. I propose the following date and time for this
-          meeting:
+        <p className="body-default-16 mb-5 italic !font-light">
+          "We have engaged in extensive discussions with HPBM's key
+          shareholders, and we are pleased to see that they share our excitement
+          and fully embrace our vision."
         </p>
-        <p className="body-default-16 mb-5">
-          Date: 24 April 2024 Time: 07.30-10.00
+        <p className="body-default-16 mb-5 italic !font-light">
+          "We urge the HPBM board to reconsider their decision. Our offer
+          already accounts for both the upside potential of HPBM and its
+          existing operational challenges. It is important to emphasize that we
+          will not increase our offer."
         </p>
-        <p className="body-default-16 mb-5">
-          During the meeting, we will delve deeper into the matters discussed
-          during the call and strategize on the best course of action. Your
-          valuable input and expertise as board members will be crucial in
-          shaping our path ahead.
+        <p className="body-default-16 mb-5 italic !font-light">
+          "We strongly prefer working collaboratively with you to achieve a
+          mutually beneficial transaction. We believe it is in the best interest
+          of both companies and our respective shareholders to swiftly move
+          forward and finalize this transaction."
         </p>
-        <p className="body-default-16 mb-5">
-          Thank you for your attention to this matter. I look forward to meeting
-          with you to chart our course forward.
-        </p>
-        <p className="body-default-16 mb-5">Best regards,</p>
-        <p className="body-default-16 mb-5">
-          Chair of the Supervisory
-          <br />
-          Board, HPBM AG.
+        <p className="body-default-16 mb-5 italic !font-light">
+          "Regrettably, should our offer be rejected once again, we will be left
+          with no alternative but to pursue a hostile takeover."
         </p>
       </div>
 

@@ -122,7 +122,6 @@ export default function Module3() {
           </div>
         </>
       )}
-
       {/* 001 */}
       {/* Notify1 */}
       <Notify
@@ -136,7 +135,6 @@ export default function Module3() {
           setShowNotify1(false);
         }}
       ></Notify>
-
       {/* 002 */}
       {/* Mail 1 Modal */}
       <Modal showModal={showMailModal1} setShowModal={setShowMailModal1}>
@@ -149,7 +147,6 @@ export default function Module3() {
           }}
         />
       </Modal>
-
       {/* 003 */}
       {/* showMeetingModalPre1 Modal */}
       <Modal
@@ -165,7 +162,6 @@ export default function Module3() {
           }}
         />
       </Modal>
-
       {/* 004 */}
       {/* showMeetingModalPre2 Modal */}
       <Modal
@@ -180,7 +176,6 @@ export default function Module3() {
           }}
         />
       </Modal>
-
       {/* 005 */}
       {/* showMeetingModalPre3 Modal */}
       <Modal
@@ -195,7 +190,6 @@ export default function Module3() {
           }}
         />
       </Modal>
-
       {/* 006 */}
       {/* Hide after video watch */}
       {isPreSectionOpen && (
@@ -272,7 +266,6 @@ export default function Module3() {
           </div>
         </div>
       )}
-
       {/* 007 */}
       {/* showVideoContentModal Modal */}
       <Modal
@@ -291,7 +284,6 @@ export default function Module3() {
           }}
         />
       </Modal>
-
       {/* 008 */}
       {/* Taskform 1 Show after video watch */}
       {isExtraOrdinaryOpen && (
@@ -358,7 +350,6 @@ export default function Module3() {
           </div>
         </div>
       )}
-
       {/* 009 */}
       {/* Show after ExtraOrdinary form submit */}
       <Modal
@@ -376,7 +367,6 @@ export default function Module3() {
           submitText={"Kindly proceed back to the lecture room for debriefing"}
         />
       </Modal>
-
       {/* 010 */}
       {/* Notify2 */}
       <Notify
@@ -390,7 +380,6 @@ export default function Module3() {
           setShowNotify2(false);
         }}
       ></Notify>
-
       {/* 011 */}
       {/* Mail 2 Modal */}
       <Modal showModal={showMailModal2} setShowModal={setShowMailModal2}>
@@ -402,7 +391,6 @@ export default function Module3() {
           }}
         />
       </Modal>
-
       {/* 012 */}
       {/* Mail 3 Modal */}
       <Modal showModal={showMailModal3} setShowModal={setShowMailModal3}>
@@ -415,22 +403,6 @@ export default function Module3() {
           }}
         />
       </Modal>
-
-      {/* 013 */}
-      {/* Notify3 */}
-      {/* <Notify
-        showNotify={showNotify3}
-        setShowNotshowNotify={setShowNotify3}
-        recipient="Board Chair13"
-        content="Meeting notes"
-        handleOpen={() => {
-          console.log("013");
-          setIsTaskFormOpen(true);
-          setIsExtraOrdinaryOpen(false);
-          setShowNotify3(false);
-        }}
-      ></Notify> */}
-
       {/* 013 */}
       {isTaskFormOpen && (
         <TaskFormMeeting2
@@ -440,7 +412,6 @@ export default function Module3() {
           }}
         />
       )}
-
       {/* 014 new */}
       <Modal
         showModal={showEOMSubmitModal14}
@@ -457,7 +428,6 @@ export default function Module3() {
           submitText={"Kindly proceed back to the lecture room for debriefing"}
         />
       </Modal>
-
       {/* 015 */}
       <Notify
         showNotify={showNotify4}
@@ -471,7 +441,6 @@ export default function Module3() {
           // Meeting3
         }}
       ></Notify>
-
       {/* 016 */}
       <Modal showModal={showMailModal4} setShowModal={setShowMailModal4}>
         <MailModalContent4
@@ -493,7 +462,6 @@ export default function Module3() {
           }}
         />
       </Modal>
-
       {/* 017 */}
       <Modal
         showModal={showMailModal4Attach}
@@ -505,21 +473,10 @@ export default function Module3() {
             setShowMailModal4Attach(false); //Self Close
             setIsTaskFormOpen(false);
             setIsTaskForm3Open(true);
-
-            // console.log("wait breaking notify");
-            // setTimeout(() => {
-            //   setShowNotify5(true);
-            //   console.log("breaking notify triggered");
-            // }, 5000);
-            //TODO: make task disable
-            // setVideoUrl(
-            //   "https://www.youtube.com/embed/8Xf6gyW_o0U?si=bLqlaABblmbhBmbw&controls=0"
-            // );
           }}
         />
       </Modal>
-
-      {/* 0 breaking notify*/}
+      {/* 19-2 breaking notify*/}
       <Notify
         showNotify={showNotify5}
         setShowNotshowNotify={setShowNotify5}
@@ -527,13 +484,12 @@ export default function Module3() {
         content="Meeting notes"
         imageLink="/images/common/breaking.jpg"
         handleOpen={() => {
-          console.log("0 breaking notify show");
+          console.log("19-2 breaking notify show");
           setShowMailModal5(true);
           setShowNotify5(false);
         }}
       ></Notify>
-
-      {/* 019 */}
+      {/* 018 */}
       {isTaskForm3Open && (
         <TaskForm3
           submitActions={() => {
@@ -542,8 +498,7 @@ export default function Module3() {
           }}
         />
       )}
-
-      {/* 018 */}
+      {/* 019 */}
       <Modal
         showModal={showTask2SubmitModal}
         setShowModal={setShowTask2SubmitModal}
@@ -552,9 +507,8 @@ export default function Module3() {
       >
         <SubmitModal
           submitActions={() => {
-            console.log("009");
             setShowTask2SubmitModal(false);
-            console.log("018 Task2 submitModal closed");
+            console.log("019");
             // setIsTaskForm3NewOpen(true);
 
             setTimeout(() => {
@@ -567,97 +521,114 @@ export default function Module3() {
           submitText={"Kindly proceed back to the lecture room for debriefing"}
         />
       </Modal>
+      {/* 019-2 here */}
 
-      {/* 019 */}
-      {isTaskForm3NewOpen && (
-        <TaskForm3New
-          submitActions={() => {
-            console.log("019 TaskForm3New Submitted");
-            setShowTask3SubmitModal(true);
-          }}
-        />
-      )}
-
-      {/* 018 Breaking News Video */}
+      {/* 020 Breaking News Video */}
       <Modal showModal={showMailModal5} setShowModal={setShowMailModal5}>
         <MailModalContent5
           submitActions={() => {
-            console.log("018 breaking video show");
+            console.log("020 breaking video closed and show new3 task");
             setShowMailModal5(false);
-            console.log("show the task 2");
             setIsTaskForm3NewOpen(true);
           }}
         />
       </Modal>
 
       {/* 021 */}
-      <Notify
-        showNotify={showNotify6}
-        setShowNotshowNotify={setShowNotify6}
-        recipient="Board Chair"
-        content="Meeting notes"
-        handleOpen={() => {
-          // console.log("021 Meet mail 6 opener");
-          setShowMailModal6(true);
-          setShowNotify6(false);
-        }}
-      ></Notify>
-
-      {/* 022 Mail Modal 6 */}
-      <Modal showModal={showMailModal6} setShowModal={setShowMailModal6}>
-        <MailModalContent6
+      {isTaskForm3NewOpen && (
+        <TaskForm3New
           submitActions={() => {
-            console.log("022 mail modal 6 closed, 7 opened  ");
-            setShowMailModal6(false);
-            setShowMailModal7(true);
+            console.log("021 TaskForm3New Submitted");
+            setShowTask3SubmitModal(true);
           }}
         />
-      </Modal>
+      )}
 
-      {/* 025 */}
+      {/* 022 */}
       <Modal
         showModal={showTask3SubmitModal}
         setShowModal={setShowTask3SubmitModal}
         // title={"WHSE Promotional Video"}
         hideClose={true}
       >
-        Task3Submit
         <SubmitModal
           submitActions={() => {
             setShowTask3SubmitModal(false);
             setIsTaskForm3NewOpen(false);
             // setIsTaskForm4Open(true); // Move down
-            console.log("025 Task3 submitModal closed");
+            console.log("022 Task3 submitModal closed");
+            console.log("Noftify 6 opened");
+            setShowNotify6(true);
           }}
           submitText={"Kindly proceed back to the lecture room for debriefing"}
         />
       </Modal>
 
+      {/* 023 */}
+      <Notify
+        showNotify={showNotify6}
+        setShowNotshowNotify={setShowNotify6}
+        recipient="Board Chair"
+        content="Meeting notes"
+        handleOpen={() => {
+          // setShowMailModal6(true);
+          setShowNotify6(false);
+          console.log("Noftify 6 closed");
+          console.log("024 Meet mail 6 opener");
+          setShowMailModal6(true);
+        }}
+      ></Notify>
+
+      {/* 024 Mail Modal 6 */}
+      <Modal showModal={showMailModal6} setShowModal={setShowMailModal6}>
+        <MailModalContent6
+          submitActions={() => {
+            console.log("024 mail openedm notify 6 closed, 7 opened  ");
+            console.log("buraya kadar ok mi");
+            setShowMailModal6(false);
+            setShowMailModal7(true);
+          }}
+        />
+      </Modal>
+
+      {/* 021 */}
+      {/* <Notify
+        showNotify={showNotify6}
+        setShowNotshowNotify={setShowNotify6}
+        recipient="Board Chair"
+        content="Meeting notes"
+        handleOpen={() => {
+          // console.log("021 Meet mail 6 opener");
+          setShowMailModal7(true);
+          setShowNotify6(false);
+        }}
+      ></Notify> */}
+
       {/* 023 Mail Modal 7 */}
       <Modal showModal={showMailModal7} setShowModal={setShowMailModal7}>
         <MailModalContent7
           submitActions={() => {
-            console.log("022 Transcript mail7 closed");
+            console.log("mail7 closed");
             setShowMailModal7(false);
             //Close tasks and open task 3
             setIsTaskFormOpen(false);
             setIsTaskForm3Open(false);
+            setIsTaskForm4Open(true);
+            console.log("task form 4 opened");
             // setIsTaskForm3NewOpen(true);
             // setIsTaskForm2Open(true);
           }}
         />
       </Modal>
-
       {/* 026 */}
       {isTaskForm4Open && (
         <TaskForm4
           submitActions={() => {
-            console.log("026");
+            console.log("task form 4 clicked");
             setShowTask4SubmitModal(true);
           }}
         />
       )}
-
       {/* 027 */}
       <Modal
         showModal={showTask4SubmitModal}
