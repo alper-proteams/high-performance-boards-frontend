@@ -4,8 +4,7 @@ import Button from "@/app/components/button";
 import Image from "next/image";
 
 export default function TaskForm1({ submitActions, submitText }) {
-  const [isTaskFormSubmitted, setIsTaskFormSubmitted] = useState(false);
-  const [disableButton, setDisableButton] = useState(false);
+  const [isFormDisable, setIsFormDisable] = useState(false);
 
   return (
     <div className="full-container bg-[#E9EBEF] mt-32 xl:px-12">
@@ -25,7 +24,7 @@ export default function TaskForm1({ submitActions, submitText }) {
         {/* <form className="col-span-2 flex flex-col gap-4"> */}
         <form
           className={`col-span-2 flex flex-col gap-4 ${
-            isTaskFormSubmitted ? "form-disabled" : ""
+            isFormDisable ? "form-disabled" : ""
           }`}
         >
           <div className="flex bg-[#F6F6F7] p-6 gap-3">
@@ -36,22 +35,21 @@ export default function TaskForm1({ submitActions, submitText }) {
               type="text"
               id="input1"
               className=" min-h-48"
-              disabled={isTaskFormSubmitted}
-              placeholder="02"
+              disabled={isFormDisable}
+              placeholder=""
             />
           </div>
 
           <Button
-            disabled={isTaskFormSubmitted}
+            disabled={isFormDisable}
             onClick={() => {
               submitActions();
-              setIsTaskFormSubmitted(true);
-              setDisableButton(true);
+              setIsFormDisable(true);
             }}
             // type="submit"
             className={"ml-auto w-full max-w-80"}
           >
-            Submit
+            Proceed
           </Button>
         </form>
       </div>

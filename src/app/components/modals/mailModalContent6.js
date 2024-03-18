@@ -18,7 +18,7 @@ export default function mail6ModalContent({ submitActions }) {
           </div>
           <div className="col-span-3">Call for an Extraordinary Meeting</div>
         </div>
-        MAIL6
+
         <p className="body-default-16 mb-5">Dear Directors,</p>
         <p className="body-default-16 mb-5">
           I hope this email finds you well. I am writing to inform you about a
