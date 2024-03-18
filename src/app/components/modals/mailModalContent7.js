@@ -21,11 +21,16 @@ export default function mail7ModalContent({ submitActions }) {
         <p className="body-default-16 mb-5 text-primary-red !font-semibold">
           Summary of key remarks by Mr Willard, the CEO of WHSE Inc.
         </p>
-        <p className="body-default-16 mb-5 italic !font-light">
+        {/* <p className="body-default-16 mb-5 italic !font-light">
           "While we are disappointed by the rejection, we remain highly
           enthusiastic about the potential merger. We firmly believe that our
           proposal offers compelling advantages for your shareholders,
           delivering immediate and significant value."
+        </p> */}
+        <p className="body-default-16 mb-5 italic !font-light">
+          “We remain highly enthusiastic about the potential merger. We firmly
+          believe that our proposal offers compelling advantages for your
+          shareholders, delivering immediate and significant value.”
         </p>
         <p className="body-default-16 mb-5 italic !font-light">
           "The current news surrounding South Africa has not dampened our
@@ -40,10 +45,10 @@ export default function mail7ModalContent({ submitActions }) {
           and fully embrace our vision."
         </p>
         <p className="body-default-16 mb-5 italic !font-light">
-          "We urge the HPBM board to reconsider their decision. Our offer
-          already accounts for both the upside potential of HPBM and its
-          existing operational challenges. It is important to emphasize that we
-          will not increase our offer."
+          "We urge the HPBM board to accept our offer. Our offer already
+          accounts for both the upside potential of HPBM and its existing
+          operational challenges. It is important to emphasize that we will not
+          increase our offer."
         </p>
         <p className="body-default-16 mb-5 italic !font-light">
           "We strongly prefer working collaboratively with you to achieve a

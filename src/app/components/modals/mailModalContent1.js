@@ -32,12 +32,10 @@ export default function Mail1ModalContent({ submitActions }) {
           this situation.
         </p>
         <p className="body-default-16 mb-5">
-          I propose the first meeting on 12 April 2024, from 08.00 to 11.00.
-          This meeting will allow all directors to review the details of the
-          takeover letter, its implications, and the potential opportunities and
-          risks associated with such an offer. The primary objective of this
-          meeting is to raise pertinent questions regarding the takeover offer,
-          which will be addressed to the company's leadership team.
+          I propose the first meeting on 12 April 2024, from 08.00 to 11.00. The
+          primary objective of this meeting is to raise pertinent questions
+          regarding the takeover offer, which will be addressed to the company's
+          leadership team.
         </p>
         <p className="body-default-16 mb-5">
           I suggest a second meeting on 16 April 2024 (08:00-12:00). During this
@@ -49,7 +47,7 @@ export default function Mail1ModalContent({ submitActions }) {
           in a comprehensive and open discussion to formulate our response
           strategy, which aligns with our company’s best interests.
         </p>
-        <p className="body-default-16 mb-5">
+        <p className="body-default-16 mb-5 underline">
           I kindly request all directors to thoroughly review the takeover
           letter and any relevant supporting materials prior to the meetings.
           Please come prepared to share your perspectives, insights, and
