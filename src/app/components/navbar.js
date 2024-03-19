@@ -39,7 +39,7 @@ export default function Navbar() {
       <div className="hidden h-10"> </div>
       <header
         className={`${
-          stickyNav ? "xl:h-14 top-0 " : "xl:h-24 top-10"
+          stickyNav ? "xl:h-14 top-0 " : "xl:h-24 md:top-10"
         } scroll-transition left-0 right-0 mx-auto w-full bg-white min-h-14 z-20 top-0 fixed h-[72px]`}
       >
         <nav className="flex flex-row justify-between container items-center h-full">
@@ -125,9 +125,11 @@ export default function Navbar() {
                 className={`scroll-transition items-center px-6 xl:px-20 ${
                   stickyNav ? "h-10" : "h-10 xl:h-12"
                 }`}
+                title={user.username}
                 onClick={handleLogout}
               >
-                {user.username} / Logout
+                <span className="hidden md:block">{user.username} /</span>
+                Logout
               </Button>
             ) : (
               <Link href="/login">
