@@ -38,7 +38,7 @@ export default function Notify({
       {showNotify ? (
         <>
           <div
-            className={`fixed scroll-transition right-5 bg-primary-red max-w-[360px] z-50 p-5 ${
+            className={`fixed scroll-transition w-full left-4 right-0 md:right-5 md:left-auto bg-primary-red max-w-[360px] z-50 p-5 ${
               stickyNav ? "top-20" : "top-40"
             }`}
           >

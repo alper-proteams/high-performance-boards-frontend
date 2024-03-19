@@ -86,7 +86,7 @@ export default function Module3() {
                 height={300}
                 priority
                 alt="image"
-                className="ml-16"
+                className="md:ml-16 mt-32 md:mt-0"
                 style={{ width: "100%", height: "auto" }}
               />
 
