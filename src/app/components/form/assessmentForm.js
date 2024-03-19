@@ -91,7 +91,13 @@ const AssessmentForm = () => {
             )}
           </div>
         ))}
-        <Button type="submit" className={"w-max mx-auto"}>
+        <Button
+          // type="submit"
+          onClick={() => {
+            window.location.href = "/board/module2";
+          }}
+          className={"w-max mx-auto"}
+        >
           Send
         </Button>
       </div>

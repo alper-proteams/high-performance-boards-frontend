@@ -19,7 +19,14 @@ const AssessmentForm = () => {
           />
         </div>
 
-        <Button type="submit">Send</Button>
+        <Button
+          // type="submit"
+          onClick={() => {
+            window.location.href = "/board/module3";
+          }}
+        >
+          Send
+        </Button>
       </div>
     </form>
   );
