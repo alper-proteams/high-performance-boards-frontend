@@ -21,6 +21,7 @@ import ShowMeetingModalPre1 from "@/app/components/modals/showMeetingModalPre1";
 import ShowMeetingModalPre2 from "@/app/components/modals/showMeetingModalPre2";
 import ShowMeetingModalPre3 from "@/app/components/modals/showMeetingModalPre3";
 import ShowVideoContentModal from "@/app/components/modals/showVideoContentModal";
+import Landing from "./landing.js";
 
 import TaskForm1 from "@/app/components/form/taskForm1";
 import TaskFormMeeting2 from "@/app/components/form/taskFormMeeting2";
@@ -29,7 +30,7 @@ import TaskForm3New from "@/app/components/form/taskForm3New";
 import TaskForm4 from "@/app/components/form/taskForm4";
 
 export default function Module3() {
-  const [isHeroectionOpen, setIsHeroectionOpen] = useState(true);
+  const [isLandingOpen, setIsLandingOpen] = useState(true);
   const [isPreSectionOpen, setIsPreSectionOpen] = useState(false);
   const [isExtraOrdinaryOpen, setIsExtraOrdinaryOpen] = useState(false);
   const [isTaskFormOpen, setIsTaskFormOpen] = useState(false);
@@ -76,79 +77,42 @@ export default function Module3() {
   return (
     <section className="relative">
       {/* 000 */}
-      {isHeroectionOpen && (
+      {isLandingOpen && (
         <>
-          <div className="full-container ">
-            <div className="card container flex flex-col xl:flex-row-reverse items-start p-4 xl:pt-52 xl:pb-20 gap-4 xl:gap-0">
-              <Image
-                src="/images/detail/module3/hero.jpg"
-                width={500}
-                height={300}
-                priority
-                alt="image"
-                className="md:ml-16 mt-32 md:mt-0"
-                style={{ width: "100%", height: "auto" }}
-              />
-
-              <div className="card-body">
-                <div className="page-header">Decision Phase</div>
-                <div className="card-content text-white">
-                  <p className="body-default-20">
-                    In the upcoming phase of the simulation, you and your fellow
-                    board members will face a series of unexpected events
-                    demanding the Board's immediate involvement and governance.
-                    These hypothetical scenarios will intensify the pressure on
-                    the Board, compelling critical decisions.
-                  </p>
-
-                  <Button
-                    onClick={() => {
-                      console.log("000");
-                      setShowNotify1(true);
-                    }}
-                  >
-                    Proceed
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="block section-bg">
-            <Image
-              src="/images/detail/module3/hero.jpg"
-              width={1920}
-              height={1080}
-              priority
-              alt="image"
+          <Landing
+            handleOpen={() => {
+              console.log("000");
+              setShowNotify1(true);
+            }}
+          />
+          {/* 001 */}
+          {/* Notify1 */}
+          <Notify
+            showNotify={showNotify1}
+            setShowNotshowNotify={setShowNotify1}
+            recipient="Board Chair"
+            content="Meeting notes"
+            handleOpen={() => {
+              console.log("001");
+              setShowMailModal1(true);
+              setShowNotify1(false);
+            }}
+          ></Notify>
+          {/* 002 */}
+          {/* Mail 1 Modal */}
+          <Modal showModal={showMailModal1} setShowModal={setShowMailModal1}>
+            <MailModalContent1
+              submitActions={() => {
+                console.log("002 ");
+                setShowMailModal1(false);
+                setIsPreSectionOpen(true);
+                setIsLandingOpen(false);
+              }}
             />
-          </div>
+          </Modal>
         </>
       )}
-      {/* 001 */}
-      {/* Notify1 */}
-      <Notify
-        showNotify={showNotify1}
-        setShowNotshowNotify={setShowNotify1}
-        recipient="Board Chair"
-        content="Meeting notes"
-        handleOpen={() => {
-          console.log("001");
-          setShowMailModal1(true);
-          setShowNotify1(false);
-        }}
-      ></Notify>
-      {/* 002 */}
-      {/* Mail 1 Modal */}
-      <Modal showModal={showMailModal1} setShowModal={setShowMailModal1}>
-        <MailModalContent1
-          submitActions={() => {
-            console.log("002 ");
-            setShowMailModal1(false);
-            setIsPreSectionOpen(true);
-            setIsHeroectionOpen(false);
-          }}
-        />
-      </Modal>
+
       {/* 003 */}
       {/* showMeetingModalPre1 Modal */}
       <Modal
@@ -191,13 +155,14 @@ export default function Module3() {
           }}
         />
       </Modal>
+
       {/* 006 */}
       {/* Hide after video watch */}
       {isPreSectionOpen && (
         <div className="full-container bg-[#E9EBEF] mt-32 mb-16 xl:px-12">
           <div className="container">
             <div className="py-8 xl:py-14 text-3xl font-semibold ">
-              Preperation Material for Extraordinary Meeting #1
+              Preparation Material for Extraordinary Meeting #1
             </div>
           </div>
           <div className="container flex flex-col md:grid grid-cols-3 gap-5 h-min">
