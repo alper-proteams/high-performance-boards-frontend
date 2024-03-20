@@ -9,7 +9,7 @@ export default function TaskForm3({ submitActions, submitText }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsFormDisable(false);
-    }, 1600000); // 26 min 1560000 // 5000
+    }, 5000); // 26 min 1560000 // 5000
 
     return () => clearTimeout(timer);
   }, []);

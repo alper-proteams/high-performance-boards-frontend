@@ -24,26 +24,25 @@ import ShowVideoContentModal from "@/app/components/modals/showVideoContentModal
 import Landing from "./landing.js";
 
 import TaskForm1 from "@/app/components/form/taskForm1";
-import TaskFormMeeting2 from "@/app/components/form/taskFormMeeting2";
-import TaskForm3 from "@/app/components/form/taskForm33";
+import TaskForm2 from "@/app/components/form/taskForm2";
+import TaskForm3 from "@/app/components/form/taskForm3";
 import TaskForm3New from "@/app/components/form/taskForm3New";
-import TaskForm4 from "@/app/components/form/taskForm4";
+import TaskForm5 from "@/app/components/form/taskForm5";
 
 export default function Module3() {
   const [isLandingOpen, setIsLandingOpen] = useState(true);
   const [isPreSectionOpen, setIsPreSectionOpen] = useState(false);
   const [isExtraOrdinaryOpen, setIsExtraOrdinaryOpen] = useState(false);
-  const [isTaskFormOpen, setIsTaskFormOpen] = useState(false);
+  const [isTaskForm2Open, setIsTaskForm2Open] = useState(false);
   const [isTaskForm3Open, setIsTaskForm3Open] = useState(false);
-  const [isTaskForm3NewOpen, setIsTaskForm3NewOpen] = useState(false);
   const [isTaskForm4Open, setIsTaskForm4Open] = useState(false);
+  const [isTaskForm5Open, setIsTaskForm5Open] = useState(false);
 
   const [showNotify1, setShowNotify1] = React.useState(false);
   const [showNotify2, setShowNotify2] = React.useState(false);
   const [showNotify3, setShowNotify3] = React.useState(false);
   const [showNotify4, setShowNotify4] = React.useState(false);
   const [showNotify5, setShowNotify5] = React.useState(false);
-  const [showNotify6, setShowNotify6] = React.useState(false);
 
   const [showMailModal1, setShowMailModal1] = React.useState(false);
   const [showMailModal2, setShowMailModal2] = React.useState(false);
@@ -68,9 +67,6 @@ export default function Module3() {
   const [showTask4SubmitModal, setShowTask4SubmitModal] = React.useState(false);
 
   const [disableButton, setDisableButton] = useState(false);
-
-  //Meeting disable, delete
-  const [isEomSubmitted, setIsEomSubmitted] = useState(false);
 
   const [videoUrl, setVideoUrl] = useState("");
 
@@ -232,6 +228,7 @@ export default function Module3() {
           </div>
         </div>
       )}
+
       {/* 007 */}
       {/* showVideoContentModal Modal */}
       <Modal
@@ -250,78 +247,13 @@ export default function Module3() {
           }}
         />
       </Modal>
+
       {/* 008 */}
-      {/* Taskform 1 Show after video watch */}
-      {/* {isExtraOrdinaryOpen && (
-        <div className="full-container bg-[#E9EBEF] mt-32 mb-16 xl:px-12">
-          <div className="container">
-            <div className="py-8 xl:py-14 text-3xl font-semibold ">
-              Extraordinary Meeting #1
-            </div>
-          </div>
-          <div className="container flex flex-col md:grid grid-cols-3 gap-5 h-min bg-white p-12">
-            <div>
-              <div className="text-primary-red">Your task</div>
-              <p>
-                Prepare a list of five questions to ask your CEO and CFO in the
-                next Extraordinary Meeting
-              </p>
-            </div>
-            <form
-              className={`col-span-2 flex flex-col gap-4 ${
-                isEomSubmitted ? "form-disabled" : ""
-              }`}
-            >
-              <div className="flex bg-[#F6F6F7] p-6 gap-3">
-                <label htmlFor="input1" className="">
-                  1
-                </label>
-                <textarea type="text" id="input1" disabled={isEomSubmitted} />
-              </div>
-              <div className="flex bg-[#F6F6F7] p-6 gap-3">
-                <label htmlFor="input2" className="">
-                  2
-                </label>
-                <textarea type="text" id="input2" disabled={isEomSubmitted} />
-              </div>
-              <div className="flex bg-[#F6F6F7] p-6 gap-3">
-                <label htmlFor="input3" className="">
-                  3
-                </label>
-                <textarea type="text" id="input3" disabled={isEomSubmitted} />
-              </div>
-              <div className="flex bg-[#F6F6F7] p-6 gap-3">
-                <label htmlFor="input4" className="">
-                  4
-                </label>
-                <textarea type="text" id="input4" disabled={isEomSubmitted} />
-              </div>
-              <div className="flex bg-[#F6F6F7] p-6 gap-3">
-                <label htmlFor="input5" className="">
-                  5
-                </label>
-                <textarea type="text" id="input5" disabled={isEomSubmitted} />
-              </div>
-              <Button
-                onClick={() => {
-                  console.log("008");
-                  setShowEOMSubmitModal(true);
-                  setIsEomSubmitted(true);
-                }}
-                className={"ml-auto w-full max-w-80"}
-              >
-                Proceed
-              </Button>
-            </form>
-          </div>
-        </div>
-      )} */}
       {isExtraOrdinaryOpen && (
         <TaskForm1
           submitActions={() => {
             console.log("taskform1 action");
             setShowEOMSubmitModal(true);
-            setIsEomSubmitted(true);
           }}
         />
       )}
@@ -373,14 +305,14 @@ export default function Module3() {
           submitActions={() => {
             console.log("012");
             setShowMailModal3(false);
-            setIsTaskFormOpen(true);
+            setIsTaskForm2Open(true);
             setIsExtraOrdinaryOpen(false);
           }}
         />
       </Modal>
       {/* 013 */}
-      {isTaskFormOpen && (
-        <TaskFormMeeting2
+      {isTaskForm2Open && (
+        <TaskForm2
           submitActions={() => {
             console.log("013");
             setShowEOMSubmitModal14(true);
@@ -398,21 +330,21 @@ export default function Module3() {
           submitActions={() => {
             console.log("014");
             setShowEOMSubmitModal14(false);
-            setShowNotify4(true);
+            setShowNotify3(true);
           }}
           submitText={"Kindly proceed back to the lecture room for debriefing"}
         />
       </Modal>
       {/* 015 */}
       <Notify
-        showNotify={showNotify4}
-        setShowNotshowNotify={setShowNotify4}
+        showNotify={showNotify3}
+        setShowNotshowNotify={setShowNotify3}
         recipient="Board Chair"
         content="Meeting notes"
         handleOpen={() => {
           console.log("015");
           setShowMailModal4(true);
-          setShowNotify4(false);
+          setShowNotify3(false);
           // Meeting3
         }}
       ></Notify>
@@ -435,27 +367,27 @@ export default function Module3() {
           submitActions={() => {
             console.log("017");
             setShowMailModal4Attach(false);
-            setIsTaskFormOpen(false);
+            setIsTaskForm2Open(false);
             setIsTaskForm3Open(true);
             setTimeout(() => {
-              setShowNotify5(true);
+              setShowNotify4(true);
               console.log("breaking notify triggered");
-            }, 1500000); //1500000 for 25min // 3000
+            }, 3000); //1500000 for 25min // 3000
           }}
         />
       </Modal>
 
       {/* 19-2 breaking notify*/}
       <Notify
-        showNotify={showNotify5}
-        setShowNotshowNotify={setShowNotify5}
+        showNotify={showNotify4}
+        setShowNotshowNotify={setShowNotify4}
         recipient="BREAKING NEWS"
         content="Meeting notes"
         imageLink="/images/common/breaking.jpg"
         handleOpen={() => {
           console.log("19-2 breaking notify show");
           setShowMailModal5(true);
-          setShowNotify5(false);
+          setShowNotify4(false);
         }}
       ></Notify>
 
@@ -492,13 +424,13 @@ export default function Module3() {
           submitActions={() => {
             console.log("020 breaking video closed and show new3 task");
             setShowMailModal5(false);
-            setIsTaskForm3NewOpen(true);
+            setIsTaskForm4Open(true);
           }}
         />
       </Modal>
 
       {/* 021 */}
-      {isTaskForm3NewOpen && (
+      {isTaskForm4Open && (
         <TaskForm3New
           submitActions={() => {
             console.log("021 TaskForm3New Submitted");
@@ -517,10 +449,10 @@ export default function Module3() {
         <SubmitModal
           submitActions={() => {
             setShowTask3SubmitModal(false);
-            setIsTaskForm3NewOpen(false);
+            setIsTaskForm4Open(false);
             console.log("022 Task3 submitModal closed");
             console.log("Noftify 6 opened");
-            setShowNotify6(true);
+            setShowNotify5(true);
           }}
           submitText={"Kindly proceed back to the lecture room for debriefing"}
         />
@@ -528,12 +460,12 @@ export default function Module3() {
 
       {/* 023 */}
       <Notify
-        showNotify={showNotify6}
-        setShowNotshowNotify={setShowNotify6}
+        showNotify={showNotify5}
+        setShowNotshowNotify={setShowNotify5}
         recipient="Board Chair"
         content="Meeting notes"
         handleOpen={() => {
-          setShowNotify6(false);
+          setShowNotify5(false);
           console.log("Noftify 6 closed");
           console.log("024 Meet mail 6 opener");
           setShowMailModal6(true);
@@ -558,16 +490,16 @@ export default function Module3() {
           submitActions={() => {
             console.log("mail7 closed");
             setShowMailModal7(false);
-            setIsTaskFormOpen(false);
+            setIsTaskForm2Open(false);
             setIsTaskForm3Open(false);
-            setIsTaskForm4Open(true);
+            setIsTaskForm5Open(true);
             console.log("task form 4 opened");
           }}
         />
       </Modal>
       {/* 026 */}
-      {isTaskForm4Open && (
-        <TaskForm4
+      {isTaskForm5Open && (
+        <TaskForm5
           submitActions={() => {
             console.log("task form 4 clicked");
             setShowTask4SubmitModal(true);
