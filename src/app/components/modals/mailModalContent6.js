@@ -70,8 +70,9 @@ export default function mail6ModalContent({ submitActions }) {
         Transcript
       </div>
       <Image
-        className="mx-auto mb-12 cursor-pointer"
+        className="mx-auto mb-12 cursor-pointer max-w-64"
         src="/images/common/transcript.svg"
+        style={{ width: "100%", height: "auto" }}
         alt="E-mail"
         width={250}
         height={250}

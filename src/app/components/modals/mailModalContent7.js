@@ -62,20 +62,6 @@ export default function mail7ModalContent({ submitActions }) {
         </p>
       </div>
 
-      {/* <div className="content-subheader text-center text-primary-red mb-6">
-        Attachment
-      </div>
-      <Image
-        className="mx-auto mb-12 cursor-pointer"
-        src="/images/common/transcript.svg"
-        alt="E-mail"
-        width={250}
-        height={250}
-        onClick={() => {
-          submitActions();
-        }}
-      /> */}
-
       <div className="flex items-center justify-end p-6">
         <Link className={"w-full"} href="#">
           <Button

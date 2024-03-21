@@ -17,6 +17,7 @@ import MailModalContent4Attach from "@/app/components/modals/mailModalContent4At
 import MailModalContent5 from "@/app/components/modals/mailModalContent5";
 import MailModalContent6 from "@/app/components/modals/mailModalContent6";
 import MailModalContent7 from "@/app/components/modals/mailModalContent7";
+
 import ShowMeetingModalPre1 from "@/app/components/modals/showMeetingModalPre1";
 import ShowMeetingModalPre2 from "@/app/components/modals/showMeetingModalPre2";
 import ShowMeetingModalPre3 from "@/app/components/modals/showMeetingModalPre3";
@@ -473,7 +474,6 @@ export default function Module3() {
         <MailModalContent6
           submitActions={() => {
             console.log("024 mail openedm notify 6 closed, 7 opened  ");
-            console.log("buraya kadar ok mi");
             setShowMailModal6(false);
             setShowMailModal7(true);
           }}

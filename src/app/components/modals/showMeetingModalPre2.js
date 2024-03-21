@@ -69,11 +69,11 @@ export default function showMeetingModalPre2({ submitActions }) {
           its operating segments.
         </p>
         <Image
-          className="mt-8 mb-5"
+          className="mt-8 mb-5 w-auto h-auto max-w-64"
           src="/images/common/lightstar-logo.png"
           alt="E-mail"
-          width={250}
-          height={250}
+          width={0}
+          height={0}
           onClick={() => {
             submitActions();
           }}
