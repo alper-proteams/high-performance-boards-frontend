@@ -21,13 +21,13 @@ import ShowMeetingModalPre1 from "@/app/components/modals/showMeetingModalPre1";
 import ShowMeetingModalPre2 from "@/app/components/modals/showMeetingModalPre2";
 import ShowMeetingModalPre3 from "@/app/components/modals/showMeetingModalPre3";
 import ShowVideoContentModal from "@/app/components/modals/showVideoContentModal";
-import Landing from "./landing.js";
 
+import Landing from "./landing.js";
 import TaskForm1 from "@/app/components/form/taskForm1";
 import TaskForm2 from "@/app/components/form/taskForm2";
 import TaskForm3 from "@/app/components/form/taskForm3";
 import TaskForm3New from "@/app/components/form/taskForm3New";
-import TaskForm5 from "@/app/components/form/taskForm5";
+import TaskForm4 from "@/app/components/form/taskForm4";
 
 export default function Module3() {
   const [isLandingOpen, setIsLandingOpen] = useState(true);
@@ -35,8 +35,8 @@ export default function Module3() {
   const [isExtraOrdinaryOpen, setIsExtraOrdinaryOpen] = useState(false);
   const [isTaskForm2Open, setIsTaskForm2Open] = useState(false);
   const [isTaskForm3Open, setIsTaskForm3Open] = useState(false);
+  const [isTaskForm3NewOpen, setIsTaskForm3NewOpen] = useState(false);
   const [isTaskForm4Open, setIsTaskForm4Open] = useState(false);
-  const [isTaskForm5Open, setIsTaskForm5Open] = useState(false);
 
   const [showNotify1, setShowNotify1] = React.useState(false);
   const [showNotify2, setShowNotify2] = React.useState(false);
@@ -60,8 +60,8 @@ export default function Module3() {
   const [showVideoContentModal, setShowVideoContentModal] =
     React.useState(false);
 
-  const [showEOMSubmitModal, setShowEOMSubmitModal] = React.useState(false);
-  const [showEOMSubmitModal14, setShowEOMSubmitModal14] = React.useState(false);
+  const [showTask0SubmitModal, setShowTask0SubmitModal] = React.useState(false);
+  const [showTask1SubmitModal, setShowTask1SubmitModal] = React.useState(false);
   const [showTask2SubmitModal, setShowTask2SubmitModal] = React.useState(false);
   const [showTask3SubmitModal, setShowTask3SubmitModal] = React.useState(false);
   const [showTask4SubmitModal, setShowTask4SubmitModal] = React.useState(false);
@@ -253,22 +253,21 @@ export default function Module3() {
         <TaskForm1
           submitActions={() => {
             console.log("taskform1 action");
-            setShowEOMSubmitModal(true);
+            setShowTask0SubmitModal(true);
           }}
         />
       )}
       {/* 009 */}
       {/* Show after ExtraOrdinary form submit */}
       <Modal
-        showModal={showEOMSubmitModal}
-        setShowModal={setShowEOMSubmitModal}
-        // title={"WHSE Promotional Video"}
+        showModal={showTask0SubmitModal}
+        setShowModal={setShowTask0SubmitModal}
         hideClose={true}
       >
         <SubmitModal
           submitActions={() => {
             console.log("009");
-            setShowEOMSubmitModal(false);
+            setShowTask0SubmitModal(false);
             setShowNotify2(true);
           }}
           submitText={"Kindly proceed back to the lecture room for debriefing"}
@@ -315,21 +314,20 @@ export default function Module3() {
         <TaskForm2
           submitActions={() => {
             console.log("013");
-            setShowEOMSubmitModal14(true);
+            setShowTask1SubmitModal(true);
           }}
         />
       )}
       {/* 014 new */}
       <Modal
-        showModal={showEOMSubmitModal14}
-        setShowModal={setShowEOMSubmitModal14}
-        // title={"WHSE Promotional Video"}
+        showModal={showTask1SubmitModal}
+        setShowModal={setShowTask1SubmitModal}
         hideClose={true}
       >
         <SubmitModal
           submitActions={() => {
             console.log("014");
-            setShowEOMSubmitModal14(false);
+            setShowTask1SubmitModal(false);
             setShowNotify3(true);
           }}
           submitText={"Kindly proceed back to the lecture room for debriefing"}
@@ -405,7 +403,6 @@ export default function Module3() {
       <Modal
         showModal={showTask2SubmitModal}
         setShowModal={setShowTask2SubmitModal}
-        // title={"WHSE Promotional Video"}
         hideClose={true}
       >
         <SubmitModal
@@ -424,13 +421,13 @@ export default function Module3() {
           submitActions={() => {
             console.log("020 breaking video closed and show new3 task");
             setShowMailModal5(false);
-            setIsTaskForm4Open(true);
+            setIsTaskForm3NewOpen(true);
           }}
         />
       </Modal>
 
       {/* 021 */}
-      {isTaskForm4Open && (
+      {isTaskForm3NewOpen && (
         <TaskForm3New
           submitActions={() => {
             console.log("021 TaskForm3New Submitted");
@@ -443,13 +440,12 @@ export default function Module3() {
       <Modal
         showModal={showTask3SubmitModal}
         setShowModal={setShowTask3SubmitModal}
-        // title={"WHSE Promotional Video"}
         hideClose={true}
       >
         <SubmitModal
           submitActions={() => {
             setShowTask3SubmitModal(false);
-            setIsTaskForm4Open(false);
+            setIsTaskForm3NewOpen(false);
             console.log("022 Task3 submitModal closed");
             console.log("Noftify 6 opened");
             setShowNotify5(true);
@@ -492,14 +488,14 @@ export default function Module3() {
             setShowMailModal7(false);
             setIsTaskForm2Open(false);
             setIsTaskForm3Open(false);
-            setIsTaskForm5Open(true);
+            setIsTaskForm4Open(true);
             console.log("task form 4 opened");
           }}
         />
       </Modal>
       {/* 026 */}
-      {isTaskForm5Open && (
-        <TaskForm5
+      {isTaskForm4Open && (
+        <TaskForm4
           submitActions={() => {
             console.log("task form 4 clicked");
             setShowTask4SubmitModal(true);
@@ -511,7 +507,6 @@ export default function Module3() {
       <Modal
         showModal={showTask4SubmitModal}
         setShowModal={setShowTask4SubmitModal}
-        // title={"WHSE Promotional Video"}
         hideClose={true}
       >
         <SubmitModal
